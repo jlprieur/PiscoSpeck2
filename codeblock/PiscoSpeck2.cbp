@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PiscoSpeck2" />
+		<Option execution_dir="C:/EXEC/PiscoSpeck2/" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="C:/EXEC/PiscoSpeck2/PiscoSpeck2" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="C:/EXEC/PiscoSpeck2" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="c:/jlp_src/jlplib/jlp_fits" />
+					<Add directory="c:/jlp_src/jlplib/jlp_numeric" />
+					<Add directory="c:/jlp_src/jlplib/jlp_splot" />
+					<Add directory="C:/jlp_src/jlplib/jlp_splot_idv" />
+					<Add directory="C:/jlp_src/jlplib/jlp_wxplot/jlp_wxplot_include" />
+					<Add directory="C:/jlp_src/jlplib/jlp_gseg_wxwid" />
+					<Add directory="C:/jlp_src/jlplib/jlp_gsegraf/jlp_gsegraf_include" />
+					<Add directory="C:/wxWidgets-3.1.1/include" />
+					<Add directory="C:/jlp_src/PiscoSpeck2" />
+					<Add directory="C:/jlp_src/PiscoSpeck2/asp2_camera" />
+					<Add directory="C:/jlp_src/PiscoSpeck2/asp2_frame" />
+					<Add directory="C:/jlp_src/PiscoSpeck2/asp2_fits" />
+					<Add directory="C:/jlp_src/PiscoSpeck2/asp2_process" />
+					<Add directory="C:/jlp_src/PiscoSpeck2/asp2_tools" />
+					<Add directory="C:/jlp_src/PiscoSpeck2/bitmaps" />
+					<Add directory="C:/jlp_src/PiscoSpeck2/jlp_andor" />
+					<Add directory="C:/jlp_src/PiscoSpeck2/jlp_fitscube" />
+					<Add directory="C:/jlp_src/PiscoSpeck2/jlp_raptor" />
+					<Add directory="C:/jlp_src/PiscoSpeck2/jlp_raptor/epix_inc" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="C:/jlp_src/PiscoSpeck2/bitmaps" />
+					<Add directory="C:/jlp_src/PiscoSpeck2" />
+					<Add directory="C:/wxWidgets-3.1.0/include" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="C:/jlp_src/PiscoSpeck2/jlp_andor/atmcd64m.lib" />
+					<Add library="C:/jlp_src/PiscoSpeck2/jlp_raptor/epix_lib/XCLIBW64.lib" />
+					<Add library="C:/EXEC/MyLib/jlp_wxplot.a" />
+					<Add library="C:/EXEC/MyLib/jlp_splot.a" />
+					<Add library="C:/EXEC/MyLib/jlp_splot_idv.a" />
+					<Add library="C:/EXEC/MyLib/jlp_gsegraf.a" />
+					<Add library="C:/EXEC/MyLib/jlp_gseg_wxwid.a" />
+					<Add library="C:/EXEC/MyLib/jlp_numeric.a" />
+					<Add library="C:/EXEC/MyLib/jlp_fits.a" />
+					<Add library="C:/EXEC/MyLib/libcfitsio.a" />
+					<Add library="C:/EXEC/MyLib/libfftw3.a" />
+					<Add library="C:/wxWidgets-3.1.1/build-debug/lib/libwx_baseu-3.1.dll.a" />
+					<Add library="C:/wxWidgets-3.1.1/build-debug/lib/libwx_mswu_core-3.1.dll.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="C:/jlp_src/jlplib/cfitsio/incl" />
+		</Compiler>
+		<Unit filename="../PiscoSpeck2.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="../asp2_app.h" />
+		<Unit filename="../asp2_app_main.cpp" />
+		<Unit filename="../asp2_camera/jlp_camera1.cpp" />
+		<Unit filename="../asp2_camera/jlp_camera1.h" />
+		<Unit filename="../asp2_camera/jlp_camera_display.cpp" />
+		<Unit filename="../asp2_camera/jlp_camera_display.h" />
+		<Unit filename="../asp2_camera/jlp_camera_display_mutex.cpp" />
+		<Unit filename="../asp2_camera/jlp_camera_display_mutex.h" />
+		<Unit filename="../asp2_camera/jlp_camera_panel.cpp" />
+		<Unit filename="../asp2_camera/jlp_camera_panel.h" />
+		<Unit filename="../asp2_camera/jlp_camera_panel1.h" />
+		<Unit filename="../asp2_camera/jlp_camera_thread.cpp" />
+		<Unit filename="../asp2_camera/jlp_camera_thread.h" />
+		<Unit filename="../asp2_camera/jlp_camera_thread_display.cpp" />
+		<Unit filename="../asp2_camera/jlp_camera_utils.cpp" />
+		<Unit filename="../asp2_camera/jlp_camera_utils.h" />
+		<Unit filename="../asp2_fits/asp2_2dfits_utils.cpp" />
+		<Unit filename="../asp2_fits/asp2_2dfits_utils.h" />
+		<Unit filename="../asp2_fits/asp2_3D_infits.cpp" />
+		<Unit filename="../asp2_fits/asp2_3D_infits.h" />
+		<Unit filename="../asp2_fits/asp2_3D_outfits.cpp" />
+		<Unit filename="../asp2_fits/asp2_3D_outfits.h" />
+		<Unit filename="../asp2_fits/asp2_3dfits_rd_utils.cpp" />
+		<Unit filename="../asp2_fits/asp2_3dfits_rd_utils.h" />
+		<Unit filename="../asp2_fits/asp2_3dfits_wr_utils.cpp" />
+		<Unit filename="../asp2_fits/asp2_3dfits_wr_utils.h" />
+		<Unit filename="../asp2_fits/jlp_fits0_cvb.cpp" />
+		<Unit filename="../asp2_fits/jlp_fits0_fmt.h" />
+		<Unit filename="../asp2_fits/jlp_rw_fits0.cpp" />
+		<Unit filename="../asp2_fits/jlp_rw_fits0.h" />
+		<Unit filename="../asp2_frame/asp2_defs.h" />
+		<Unit filename="../asp2_frame/asp2_frame.cpp" />
+		<Unit filename="../asp2_frame/asp2_frame.h" />
+		<Unit filename="../asp2_frame/asp2_frame_id.h" />
+		<Unit filename="../asp2_frame/asp2_frame_language.cpp" />
+		<Unit filename="../asp2_frame/asp2_frame_language.h" />
+		<Unit filename="../asp2_frame/asp2_frame_logbook.cpp" />
+		<Unit filename="../asp2_frame/asp2_frame_menu.cpp" />
+		<Unit filename="../asp2_frame/asp2_frame_menu_onclick.cpp" />
+		<Unit filename="../asp2_frame/asp2_frame_process.cpp" />
+		<Unit filename="../asp2_frame/asp2_frame_utils.cpp" />
+		<Unit filename="../asp2_frame/asp2_menu_rwfits.cpp" />
+		<Unit filename="../asp2_frame/asp2_typedef.h" />
+		<Unit filename="../asp2_process/asp2_clean_deconv.cpp" />
+		<Unit filename="../asp2_process/asp2_covermas.cpp" />
+		<Unit filename="../asp2_process/asp2_covermas.h" />
+		<Unit filename="../asp2_process/asp2_decode_thread.cpp" />
+		<Unit filename="../asp2_process/asp2_decode_thread.h" />
+		<Unit filename="../asp2_process/asp2_inv_bispec2.cpp" />
+		<Unit filename="../asp2_process/asp2_photon_corr.cpp" />
+		<Unit filename="../asp2_process/asp2_photon_corr.h" />
+		<Unit filename="../asp2_process/jlp_decode.cpp" />
+		<Unit filename="../asp2_process/jlp_decode.h" />
+		<Unit filename="../asp2_process/jlp_decode_access.cpp" />
+		<Unit filename="../asp2_process/jlp_decode_cube_save.cpp" />
+		<Unit filename="../asp2_process/jlp_decode_process2.cpp" />
+		<Unit filename="../asp2_process/jlp_decode_process_cube.cpp" />
+		<Unit filename="../asp2_process/jlp_decode_process_cube_utils.cpp" />
+		<Unit filename="../asp2_process/jlp_decode_process_scidar.cpp" />
+		<Unit filename="../asp2_process/jlp_speckprocess_panel.cpp" />
+		<Unit filename="../asp2_process/jlp_speckprocess_panel.h" />
+		<Unit filename="../asp2_process/jlp_speckprocess_panel_onclick.cpp" />
+		<Unit filename="../asp2_process/jlp_speckprocess_panel_update.cpp" />
+		<Unit filename="../asp2_tools/asp2_rw_config_files.cpp" />
+		<Unit filename="../asp2_tools/asp2_rw_config_files.h" />
+		<Unit filename="../asp2_tools/asp_camera_dlg.cpp" />
+		<Unit filename="../asp2_tools/asp_camera_dlg.h" />
+		<Unit filename="../asp2_tools/asp_display_panel.cpp" />
+		<Unit filename="../asp2_tools/asp_display_panel.h" />
+		<Unit filename="../asp2_tools/asp_display_panel_onclick.cpp" />
+		<Unit filename="../asp2_tools/jlp_display2_mutex.cpp" />
+		<Unit filename="../asp2_tools/jlp_display2_mutex.h" />
+		<Unit filename="../asp2_tools/jlp_language_dlg.cpp" />
+		<Unit filename="../asp2_tools/jlp_language_dlg.h" />
+		<Unit filename="../asp2_tools/jlp_time0.cpp" />
+		<Unit filename="../asp2_tools/jlp_time0.h" />
+		<Unit filename="../jlp_andor/Atmcd32d.h" />
+		<Unit filename="../jlp_andor/jlp_andor_cam1.cpp" />
+		<Unit filename="../jlp_andor/jlp_andor_cam1.h" />
+		<Unit filename="../jlp_andor/jlp_andor_cam1_acqui.cpp" />
+		<Unit filename="../jlp_andor/jlp_andor_cam1_acqui_conti.cpp" />
+		<Unit filename="../jlp_andor/jlp_andor_cam1_set.cpp" />
+		<Unit filename="../jlp_andor/jlp_andor_panel.cpp" />
+		<Unit filename="../jlp_andor/jlp_andor_panel.h" />
+		<Unit filename="../jlp_andor/jlp_andor_panel_onclick1.cpp" />
+		<Unit filename="../jlp_andor/jlp_andor_panel_onclick2.cpp" />
+		<Unit filename="../jlp_andor/jlp_andor_panel_update.cpp" />
+		<Unit filename="../jlp_andor/jlp_andor_utils.cpp" />
+		<Unit filename="../jlp_andor/jlp_andor_utils.h" />
+		<Unit filename="../jlp_fitscube/jlp_fitscube_cam1.cpp" />
+		<Unit filename="../jlp_fitscube/jlp_fitscube_cam1.h" />
+		<Unit filename="../jlp_fitscube/jlp_fitscube_cam1_acqui.cpp" />
+		<Unit filename="../jlp_fitscube/jlp_fitscube_cam1_acqui_conti.cpp" />
+		<Unit filename="../jlp_fitscube/jlp_fitscube_cam1_set.cpp" />
+		<Unit filename="../jlp_fitscube/jlp_fitscube_panel.cpp" />
+		<Unit filename="../jlp_fitscube/jlp_fitscube_panel.h" />
+		<Unit filename="../jlp_fitscube/jlp_fitscube_panel_onclick1.cpp" />
+		<Unit filename="../jlp_fitscube/jlp_fitscube_panel_update.cpp" />
+		<Unit filename="../jlp_fitscube/jlp_fitscube_utils.cpp" />
+		<Unit filename="../jlp_fitscube/jlp_fitscube_utils.h" />
+		<Unit filename="../jlp_raptor/epix_inc/XCLIBWNT_IMPORT.H" />
+		<Unit filename="../jlp_raptor/epix_inc/XCLIBWNT_LABVIEW.H" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_cext.h" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_cext_hp1.h" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_cext_hp2.h" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_cext_hp4.h" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_cext_hpe.h" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_cext_hps.h" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_pxerrno.h" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_pximage.h" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_pxlibcam.h" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_pxlibsv.h" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_pxlibvs.h" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_xcliball.h" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_xclibsc.h" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_xclibsv.h" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_xclibver.h" />
+		<Unit filename="../jlp_raptor/epix_inc/epix_xclibvs.h" />
+		<Unit filename="../jlp_raptor/jlp_raptor_cam1.cpp" />
+		<Unit filename="../jlp_raptor/jlp_raptor_cam1.h" />
+		<Unit filename="../jlp_raptor/jlp_raptor_cam1_acqui.cpp" />
+		<Unit filename="../jlp_raptor/jlp_raptor_cam1_get.cpp" />
+		<Unit filename="../jlp_raptor/jlp_raptor_cam1_set.cpp" />
+		<Unit filename="../jlp_raptor/jlp_raptor_cam1_tools.cpp" />
+		<Unit filename="../jlp_raptor/jlp_raptor_panel.cpp" />
+		<Unit filename="../jlp_raptor/jlp_raptor_panel.h" />
+		<Unit filename="../jlp_raptor/jlp_raptor_panel_onclick1.cpp" />
+		<Unit filename="../jlp_raptor/jlp_raptor_panel_update.cpp" />
+		<Unit filename="../jlp_raptor/jlp_raptor_serial.cpp" />
+		<Unit filename="../jlp_raptor/jlp_raptor_serial.h" />
+		<Unit filename="../jlp_raptor/jlp_raptor_utils.cpp" />
+		<Unit filename="../jlp_raptor/jlp_raptor_utils.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

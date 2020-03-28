@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="RaptorSpeck2" />
+		<Option execution_dir="C:/jlp_src/AndorSpeck2/codeblock/AndorSpeck2" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="C:/EXEC/RaptorSpeck2/RaptorSpeck2" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="C:/EXEC/RaptorSpeck2" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="C:/jlp_src/AndorSpeck2" />
+					<Add directory="c:/jlp_src/jlplib/jlp_fits" />
+					<Add directory="c:/jlp_src/jlplib/jlp_numeric" />
+					<Add directory="c:/jlp_src/jlplib/jlp_splot" />
+					<Add directory="C:/jlp_src/jlplib/jlp_splot_idv" />
+					<Add directory="c:/jlp_src/jlplib/jlp_wxplot" />
+					<Add directory="C:/jlp_src/jlplib/jlp_gseg_wxwid" />
+					<Add directory="C:/jlp_src/jlplib/jlp_gsegraf" />
+					<Add directory="C:/wxWidgets-3.1.0/include" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="C:/jlp_src/AndorSpeck2/bitmaps" />
+					<Add directory="C:/jlp_src/AndorSpeck2" />
+					<Add directory="C:/wxWidgets-3.1.0/include" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="C:/jlp_src/AndorSpeck2/ATMCD32M.LIB" />
+					<Add library="C:/EXEC/MyLib/jlp_wxplot.a" />
+					<Add library="C:/EXEC/MyLib/jlp_splot.a" />
+					<Add library="C:/EXEC/MyLib/jlp_splot_idv.a" />
+					<Add library="C:/EXEC/MyLib/jlp_gsegraf.a" />
+					<Add library="C:/EXEC/MyLib/jlp_gseg_wxwid.a" />
+					<Add library="C:/EXEC/MyLib/jlp_numeric.a" />
+					<Add library="C:/EXEC/MyLib/jlp_fits.a" />
+					<Add library="C:/EXEC/MyLib/libcfitsio.a" />
+					<Add library="C:/EXEC/MyLib/libfftw3.a" />
+					<Add library="C:/wxWidgets-3.1.0/lib/libwx_baseu-3.1-x86_64-w64-mingw32.dll.a" />
+					<Add library="C:/wxWidgets-3.1.0/lib/libwx_mswu_core-3.1-x86_64-w64-mingw32.dll.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="C:/jlp_src/jlplib/cfitsio/incl" />
+		</Compiler>
+		<Unit filename="../RaptorSpeck2.cpp" />
+		<Unit filename="../RaptorSpeck2.h" />
+		<Unit filename="../RaptorSpeck2.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="../asp2_3Dfits.cpp" />
+		<Unit filename="../asp2_3Dfits.h" />
+		<Unit filename="../asp2_3dfits_thread.cpp" />
+		<Unit filename="../asp2_3dfits_thread.h" />
+		<Unit filename="../asp2_andor_thread.cpp" />
+		<Unit filename="../asp2_andor_thread.h" />
+		<Unit filename="../asp2_andor_thread_display.cpp" />
+		<Unit filename="../asp2_clean_deconv.cpp" />
+		<Unit filename="../asp2_covermas.cpp" />
+		<Unit filename="../asp2_covermas.h" />
+		<Unit filename="../asp2_decode_thread.cpp" />
+		<Unit filename="../asp2_decode_thread.h" />
+		<Unit filename="../asp2_defs.h" />
+		<Unit filename="../asp2_display_panel.cpp" />
+		<Unit filename="../asp2_display_panel.h" />
+		<Unit filename="../asp2_fits_utils.cpp" />
+		<Unit filename="../asp2_fits_utils.h" />
+		<Unit filename="../asp2_frame.h" />
+		<Unit filename="../asp2_frame_id.h" />
+		<Unit filename="../asp2_frame_menu.cpp" />
+		<Unit filename="../asp2_frame_menu_onclick.cpp" />
+		<Unit filename="../asp2_inv_bispec2.cpp" />
+		<Unit filename="../asp2_language.cpp" />
+		<Unit filename="../asp2_language.h" />
+		<Unit filename="../asp2_main.cpp" />
+		<Unit filename="../asp2_main_utils.cpp" />
+		<Unit filename="../asp2_menu_rwfits.cpp" />
+		<Unit filename="../asp2_photon_corr.cpp" />
+		<Unit filename="../asp2_photon_corr.h" />
+		<Unit filename="../asp2_process.cpp" />
+		<Unit filename="../asp2_rw_config_files.cpp" />
+		<Unit filename="../asp2_rw_config_files.h" />
+		<Unit filename="../asp2_typedef.h" />
+		<Unit filename="../gdp_frame_logbook.cpp" />
+		<Unit filename="../gdp_frame_video.cpp" />
+		<Unit filename="../jlp_Atmcd32d_linux.cpp" />
+		<Unit filename="../jlp_Atmcd32d_linux.h" />
+		<Unit filename="../jlp_andor_cam1.cpp" />
+		<Unit filename="../jlp_andor_cam1.h" />
+		<Unit filename="../jlp_andor_cam1_acqui.cpp" />
+		<Unit filename="../jlp_andor_cam1_acqui_conti.cpp" />
+		<Unit filename="../jlp_andor_cam1_set.cpp" />
+		<Unit filename="../jlp_andor_display.cpp" />
+		<Unit filename="../jlp_andor_display.h" />
+		<Unit filename="../jlp_andor_display_mutex.cpp" />
+		<Unit filename="../jlp_andor_display_mutex.h" />
+		<Unit filename="../jlp_andor_panel.cpp" />
+		<Unit filename="../jlp_andor_panel.h" />
+		<Unit filename="../jlp_andor_panel_onclick1.cpp" />
+		<Unit filename="../jlp_andor_panel_onclick2.cpp" />
+		<Unit filename="../jlp_andor_panel_update.cpp" />
+		<Unit filename="../jlp_andor_utils.cpp" />
+		<Unit filename="../jlp_andor_utils.h" />
+		<Unit filename="../jlp_decode.cpp" />
+		<Unit filename="../jlp_decode.h" />
+		<Unit filename="../jlp_decode_access.cpp" />
+		<Unit filename="../jlp_decode_cube_save.cpp" />
+		<Unit filename="../jlp_decode_process2.cpp" />
+		<Unit filename="../jlp_decode_process_cube.cpp" />
+		<Unit filename="../jlp_decode_process_cube_utils.cpp" />
+		<Unit filename="../jlp_decode_process_scidar.cpp" />
+		<Unit filename="../jlp_display2_mutex.cpp" />
+		<Unit filename="../jlp_display2_mutex.h" />
+		<Unit filename="../jlp_fits0_computer.h" />
+		<Unit filename="../jlp_fits0_cvb.cpp" />
+		<Unit filename="../jlp_fits0_fmt.h" />
+		<Unit filename="../jlp_language_dlg.cpp" />
+		<Unit filename="../jlp_language_dlg.h" />
+		<Unit filename="../jlp_rw_fits0.cpp" />
+		<Unit filename="../jlp_rw_fits0.h" />
+		<Unit filename="../jlp_speckprocess_panel.cpp" />
+		<Unit filename="../jlp_speckprocess_panel.h" />
+		<Unit filename="../jlp_speckprocess_panel_onclick.cpp" />
+		<Unit filename="../jlp_speckprocess_panel_update.cpp" />
+		<Unit filename="../jlp_time0.cpp" />
+		<Unit filename="../jlp_time0.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

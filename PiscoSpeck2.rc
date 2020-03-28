@@ -1,0 +1,22 @@
+#define wxUSE_NO_MANIFEST 0
+
+#include "wx/msw/wx.rc"
+
+mondrian ICON "mondrian.ico"
+new BITMAP "bitmaps/new.bmp"
+open BITMAP "bitmaps/open.bmp"
+save BITMAP "bitmaps/save.bmp"
+copy BITMAP "bitmaps/copy.bmp"
+cut BITMAP "bitmaps/cut.bmp"
+paste BITMAP "bitmaps/paste.bmp"
+print BITMAP "bitmaps/print.bmp"
+help BITMAP "bitmaps/help.bmp"
+stream_start BITMAP "bitmaps/stream_start.bmp"
+stream_stop BITMAP "bitmaps/stream_stop.bmp"
+process_start BITMAP "bitmaps/process_start.bmp"
+process_stop BITMAP "bitmaps/process_stop.bmp"
+stats BITMAP "bitmaps/stats.bmp"
+restore BITMAP "bitmaps/restore.bmp"
+erase BITMAP "bitmaps/erase.bmp"
+
+

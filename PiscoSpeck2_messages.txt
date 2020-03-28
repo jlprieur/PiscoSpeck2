@@ -1,0 +1,1049 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% File menu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% i=9
+FitsCube Setup
+Param&egrave;tres FitsCube
+Parametri FitsCube
+Par&aacute;metros FitsCube
+% i=10
+Andor Setup
+Param&egrave;tres Andor
+Parametri Andor
+Par&aacute;metros Andor
+% i=11
+Raptor Setup
+Param&egrave;tres Raptor
+Parametri Raptor
+Par&aacute;metros Raptor
+% i=12
+Processing Setup
+Param&egrave;tres du traitement
+Parametri del trattamento
+Par&aacute;metros de procesamiento
+% i=13
+Control board
+Tableau de bord
+Pannello di controllo
+Tablero de control
+% i=14
+ANDOR/RAPTOR not connected:
+ANDOR/RAPTOR non connect&eacute;:
+ANDOR/RAPTOR non collegata:
+ANDOR/RAPTOR no est&aacute; connectado:
+% i=15
+ will only process 3D FITS files ! 
+ traitement de fichiers FITS 3D seulement! 
+ solamente per trattare files FITS 3D!
+ s&oacute;lo se procesar&aacute; archivos FITS 3D ! 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Logbook menu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% i=50
+Show logbook window
+Montre le carnet de bord
+Mostra il diario di bordo
+Muestra el libro de registro
+% i=51
+Display the logbook window
+Affiche la fen&ecirc;tre du carnet de bord
+Mostra la finestra del diario di bordo
+Muestra la ventana con el libro de registro
+% i=52
+Hide logbook window
+Cache le carnet de bord
+Nascondi il diario di bordo
+Oculta el libro de registro
+% i=53
+Hide the logbook window
+Cache la fen&ecirc;tre du carnet de bord
+Nascondi la finestra col diario di bordo
+Oculta la ventana con el libro de registro
+% i=54
+Clear the logbook
+Efface le carnet de bord
+Cancella il diario di bordo
+Borra el libro de registro
+% i=55
+Clear the logbook content
+Efface le contenu du carnet de bord
+Cancella il contenuto del diario di bordo
+Borra il contenido del libro de registro
+% i=56
+Clean the logbook
+Nettoie le carnet de bord
+Pulisci il diario di bordo
+Limpia el libro de registro
+% i=57
+Clean the logbook from unuseful content
+Nettoie le contenu du carnet de bord 
+Pulisci il contenuto del diario di bordo
+Limpia el contenido del libro de registro
+% i=58
+Save (cleaned) logbook
+Sauve le carnet de bord (nettoy&eacute;)
+Salva il diario di bordo
+Guarda el libro de registro
+% i=59
+Save a selection from the logbook content
+Sauve une s&eacute;lection du carnet de bord
+Salva una selezione del diario di bordo
+Guarda la seleci&oacute;n del libro de registro
+% i=60
+Logbook
+Carnet de bord
+Diario di bordo
+Libro de registro
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Help menu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% i=90
+Help
+Aide
+Aiuto
+Ayuda
+% i=91
+How to use this program
+Aide pour utiliser ce programme
+Aiuto per l'uso di questo programma
+Ayuda para utilizar este programe
+% i=92
+Context help...
+Aide du contexte
+Aiuto sul contesto
+Ayuda del contexto
+% i=93
+Get context help for a widget/control
+Affiche une aide du contexte d'un bouton/&eacute;l&eacute;ment
+% i=94
+About...
+A propos...
+A proposito...
+A prop&oacute;sito...
+% i=95
+About this program...
+A propos de ce programme...
+A proposito di questo programma...
+Acerca de este programe...
+% i=96
+Help
+Aide
+Aiuto
+Ayuda
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Help/About    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% i=97
+Sorry: 'Help' is not implemented yet
+D&eacute;sol&eacute;: 'Aide' non encore disponible
+Mi dispiace: 'Aiuto' non ancora implementato
+Lo siento: 'Ayuda' aun no implementada 
+% i=98
+Current version: November 2017
+Version actuelle: novembre 2017 
+Versione attuale: novembre 2017 
+Versi&oacute;n actual: noviembre 2017
+% i=99
+Created with wxWidgets
+Cr&eacute;&eacute; avec wxWidgets
+Creato con wxWidgets
+Creado con wxWidgets
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% Toolbar %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% i=120
+Andor/Raptor not connected: please enter 3D FITS file
+Andor/Raptor non connect&eacute;: entrez un fichier 3D-FITS
+Andor/Raptor non collegata: inserire un file 3D-FITS
+Andor/Raptor no conectado: aprire un archivo 3D-FITS
+% i=121
+Start visu
+D&eacute;but visu
+Inizia visu
+Inicia visu
+% i=122
+Start streaming
+Lance la visualisation
+Inizia la visualizzazione
+Inicia la visualizaci&oacute;n
+% i=123
+Stop visu
+Stop visu
+Stop visu
+Stop visu
+% i=124
+Stop streaming
+Arr&ecirc;te la visualisation
+Ferma la visualizzazione
+Detiene la visualizaci&oacute;n
+% i=125
+Start proc
+D&eacute;but trait
+Inizia tratt.
+Inicia visu
+% i=126
+Start processing
+Lance le traitement
+Inizia il trattamento
+Inicia el procesamiento
+% i=127
+Stop proc
+Stop trait
+Stop tratt.
+Stop visu
+% i=128
+Stop processing
+Arr&ecirc;te le traitement
+Interrompi il trattamento
+Detiene el procesamiento
+% i=129
+Statistics
+Statistiques
+Statistica
+Estad&iacute;stica
+% i=130
+Display statistics
+Affiche les statistiques
+Visualizza le statistiche
+Muestra las estad&iacute;sticas
+% i=131
+Restore
+Restaure
+Ripristina
+Restaura
+% i=132
+Restore image
+Restaure l'image
+Ripristina l'immagine
+Restaura la imagen
+% i=133
+Save
+Sauvegarde
+Salva
+Guarda
+% i=134
+Save the results
+Sauve les r&eacute;sultats
+Salva i risultati
+Guarda los resultados
+% i=135
+Erase
+Efface
+Cancella
+Borra
+% i=136
+Erase all
+Efface tout
+Cancella tutto
+Borra todo
+% i=140
+Program to process speckle data from Andor/Raptor or 3D-Fits files
+Programme pour traiter des donn&eacute;es speckle
+Programma per trattare i dati speckle Andor/Raptor o 3D-FITS
+Programma para procesar datos speckle Andor/Raptor o 3D-FITS
+% i=141
+Old results, without bispectrum
+Anciens r&eacute;sultats, sans bispectre
+Risultati precedenti senza bispettro
+Ex resultados, sin biespectro
+% i=142
+LongInt, Autoc, Modsq
+% i=143
+Old results, with bispectrum
+Anciens r&eacute;sultats, avec bispectre
+Risultati precedenti con bispettro
+Ex resultados, con biespectro
+% i=144
+LongInt, Autoc, Modsq, Bispectrum
+LongInt, Autoc, Modsq, Bispectre
+LongInt, Autoc, Modsq, Bispettro
+LongInt, Autoc, Modsq, Biespectro
+% i=145
+3D FITS file (for display)
+Fichier 3D FITS (pour visual.)
+File 3D FITS (per visual.)
+Archivo 3D FITS (para visual.)
+% i=146
+Read a 3D FITS file made with a set of 2D images
+Lit un fichier 3D FITS fait avec un jeu d'images 2D
+Legge un file 3D FITS fatto con immagini 2D
+Lee un archivo 3D FITS hecho con im&aacute;genes 2D
+% i=147
+2D FITS file (for display)
+Fichier 2D FITS (pour visual.)
+File 2D FITS (per visual.)
+Archivo 2D FITS (para visual.)
+% i=148
+Read a FITS file with a 2D image
+Lit un fichier FITS avec une images 2D
+Legge un file FITS con una immagine 2D
+Lee un archivo FITS con una imagen 2D
+% i=149
+Open
+Ouvrir
+Aprire
+Abrir
+% i=150
+Reading data from files
+Lecture de fichiers de donn&eacute;es
+Lettura dei dati da file
+Lectura de datos en archivos
+% i=151
+Processing results
+R&eacute;sultats du traitement
+Risultati del trattamento
+Resultados del procesamiento
+% i=152
+Save processing results to FITS files
+Sauvegarder les r&eacute;sultats en fichiers FITS
+Salvare i risultati in file FITS
+Guardar los resultados en archivos FITS
+% i=153
+Elementary frames to 3DFITS files
+Images &eacute;l&eacute;mentaires en fichiers 3D-FITS
+Immagini elementari in file 3D-FITS
+Im&aacute;genes elementares a archivos 3D-FITS
+% i=154
+Save elementary frames to 3D FITS files
+Sauvegarder les images &eacute;l&eacute;mentaires
+Salvare i dati in file 3D-FITS
+Guardar los datos en archivos 3D-FITS
+% i=155
+Save
+Sauvegarde
+Salvare
+Guardar
+% i=156
+Save data to file
+Sauvegarder les donn&eacute;es dans un fichier
+Salvare i dati in file
+Guardar los datos en archivos
+% i=157
+Exit
+Sortie
+Uscita
+Salida
+% i=158
+Quit program
+Sortie du programme
+Chiudere il programma
+Cierra el programa
+% i=159
+File
+Fichier
+File
+Archivo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% Andor (200+) /Raptor (600+) Panel %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% i=200
+Validate
+Valider
+Convalidare
+Validare
+% i=201
+Cancel 
+Annuler 
+Cancellare
+Annulare
+% i=202
+Save the config
+Sauver la configuration
+Salvare la configurazione
+Guardar la configuraci&oacute;n
+% i=203
+Load a config
+Charger une configuration
+Caricare una configurazione
+Cargar la configuraci&oacute;n
+% i=204
+Standard values
+Valeurs standards
+Valori di default
+Valores est&aacute;ndard
+% i=205
+Image geometry
+G&eacute;om&eacute;trie des images
+Geometria delle immagini
+Geometr&iacute;a de las imag&eacute;nes
+% i=206
+ROI size
+Taille de la fen&ecirc;tre active
+Dimensioni della finestra attiva
+Tama&ntilde;o de la ventana activa
+% i=207
+Rotation (degrees)
+Rotation (degr&eacute;s)
+Rotazione (gradi)
+Rotaci&oacute;n (grados)
+% i=208
+Compression ('binning')
+Compression ('binning')
+Compressione ('binning')
+Compresi&oacute;n ('binning')
+% i=209
+Mirror effect
+Effet miroir
+Effetto specchio
+Efecto de espejo
+% i=210
+None
+Aucun
+Nessuno
+Ninguno
+% i=211
+Vertical
+Vertical
+Verticale
+Vertical
+% i=212
+Horizontal
+Horizontal
+Orizzontale
+Horizontal
+% i=213
+ROI center
+Centre de la fen&ecirc;tre active
+Centro della finestra attiva
+Centro de la ventana activa
+% i=214
+Acquisition settings
+Param&egrave;tres de l'acquisition
+Parametri di acquisizione
+Par&aacute;metros de la adquisici&oacute;n
+% i=215
+Mode
+Mode
+Modo
+Modo
+% i=216
+Long exposure
+Longue pose
+Lunga esposizione
+Larga exposici&oacute;n
+% i=217
+Video (continuous)
+Video (continue)
+Video (continuo)
+Video (continua)
+% i=218
+Sequence of short exp.
+S&eacute;quence de poses courtes
+Sequenza di brevi esp.
+Secuencia de exp. cortas
+% i=219
+Accumulation of short exp.
+Accumulation de poses courtes
+Accumulo di brevi esp.
+Acumulaci&oacute;n de ext. cortas
+% i=220
+Trigger
+D&eacute;clencheur
+Pulsante di avvio
+Gatillo
+% i=221
+Internal
+Interne
+Interno
+Interno
+% i=222
+External
+Externe
+Esterno
+Externo
+% i=223
+Software
+Logiciel
+Software
+Software
+% i=620
+Ext.Trigger
+D&eacute;clencheur ext.
+Pulsante di avvio est.
+Gatillo ext.
+% i=621
+Off
+Off
+Off
+Off
+% i=622
+On (+edge)
+On (bord asc.)
+On (+edge)
+On (+edge)
+% i=623
+On (-edge)
+On (bord desc.)
+On (-edge)
+On (-edge)
+% i=224
+Shutter
+Obturateur
+Otturatore
+Obturador
+% i=225
+Unavailable
+Non disponible
+Non disponibile
+No disponile
+% i=226
+Automatic
+Automatique
+Automatico
+Autom&aacute;tico
+% i=227
+Kept open
+Maintenu ouvert
+Tenuto aperto
+Mantenido abierto
+% i=228
+Kept closed
+Maintenu ferm&eacute;
+Tenuto chiuso
+Mantenido cerrado
+% i=229
+Vertical shift
+D&eacute;calage vertical
+Spostamento verticale
+Desplazamiento vertical
+% i=230
+Vshift speed
+Vitesse d&eacute;calage (vshift-speed)
+Velocit&agrave; di spostamento
+Velocidad de desplazamiento
+% i=231
+Clock vshift voltage
+Tension d'horloge (vshift-volt)
+Tensione dell'orologio (vshift-volt)
+Tensi&oacute;n de reloj (vshift-volt)
+% i=232
+Kinetic mode
+Mode cin&eacute;tique
+Modalit&agrave; cinetica
+Modo cin&eacute;tico
+% i=233
+Short exp exposure time (msec)
+Poses &eacute;l&eacute;mentaires (msec)
+Pose elementari (msec)
+Expo. elementares (msec)
+% i=234
+Clock time (= frame period) (msec)
+P&eacute;riode des poses (clock-time) (msec)
+Tempo di esposizioni (clock-time) (msec)
+Per&iacute;odo de las exposiciones (clock-time) (msec)
+% i=235
+Number of frames/cycle
+Nombre de poses/cycle
+Numero di esposizioni/ciclo
+N&uacute;mero de exposiciones/ciclo
+% i=236
+Cycle time (= cycle period) (msec)
+P&eacute;riode des cycles (cycle-time) (msec)
+Periodo dei cicli (cycle-time) (msec)
+Per&iacute;odo de los ciclos (cycle-time) (msec)
+% i=237
+Number of cycles
+Nombre de cycles
+Numero di cicli
+N&uacute;mero de ciclos
+% i=238
+Integration time (sec)
+Temps d'int&eacute;gration (sec)
+Tempo d'integrazione (sec)
+Tiempo de integraci&oacute;n (sec)
+% i=239
+Read-out register
+Registre de sortie (d&eacute;c. horiz.)
+Registro di uscita
+Registro de salida
+% i=240
+H-shift speed
+Vitesse (Hshift speed)
+Velocit&agrave; (Hshift speed)
+Velocidad (Hshift speed)
+% i=241
+Preampli. gain
+Gain du pr&eacute;ampli
+Guadagno preampli.
+Ganancia de preampli.
+% i=242
+A/D channel
+Canal convertisseur A/N
+Canale analogico digitale
+Canal convertidor D/A
+% i=243
+EMCCD gain
+Gain EMCCD
+Guadagno EMCCD
+Ganancia EMCCD
+% i=244
+Activated
+Activ&eacute; 
+Attivato
+Activado
+% i=245
+EMGain
+EMGain
+EMGain
+EMGain
+% i=630
+Current camera status
+Etat actuel de la cam&eacute;ra
+Stato attuale della camera
+Estado actual de la c&aacute;mara
+% i=631
+Sensor temp. (deg. C)
+Temp. capteur (deg. C)
+Temp. sensore (gr. C)
+Temp. sensor (gr. C)
+% i=632
+Box temp. (deg. C)
+Temp. boitier (deg. C)
+Temp. scatola (gr. C)
+Temp. caja (gr. C)
+% i=633
+Gain
+Gain
+Gadagno
+Ganancia
+% i=634
+Expo. time (msec)
+Temps expo. (msec)
+Tiempo di exp. (mseg)
+Tiempo de exp. (mseg)
+% i=639
+Update camera status
+Mise &agrave; jour, &eacute;tat cam&eacute;
+Aggiornamento dello stato della camera
+Actualizaci&oacute;n del estado de la c&aacute;mara
+% i=640
+Camera setup
+Camera setup
+Camera setup
+Camera setup
+% i=641
+NUC State
+Etat NUC
+Estate NUC
+Estado NUC
+% i=642
+Frame rate
+Freq. image
+Freq. immagine
+Freq. imagen
+% i=643
+Gain
+Gain
+Guadagno
+Ganancia
+% i=644
+High Gain
+Haut Gain 
+Alto Gadagno
+Alta Ganancia
+% i=645
+Digital Gain
+Gain digital
+Gadagno digitale
+Ganancia digitale
+% i=246
+Cooler control
+R&eacute;gulation de temp&eacute;rature
+Controllo della temperatura
+Control de la temperatura
+% i=247
+Set point (deg. C)
+Consigne (deg. C)
+Valore impostato (gradi C)
+Consigna (grados C)
+% i=248
+Baseline clamp
+% i=249
+Frame transfer
+Transfert de trame
+Trasferimento di trama
+Transferencia de fotogramas
+% i=647
+Trigger delay
+% i=648
+Auto exposure
+Exposition auto.
+Esposizione auto.
+Exposici&oacute;n auto.
+% i=649
+Image Sharpen
+Image aiguis&eacute;e
+Nitidezza Immagine
+Nitidez de imagen
+% i=250
+Activated
+Activ&eacute;
+Attivato
+Activado
+% i=251
+Fan
+Ventilateur
+Ventilatore
+Ventilator
+% i=260
+Full frame
+Plein cadre
+Frame intero
+Fotogr. completo
+% i=261
+Hori. and vert.
+Hori. et vert.
+Oriz. e vert.
+Hori. y vert.
+%%%%%%%%%%%
+% i=270
+Shutdown options
+Options d'arr&ecirc;t
+Opzioni di spegnimento
+Opciones de apagado
+% i=271
+Shutter closed
+Obturateur ferm&eacute; 
+Otturatore chiuso
+Obturador cerrado
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% Speckle Process Panel %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% i=300
+Type of processing
+Type de traitement
+Tipo di trattamento
+Tipo de tratamiento
+% i=301
+Mode :
+Mode :
+Modo :
+Modo :
+% i=302
+None (display only)
+Aucun (visualisation seulement)
+Nessuno (visualizzare solo)
+Ninguno (mostrar s&oacute;lo)
+% i=303
+Integration (with/without centering)
+Int&eacute;gration (avec/sans recentrage)
+Integrazione (con/senza centratura)
+Integrazione (con/sin centrar)
+% i=304
+Autocorr., spectrum
+Autocorr., spectre
+Autocorr., spettro
+Autocorr., espectro
+% i=305
+Autocorr., spectrum, quadrant
+Autocorr., spectre, quadrant
+Autocorr., spettro, quadrante
+Autocorr., espectro, cuadrante
+% i=306
+Bispectrum, spectrum
+Bispectre, spectre
+Bispettro, spettro
+Biespectro, espectro
+% i=307
+Bispectrum, autocorr., spectrum, quadrant
+Bispectre, autocorr., spectre, quadrant
+Bispettro, autocorr., spettro, quadrante
+Biespectro, autocorr., espectro, cuadrante
+% i=308
+Spectroscopy
+Spectroscopie
+Spettroscopia
+Espectroscopia
+% i=309
+SCIDAR-Linear
+SCIDAR-Lin&eacute;aire
+SCIDAR-Lineare
+SCIDAR-Lineal
+% i=310
+SCIDAR-Logarithm
+SCIDAR-Logarithme
+SCIDAR-Logaritmico
+SCIDAR-Logaritmo
+% i=311
+Bispectrum
+Bispectre
+Bispettro
+Biespectro
+% i=312
+Slit angle :
+Angle de la fente :
+Angolo della fenditura :
+Angulo de la ranura :
+% i=313
+Spectrum angle :
+Angle du spectre :
+Angolo di spettro :
+Angulo del espectro :
+% i=314
+Statistics and image selection
+Statistiques et s&eacute;lection d'images
+Statistiche e selezione immagini
+Estad&iacute;stica y selecci&oacute;n de im&aacute;genes
+% i=315
+Statistics
+Statistiques
+Statistiche
+Estad&iacute;stica
+% i=316
+Selection with the seeing
+S&eacute;lection avec le seeing
+Selezione con il seeing
+Selecci&oacute;n con el seeing
+% i=317
+Selection with the maximum value
+S&eacute;lection avec la valeur maximale
+Selezione con il valore massimo
+Seleci&oacute;n con el valor m&aacute;ximo
+% i=318
+Min/max thresholds used for selection :
+Seuils min/max utilis&eacute;s pour la s&eacute;lection :
+Soglie min/max utilizzate per la selezione :
+Umbrales min/max utilizados para la selecci&oacute;n :
+% i=319
+Seeing val. :
+Val. seeing :
+Val. seeing :
+Val. seeing :
+% i=320
+Maximum val. :
+Val. maximales :
+Val. massimi :
+Val. m&aacute;ximos :
+% i=321
+Image cubes
+Cubes d'images
+Cubi di immagini
+Cubos de imagenes
+% i=322
+KK cross-cor. :
+KK intercor. :
+KK intercor. :
+KK intercor. :
+% i=323
+Backup of the elementary images
+Sauvegarde des images &eacute;l&eacute;mentaires
+Salvataggio delle immagini elementari
+Salvaguardia de las im&aacute;genes elementares
+% i=324
+Backup :
+Sauvegarde :
+Salvataggio :
+Salvaguardia :
+% i=325
+No backup
+Pas de sauvegarde
+Nessun salvataggio
+Ninguna salvaguardia
+% i=326
+All the images
+Toutes les images
+Tutte le immagini
+Todas las im&aacute;genes
+% i=327
+Selection only
+S&eacute;lection seulement
+Solo selezione
+S&oacute;lo selecci&oacute;n
+% i=328
+U.T./L.T. shift :
+D&eacute;calage T.L./T.U. :
+Spostamento T.L./T.U. :
+Cambio T.L./T.U. :
+% i=330
+Offset correction
+Offset : correction
+Offset : correzione
+Offset : correcci&oacute;n
+% i=331
+Threshold only
+Seuil seulement
+Soglia solamente
+S&oacute;lo umbral
+% i=332
+Threshold and file
+Seuil et fichier
+Soglia e file
+Umbral y archivo
+% i=333
+Offset threshold
+Seuil offset
+Soglia offset
+Umbral offset
+% i=334
+Offset file
+Fichier offset
+File offset
+Archivo offset
+% i=335
+Select offset file
+S&eacute;lect. fichier offset
+Selez. file offset
+Selec. archivo offset
+% i=336
+Flat field correction
+Flat field : correction
+Flat field : correzione
+Flat field : correcci&oacute;n
+% i=337
+No correction
+Pas de correction
+Nessuna correzione
+Ninguna correcci&oacute;n
+% i=338
+Corr. with file
+Corr. avec fichier
+Corr. con file
+Corr. con archivo
+% i=339
+Ffield file:
+Fichier ffield:
+File ffield:
+Archivo ffield:
+% i=340
+Select flat field file
+S&eacute;lect. fichier flat field
+Selez. file flat field
+Selec. archivo flat field
+% i=341
+Options
+% i=342
+Direct vector
+Vecteur d'orientation
+Vettore di orientamento
+Vector de orientaci&oacute;n
+% i=343
+Lucky imaging (with selection)
+Image 'Lucky' (avec s&eacute;lection)
+Immagine 'Lucky' (con selezione)
+Im&aacute;gen 'Lucky' (con selecci&oacute;n)
+% i=350
+Auxiliary files
+Fichiers auxiliaires
+Files ausiliari
+Archivos auxiliares
+% i=351
+Autoc of an unresolved star
+Autoc d'une &eacute;toile non r&eacute;solue
+Autoc di una stella non risolta
+Autoc de una estrella no resuelta
+% i=352
+Select unresolved autoc
+S&eacute;lect. autoc non r&eacute;solue
+Selez. autoc non risolta
+Selec. autoc no resuelta
+% i=353
+Modsq of an unresolved star
+Modsq d'une &eacute;toile non r&eacute;solue
+Modsq di una stella non risolta
+Modsq de una estrella no resuelta
+% i=354
+Select unresolved modsq
+S&eacute;lect. modsq non r&eacute;solu
+Selez. modsq non risolto
+Selec. modsq no resuelto
+% i=355
+Modsq of photon response
+Modsq de la r&eacute;ponse &agrave; un photon
+Modsq della riposta ad un fotone
+Modsq de la respuesta a un fot&oacute;n
+% i=356
+Select photon modsq
+S&eacute;lect. modsq photon
+Selez. modsq fotone
+Selec. modsq fot&oacute;n
+% i=360
+Directories
+R&eacute;pertoires
+Direttorii
+Directorios
+% i=361
+Temporary files
+Fichiers temporaires
+Files temporanei
+Archivos temporales
+% i=362
+Cubes 3D FITS
+Cubes 3D FITS
+Cubi 3D FITS
+Cubos 3D FITS
+% i=363
+Results
+R&eacute;sultats
+Risultati
+Resultados
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Display panel
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% i=400
+Short exposure
+Pose courte
+Esposizione breve
+Exposici&oacute;n corta
+% i=401
+Power spectrum
+Spectre de puissance
+Spettro di potenza
+Espectro de potencia
+% i=402
+Autocorrelation
+Autocorr&eacute;lation
+Autocorrelazione
+Autocorrelaci&oacute;n
+% i=403
+Long integration
+Longue int&eacute;gration
+Lunga integrazione
+Larga integraci&oacute;n
+% i=404
+Quadrant
+Quadrant
+Quadrante
+Cuadrante
+% i=405
+Autoc. - unres. autoc
+Autoc. - autoc. non r&eacute;solue
+Autoc. - autoc. non risolta
+Autoc. - autoc no resuelta
+% i=406
+Lucky image
+Image 'Lucky'
+Immagine 'Lucky'
+Im&aacute;gen 'Lucky'
+%%% NB: i=342 "Direct vector"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% Decode %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% i=500
+Warning:
+Attention :
+Attenzione :
+Atenci&oacute;n :
+% i=501
+the results have not been saved!
+les r&eacutesultats n'ont pas &eacute;t&eacute; sauv&eacute;s!
+i resultati non sono stati salvati !
+los resultados no estan salvados
+% i=502
+Do you want to save the results ?
+Voulez-vous sauver les reacute;sultats ?
+Volete salvare i resultati ?
+Quiere salvar lors resultados
+% i=503
+(already saved)
+(d&eacute;j&aacute; sauv&eacute;es
+(gi&aacute; salvate)
+(ya salvado)
+% i=504
+(not yet saved)
+(pas encore sauv&eacute;es)
+(non ancora salvate)
+(no salvadas a&uaute;n)
+% i=505
+Number of frames:
+Nombre d'images:
+Numero di immagini:
+N&uacute;mero de im&aacute;genes:
+% i=506
+selection
+s&eacute;lection
+selezione
+selecci&oaute;n

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Debug" />
+	<File name="..\asp2_process\asp2_inv_bispec2.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6614" topLine="167" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_andor\Atmcd32d.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="11683" topLine="198" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_raptor\jlp_raptor_panel_onclick1.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="21334" topLine="686" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_andor\jlp_andor_cam1.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="15003" topLine="438" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_raptor\jlp_raptor_panel_update.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="15163" topLine="534" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_andor\jlp_andor_cam1.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1192" topLine="5" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_raptor\jlp_raptor_serial.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8715" topLine="310" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_process\jlp_decode.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2119" topLine="31" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_andor\jlp_andor_cam1_acqui.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6974" topLine="262" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_process\jlp_decode.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9003" topLine="170" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_andor\jlp_andor_cam1_acqui_conti.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="10361" topLine="273" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_raptor\jlp_raptor_utils.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6111" topLine="160" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_process\jlp_decode_access.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12681" topLine="401" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_andor\jlp_andor_cam1_set.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12710" topLine="375" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_raptor\jlp_raptor_utils.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1540" topLine="36" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_process\jlp_decode_cube_save.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12425" topLine="320" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_andor\jlp_andor_panel.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="15721" topLine="355" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_andor\jlp_andor_panel.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1967" topLine="61" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_frame\asp2_frame.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6901" topLine="229" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_andor\jlp_andor_panel_onclick1.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6963" topLine="194" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_frame\asp2_frame.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6041" topLine="177" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_andor\jlp_andor_panel_update.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12433" topLine="396" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_frame\asp2_frame_id.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2002" topLine="71" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_camera\jlp_camera_display_mutex.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1599" topLine="28" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_andor\jlp_andor_utils.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9871" topLine="244" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_process\jlp_speckprocess_panel.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2156" topLine="51" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_andor\jlp_andor_utils.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4159" topLine="65" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_process\jlp_speckprocess_panel.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2840" topLine="98" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_camera\jlp_camera_panel.cpp" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1682" topLine="21" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_fitscube\jlp_fitscube_cam1.cpp" open="0" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1885" topLine="51" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_camera\jlp_camera_panel.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="34" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_fitscube\jlp_fitscube_cam1.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1776" topLine="33" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_frame\asp2_frame_menu.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2306" topLine="44" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_raptor\jlp_raptor_cam1.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6421" topLine="174" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_fitscube\jlp_fitscube_cam1_acqui.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1262" topLine="19" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_frame\asp2_frame_menu_onclick.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3543" topLine="109" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_raptor\jlp_raptor_cam1.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2412" topLine="45" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_tools\asp2_rw_config_files.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6927" topLine="144" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_camera\jlp_camera_thread.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6801" topLine="201" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_fitscube\jlp_fitscube_cam1_acqui_conti.cpp" open="0" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2105" topLine="42" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_frame\asp2_frame_process.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8411" topLine="220" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_raptor\jlp_raptor_cam1_acqui.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1561" topLine="30" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_camera\jlp_camera_thread.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1694" topLine="52" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_fitscube\jlp_fitscube_cam1_set.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2664" topLine="48" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_frame\asp2_frame_utils.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2393" topLine="54" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_raptor\jlp_raptor_cam1_get.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="17109" topLine="472" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_tools\asp_camera_dlg.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4628" topLine="109" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_camera\jlp_camera_thread_display.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3399" topLine="70" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_frame\asp2_menu_rwfits.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9503" topLine="256" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_raptor\jlp_raptor_cam1_set.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2893" topLine="65" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_tools\asp_camera_dlg.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1231" topLine="31" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_camera\jlp_camera_utils.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1678" topLine="30" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_frame\asp2_typedef.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4896" topLine="114" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_raptor\jlp_raptor_cam1_tools.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2823" topLine="88" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_camera\jlp_camera_utils.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="456" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_fitscube\jlp_fitscube_panel_onclick1.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7219" topLine="232" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_raptor\jlp_raptor_panel.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="16390" topLine="392" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_fits\asp2_2dfits_utils.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3268" topLine="78" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_process\asp2_covermas.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5399" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_raptor\jlp_raptor_panel.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5019" topLine="127" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_fits\asp2_2dfits_utils.h" open="0" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_fitscube\jlp_fitscube_utils.cpp" open="0" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6218" topLine="171" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_tools\jlp_display2_mutex.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5154" topLine="140" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_app_main.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5364" topLine="137" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_fits\asp2_3D_infits.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1774" topLine="33" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_fitscube\jlp_fitscube_utils.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1603" topLine="23" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_camera\jlp_camera1.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1009" topLine="14" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_fits\asp2_3D_infits.h" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1855" topLine="34" />
+		</Cursor>
+	</File>
+	<File name="..\jlp_raptor\epix_inc\XCLIBWNT_IMPORT.H" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6358" topLine="101" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_camera\jlp_camera1.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1386" topLine="39" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_fits\asp2_3D_outfits.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1087" topLine="21" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_tools\jlp_language_dlg.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1144" topLine="28" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_camera\jlp_camera_display.cpp" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6016" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_process\asp2_decode_thread.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8018" topLine="240" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_camera\jlp_camera_display.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1651" topLine="35" />
+		</Cursor>
+	</File>
+	<File name="..\asp2_fits\asp2_3dfits_rd_utils.cpp" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1826" topLine="57" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>

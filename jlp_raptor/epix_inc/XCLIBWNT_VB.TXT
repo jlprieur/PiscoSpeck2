@@ -1,0 +1,2534 @@
+'                                                          
+'   XCLIBWNT_VB.TXT     External     27-Apr-2017    
+'   Copyright (C)  2006-2017   EPIX, Inc.  All rights reserved.
+'                                                          
+'   XCLIB Declarations for VB                              
+'                                                          
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_PIXCIopen(const char*driverparms,const char*formatname,const char*formatfile);
+' The `driverparms' parameter has been declared expecting a double quoted String to be passed
+' The `formatname' parameter has been declared expecting a double quoted String to be passed
+' The `formatfile' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_PIXCIOPEN Lib "XCLIBWNT.DLL" Alias "pxd_PIXCIopen"  _
+(ByVal c_driverparms as String, ByVal c_formatname as String, ByVal c_formatfile as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_PIXCIclose(void);
+Private Declare Function PXD_PIXCICLOSE Lib "XCLIBWNT.DLL" Alias "pxd_PIXCIclose"  _
+() as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_mesgFault(int unitmap);
+Private Declare Function PXD_MESGFAULT Lib "XCLIBWNT.DLL" Alias "pxd_mesgFault"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,char*)pxd_mesgErrorCode(int err);
+Private Declare Function PXD_MESGERRORCODE Lib "XCLIBWNT.DLL" Alias "pxd_mesgErrorCode"  _
+(ByVal c_err as Long) as String
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_mesgFaultText(int unitmap,char buf[],size_t bufsize);
+' The `buf' parameter has been declared expecting a dimensioned Byte array to be passed
+Private Declare Function PXD_MESGFAULTTEXT Lib "XCLIBWNT.DLL" Alias "pxd_mesgFaultText"  _
+(ByVal c_unitmap as Long, c_buf as Any, ByVal c_bufsize as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_mesgFaultText(int unitmap,char*buf,size_t bufsize);
+' Duplicate declaration
+
+' _cDcl(__declspec(dllexport),__stdcall,pxdstate_s*)pxe_XCLIBinstantiate(void);
+Private Declare Function PXE_XCLIBINSTANTIATE Lib "XCLIBWNT.DLL" Alias "pxe_XCLIBinstantiate"  _
+() as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,void)pxe_XCLIBuninstantiate(pxdstate_s*);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Sub PXE_XCLIBUNINSTANTIATE Lib "XCLIBWNT.DLL" Alias "pxe_XCLIBuninstantiate"  _
+(ByVal c_noname1 as Long)
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_PIXCIopen(pxdstate_s*,const char*driverparms,const char*formatname,const char*formatfile);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `driverparms' parameter has been declared expecting a double quoted String to be passed
+' The `formatname' parameter has been declared expecting a double quoted String to be passed
+' The `formatfile' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_PIXCIOPEN Lib "XCLIBWNT.DLL" Alias "pxe_PIXCIopen"  _
+(ByVal c_noname1 as Long, ByVal c_driverparms as String, ByVal c_formatname as String,  _
+ByVal c_formatfile as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_PIXCIclose(pxdstate_s*);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_PIXCICLOSE Lib "XCLIBWNT.DLL" Alias "pxe_PIXCIclose"  _
+(ByVal c_noname1 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_mesgFault(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_MESGFAULT Lib "XCLIBWNT.DLL" Alias "pxe_mesgFault"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_mesgFaultText(pxdstate_s*,int unitmap,char buf[],size_t bufsize);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `buf' parameter has been declared expecting a dimensioned Byte array to be passed
+Private Declare Function PXE_MESGFAULTTEXT Lib "XCLIBWNT.DLL" Alias "pxe_mesgFaultText"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, c_buf as Any, ByVal c_bufsize as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_mesgFaultText(pxdstate_s*,int unitmap,char*buf,size_t bufsize);
+' Duplicate declaration
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_infoModel(int unitmap);
+Private Declare Function PXD_INFOMODEL Lib "XCLIBWNT.DLL" Alias "pxd_infoModel"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_infoSubmodel(int unitmap);
+Private Declare Function PXD_INFOSUBMODEL Lib "XCLIBWNT.DLL" Alias "pxd_infoSubmodel"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_infoUnits(void);
+Private Declare Function PXD_INFOUNITS Lib "XCLIBWNT.DLL" Alias "pxd_infoUnits"  _
+() as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,char*)pxd_infoDriverId(void);
+Private Declare Function PXD_INFODRIVERID Lib "XCLIBWNT.DLL" Alias "pxd_infoDriverId"  _
+() as String
+
+' _cDcl(__declspec(dllexport),__stdcall,char*)pxd_infoLibraryId(void);
+Private Declare Function PXD_INFOLIBRARYID Lib "XCLIBWNT.DLL" Alias "pxd_infoLibraryId"  _
+() as String
+
+' _cDcl(__declspec(dllexport),__stdcall,ulong)pxd_infoMemsize(int unitmap);
+Private Declare Function PXD_INFOMEMSIZE Lib "XCLIBWNT.DLL" Alias "pxd_infoMemsize"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_infoSysTicksUnits(uint32 ticku[2]);
+' The `ticku' parameter has been declared expecting a dimensioned Long array w. 2 elements to be passed
+Private Declare Function PXD_INFOSYSTICKSUNITS Lib "XCLIBWNT.DLL" Alias "pxd_infoSysTicksUnits"  _
+(c_ticku as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_infoSysTicks(uint32 ticks[2]);
+' The `ticks' parameter has been declared expecting a dimensioned Long array w. 2 elements to be passed
+Private Declare Function PXD_INFOSYSTICKS Lib "XCLIBWNT.DLL" Alias "pxd_infoSysTicks"  _
+(c_ticks as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_infoModel(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_INFOMODEL Lib "XCLIBWNT.DLL" Alias "pxe_infoModel"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_infoSubmodel(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_INFOSUBMODEL Lib "XCLIBWNT.DLL" Alias "pxe_infoSubmodel"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_infoUnits(pxdstate_s*);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_INFOUNITS Lib "XCLIBWNT.DLL" Alias "pxe_infoUnits"  _
+(ByVal c_noname1 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,char*)pxe_infoDriverId(pxdstate_s*);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_INFODRIVERID Lib "XCLIBWNT.DLL" Alias "pxe_infoDriverId"  _
+(ByVal c_noname1 as Long) as String
+
+' _cDcl(__declspec(dllexport),__stdcall,char*)pxe_infoLibraryId(pxdstate_s*);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_INFOLIBRARYID Lib "XCLIBWNT.DLL" Alias "pxe_infoLibraryId"  _
+(ByVal c_noname1 as Long) as String
+
+' _cDcl(__declspec(dllexport),__stdcall,ulong)pxe_infoMemsize(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_INFOMEMSIZE Lib "XCLIBWNT.DLL" Alias "pxe_infoMemsize"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_infoSysTicksUnits(pxdstate_s*,uint32 ticku[2]);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `ticku' parameter has been declared expecting a dimensioned Long array to be passed
+Private Declare Function PXE_INFOSYSTICKSUNITS Lib "XCLIBWNT.DLL" Alias "pxe_infoSysTicksUnits"  _
+(ByVal c_noname1 as Long, c_ticku as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_infoSysTicks(pxdstate_s*,uint32 ticks[2]);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `ticks' parameter has been declared expecting a dimensioned Long array to be passed
+Private Declare Function PXE_INFOSYSTICKS Lib "XCLIBWNT.DLL" Alias "pxe_infoSysTicks"  _
+(ByVal c_noname1 as Long, c_ticks as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageXdim(void);
+Private Declare Function PXD_IMAGEXDIM Lib "XCLIBWNT.DLL" Alias "pxd_imageXdim"  _
+() as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageYdim(void);
+Private Declare Function PXD_IMAGEYDIM Lib "XCLIBWNT.DLL" Alias "pxd_imageYdim"  _
+() as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageCdim(void);
+Private Declare Function PXD_IMAGECDIM Lib "XCLIBWNT.DLL" Alias "pxd_imageCdim"  _
+() as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageBdim(void);
+Private Declare Function PXD_IMAGEBDIM Lib "XCLIBWNT.DLL" Alias "pxd_imageBdim"  _
+() as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageZdim(void);
+Private Declare Function PXD_IMAGEZDIM Lib "XCLIBWNT.DLL" Alias "pxd_imageZdim"  _
+() as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageIdim(void);
+Private Declare Function PXD_IMAGEIDIM Lib "XCLIBWNT.DLL" Alias "pxd_imageIdim"  _
+() as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_imageAspectRatio(void);
+Private Declare Function PXD_IMAGEASPECTRATIO Lib "XCLIBWNT.DLL" Alias "pxd_imageAspectRatio"  _
+() as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageXdims(int unitmap);
+Private Declare Function PXD_IMAGEXDIMS Lib "XCLIBWNT.DLL" Alias "pxd_imageXdims"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageYdims(int unitmap);
+Private Declare Function PXD_IMAGEYDIMS Lib "XCLIBWNT.DLL" Alias "pxd_imageYdims"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageCdims(int unitmap);
+Private Declare Function PXD_IMAGECDIMS Lib "XCLIBWNT.DLL" Alias "pxd_imageCdims"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageBdims(int unitmap);
+Private Declare Function PXD_IMAGEBDIMS Lib "XCLIBWNT.DLL" Alias "pxd_imageBdims"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageZdims(int unitmap);
+Private Declare Function PXD_IMAGEZDIMS Lib "XCLIBWNT.DLL" Alias "pxd_imageZdims"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageIdims(int unitmap);
+Private Declare Function PXD_IMAGEIDIMS Lib "XCLIBWNT.DLL" Alias "pxd_imageIdims"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_imageAspectRatios(int unitmap);
+Private Declare Function PXD_IMAGEASPECTRATIOS Lib "XCLIBWNT.DLL" Alias "pxd_imageAspectRatios"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageXdim(pxdstate_s*);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_IMAGEXDIM Lib "XCLIBWNT.DLL" Alias "pxe_imageXdim"  _
+(ByVal c_noname1 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageYdim(pxdstate_s*);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_IMAGEYDIM Lib "XCLIBWNT.DLL" Alias "pxe_imageYdim"  _
+(ByVal c_noname1 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageCdim(pxdstate_s*);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_IMAGECDIM Lib "XCLIBWNT.DLL" Alias "pxe_imageCdim"  _
+(ByVal c_noname1 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageBdim(pxdstate_s*);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_IMAGEBDIM Lib "XCLIBWNT.DLL" Alias "pxe_imageBdim"  _
+(ByVal c_noname1 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageZdim(pxdstate_s*);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_IMAGEZDIM Lib "XCLIBWNT.DLL" Alias "pxe_imageZdim"  _
+(ByVal c_noname1 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageIdim(pxdstate_s*);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_IMAGEIDIM Lib "XCLIBWNT.DLL" Alias "pxe_imageIdim"  _
+(ByVal c_noname1 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_imageAspectRatio(pxdstate_s*);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_IMAGEASPECTRATIO Lib "XCLIBWNT.DLL" Alias "pxe_imageAspectRatio"  _
+(ByVal c_noname1 as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageXdims(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_IMAGEXDIMS Lib "XCLIBWNT.DLL" Alias "pxe_imageXdims"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageYdims(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_IMAGEYDIMS Lib "XCLIBWNT.DLL" Alias "pxe_imageYdims"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageCdims(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_IMAGECDIMS Lib "XCLIBWNT.DLL" Alias "pxe_imageCdims"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageBdims(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_IMAGEBDIMS Lib "XCLIBWNT.DLL" Alias "pxe_imageBdims"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageZdims(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_IMAGEZDIMS Lib "XCLIBWNT.DLL" Alias "pxe_imageZdims"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageIdims(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_IMAGEIDIMS Lib "XCLIBWNT.DLL" Alias "pxe_imageIdims"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_imageAspectRatios(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_IMAGEASPECTRATIOS Lib "XCLIBWNT.DLL" Alias "pxe_imageAspectRatios"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_readuchar(int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,uchar*membuf,size_t cnt,char*colorspace);
+' The `membuf' parameter has been declared expecting a dimensioned Byte array to be passed
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_READUCHAR Lib "XCLIBWNT.DLL" Alias "pxd_readuchar"  _
+(ByVal c_unitmap as Long, ByVal c_framebuf as Long, ByVal c_ulx as Long, ByVal c_uly as Long,  _
+ByVal c_lrx as Long, ByVal c_lry as Long, c_membuf as Any, ByVal c_cnt as Long,  _
+ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_writeuchar(int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,uchar*membuf,size_t cnt,char*colorspace);
+' The `membuf' parameter has been declared expecting a dimensioned Byte array to be passed
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_WRITEUCHAR Lib "XCLIBWNT.DLL" Alias "pxd_writeuchar"  _
+(ByVal c_unitmap as Long, ByVal c_framebuf as Long, ByVal c_ulx as Long, ByVal c_uly as Long,  _
+ByVal c_lrx as Long, ByVal c_lry as Long, c_membuf as Any, ByVal c_cnt as Long,  _
+ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_readushort(int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,ushort*membuf,size_t cnt,char*colorspace);
+' The `membuf' parameter has been declared expecting a dimensioned Integer array to be passed
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_READUSHORT Lib "XCLIBWNT.DLL" Alias "pxd_readushort"  _
+(ByVal c_unitmap as Long, ByVal c_framebuf as Long, ByVal c_ulx as Long, ByVal c_uly as Long,  _
+ByVal c_lrx as Long, ByVal c_lry as Long, c_membuf as Any, ByVal c_cnt as Long,  _
+ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_writeushort(int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,ushort*membuf,size_t cnt,char*colorspace);
+' The `membuf' parameter has been declared expecting a dimensioned Integer array to be passed
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_WRITEUSHORT Lib "XCLIBWNT.DLL" Alias "pxd_writeushort"  _
+(ByVal c_unitmap as Long, ByVal c_framebuf as Long, ByVal c_ulx as Long, ByVal c_uly as Long,  _
+ByVal c_lrx as Long, ByVal c_lry as Long, c_membuf as Any, ByVal c_cnt as Long,  _
+ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pximage_s*)pxd_defineImage(int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_DEFINEIMAGE Lib "XCLIBWNT.DLL" Alias "pxd_defineImage"  _
+(ByVal c_unitmap as Long, ByVal c_framebuf as Long, ByVal c_ulx as Long, ByVal c_uly as Long,  _
+ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pximage3_s*)pxd_defineImage3(int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_DEFINEIMAGE3 Lib "XCLIBWNT.DLL" Alias "pxd_defineImage3"  _
+(ByVal c_unitmap as Long, ByVal c_startbuf as Long, ByVal c_endbuf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pximage_s*)pxd_definePximage(int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_DEFINEPXIMAGE Lib "XCLIBWNT.DLL" Alias "pxd_definePximage"  _
+(ByVal c_unitmap as Long, ByVal c_framebuf as Long, ByVal c_ulx as Long, ByVal c_uly as Long,  _
+ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pximage3_s*)pxd_definePximage3(int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_DEFINEPXIMAGE3 Lib "XCLIBWNT.DLL" Alias "pxd_definePximage3"  _
+(ByVal c_unitmap as Long, ByVal c_startbuf as Long, ByVal c_endbuf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,void)pxd_definePximageFree(pximage_s*);
+Private Declare Sub PXD_DEFINEPXIMAGEFREE Lib "XCLIBWNT.DLL" Alias "pxd_definePximageFree"  _
+(ByVal c_noname1 as Long)
+
+' _cDcl(__declspec(dllexport),__stdcall,void)pxd_definePximage3Free(pximage3_s*);
+Private Declare Sub PXD_DEFINEPXIMAGE3FREE Lib "XCLIBWNT.DLL" Alias "pxd_definePximage3Free"  _
+(ByVal c_noname1 as Long)
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_readuchar(pxdstate_s*,int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,uchar*membuf,size_t cnt,char*colorspace);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `membuf' parameter has been declared expecting a dimensioned Byte array to be passed
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_READUCHAR Lib "XCLIBWNT.DLL" Alias "pxe_readuchar"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_framebuf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, c_membuf as Any,  _
+ByVal c_cnt as Long, ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_writeuchar(pxdstate_s*,int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,uchar*membuf,size_t cnt,char*colorspace);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `membuf' parameter has been declared expecting a dimensioned Byte array to be passed
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_WRITEUCHAR Lib "XCLIBWNT.DLL" Alias "pxe_writeuchar"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_framebuf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, c_membuf as Any,  _
+ByVal c_cnt as Long, ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_readushort(pxdstate_s*,int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,ushort*membuf,size_t cnt,char*colorspace);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `membuf' parameter has been declared expecting a dimensioned Integer array to be passed
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_READUSHORT Lib "XCLIBWNT.DLL" Alias "pxe_readushort"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_framebuf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, c_membuf as Any,  _
+ByVal c_cnt as Long, ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_writeushort(pxdstate_s*,int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,ushort*membuf,size_t cnt,char*colorspace);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `membuf' parameter has been declared expecting a dimensioned Integer array to be passed
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_WRITEUSHORT Lib "XCLIBWNT.DLL" Alias "pxe_writeushort"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_framebuf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, c_membuf as Any,  _
+ByVal c_cnt as Long, ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pximage_s*)pxe_defineImage(pxdstate_s*,int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_DEFINEIMAGE Lib "XCLIBWNT.DLL" Alias "pxe_defineImage"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_framebuf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pximage3_s*)pxe_defineImage3(pxdstate_s*,int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_DEFINEIMAGE3 Lib "XCLIBWNT.DLL" Alias "pxe_defineImage3"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_startbuf as Long, ByVal c_endbuf as Long,  _
+ByVal c_ulx as Long, ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long,  _
+ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pximage_s*)pxe_definePximage(pxdstate_s*,int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_DEFINEPXIMAGE Lib "XCLIBWNT.DLL" Alias "pxe_definePximage"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_framebuf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pximage3_s*)pxe_definePximage3(pxdstate_s*,int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_DEFINEPXIMAGE3 Lib "XCLIBWNT.DLL" Alias "pxe_definePximage3"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_startbuf as Long, ByVal c_endbuf as Long,  _
+ByVal c_ulx as Long, ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long,  _
+ByVal c_colorspace as String) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,void)pxe_definePximageFree(pxdstate_s*,pximage_s*);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Sub PXE_DEFINEPXIMAGEFREE Lib "XCLIBWNT.DLL" Alias "pxe_definePximageFree"  _
+(ByVal c_noname1 as Long, ByVal c_noname2 as Long)
+
+' _cDcl(__declspec(dllexport),__stdcall,void)pxe_definePximage3Free(pxdstate_s*,pximage3_s*);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Sub PXE_DEFINEPXIMAGE3FREE Lib "XCLIBWNT.DLL" Alias "pxe_definePximage3Free"  _
+(ByVal c_noname1 as Long, ByVal c_noname2 as Long)
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_doSnap(int unitmap,pxbuffer_t buffer,ulong timeout);
+Private Declare Function PXD_DOSNAP Lib "XCLIBWNT.DLL" Alias "pxd_doSnap"  _
+(ByVal c_unitmap as Long, ByVal c_buffer as Long, ByVal c_timeout as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goSnap(int unitmap,pxbuffer_t buffer);
+Private Declare Function PXD_GOSNAP Lib "XCLIBWNT.DLL" Alias "pxd_goSnap"  _
+(ByVal c_unitmap as Long, ByVal c_buffer as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goSnapPair(int unitmap,pxbuffer_t buffer1,pxbuffer_t buffer2);
+Private Declare Function PXD_GOSNAPPAIR Lib "XCLIBWNT.DLL" Alias "pxd_goSnapPair"  _
+(ByVal c_unitmap as Long, ByVal c_buffer1 as Long, ByVal c_buffer2 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goLive(int unitmap,pxbuffer_t buffer);
+Private Declare Function PXD_GOLIVE Lib "XCLIBWNT.DLL" Alias "pxd_goLive"  _
+(ByVal c_unitmap as Long, ByVal c_buffer as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goUnLive(int unitmap);
+Private Declare Function PXD_GOUNLIVE Lib "XCLIBWNT.DLL" Alias "pxd_goUnLive"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goAbortLive(int unitmap);
+Private Declare Function PXD_GOABORTLIVE Lib "XCLIBWNT.DLL" Alias "pxd_goAbortLive"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goLivePair(int unitmap,pxbuffer_t buffer1,pxbuffer_t buffer2);
+Private Declare Function PXD_GOLIVEPAIR Lib "XCLIBWNT.DLL" Alias "pxd_goLivePair"  _
+(ByVal c_unitmap as Long, ByVal c_buffer1 as Long, ByVal c_buffer2 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goLiveSeq(int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxbuffer_t incbuf,pxbuffer_t numbuf,int period);
+Private Declare Function PXD_GOLIVESEQ Lib "XCLIBWNT.DLL" Alias "pxd_goLiveSeq"  _
+(ByVal c_unitmap as Long, ByVal c_startbuf as Long, ByVal c_endbuf as Long, ByVal c_incbuf as Long,  _
+ByVal c_numbuf as Long, ByVal c_period as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goLiveTrig(int unitmap,pxbuffer_t buffer,uint gpin10mask,uint gpout20value,uint gpout20mask,uint gpout20when,
+' uint gpin30wait,uint gpin30mask,uint gpout40value,uint gpout40mask,uint option50,uint field50,
+' uint gpout50value,uint gpout50mask,uint delay60,uint gpout60value,uint gpout60mask,uint delay70,
+' uint field70,uint capture70,uint gpin80mask,uint gpout80value,uint gpout80mask);
+Private Declare Function PXD_GOLIVETRIG Lib "XCLIBWNT.DLL" Alias "pxd_goLiveTrig"  _
+(ByVal c_unitmap as Long, ByVal c_buffer as Long, ByVal c_gpin10mask as Long, ByVal c_gpout20value as Long,  _
+ByVal c_gpout20mask as Long, ByVal c_gpout20when as Long, ByVal c_gpin30wait as Long,  _
+ByVal c_gpin30mask as Long, ByVal c_gpout40value as Long, ByVal c_gpout40mask as Long,  _
+ByVal c_option50 as Long, ByVal c_field50 as Long, ByVal c_gpout50value as Long,  _
+ByVal c_gpout50mask as Long, ByVal c_delay60 as Long, ByVal c_gpout60value as Long,  _
+ByVal c_gpout60mask as Long, ByVal c_delay70 as Long, ByVal c_field70 as Long, ByVal c_capture70 as Long,  _
+ByVal c_gpin80mask as Long, ByVal c_gpout80value as Long, ByVal c_gpout80mask as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goLiveSeqTrig(int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxbuffer_t incbuf,pxbuffer_t numbuf,int period,
+' uint rsvd1,uint rsvd2,uint trig20wait,uint trig20slct,pxvbtime_t trig20delay,uint rsvd3,uint rsvd4,
+' uint rsvd5,uint rsvd6,pxvbtime_t rsvd7,uint rsvd8,uint rsvd9,uint trig40wait,uint trig40slct,
+' pxvbtime_t trig40delay,uint rsvd10,uint rsvd11,uint rsvd12,uint rsvd13,uint rsvd14,uint rsvd15);
+Private Declare Function PXD_GOLIVESEQTRIG Lib "XCLIBWNT.DLL" Alias "pxd_goLiveSeqTrig"  _
+(ByVal c_unitmap as Long, ByVal c_startbuf as Long, ByVal c_endbuf as Long, ByVal c_incbuf as Long,  _
+ByVal c_numbuf as Long, ByVal c_period as Long, ByVal c_rsvd1 as Long, ByVal c_rsvd2 as Long,  _
+ByVal c_trig20wait as Long, ByVal c_trig20slct as Long, ByVal c_trig20delay as Long,  _
+ByVal c_rsvd3 as Long, ByVal c_rsvd4 as Long, ByVal c_rsvd5 as Long, ByVal c_rsvd6 as Long,  _
+ByVal c_rsvd7 as Long, ByVal c_rsvd8 as Long, ByVal c_rsvd9 as Long, ByVal c_trig40wait as Long,  _
+ByVal c_trig40slct as Long, ByVal c_trig40delay as Long, ByVal c_rsvd10 as Long,  _
+ByVal c_rsvd11 as Long, ByVal c_rsvd12 as Long, ByVal c_rsvd13 as Long, ByVal c_rsvd14 as Long,  _
+ByVal c_rsvd15 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goneLive(int unitmap,int rsvd);
+Private Declare Function PXD_GONELIVE Lib "XCLIBWNT.DLL" Alias "pxd_goneLive"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_videoFieldsPerFrame(void);
+Private Declare Function PXD_VIDEOFIELDSPERFRAME Lib "XCLIBWNT.DLL" Alias "pxd_videoFieldsPerFrame"  _
+() as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_videoFieldsPerFrames(int unitmap);
+Private Declare Function PXD_VIDEOFIELDSPERFRAMES Lib "XCLIBWNT.DLL" Alias "pxd_videoFieldsPerFrames"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pxvbtime_t)pxd_videoFieldCount(int unitmap);
+Private Declare Function PXD_VIDEOFIELDCOUNT Lib "XCLIBWNT.DLL" Alias "pxd_videoFieldCount"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pxbuffer_t)pxd_capturedBuffer(int unitmap);
+Private Declare Function PXD_CAPTUREDBUFFER Lib "XCLIBWNT.DLL" Alias "pxd_capturedBuffer"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,uint32)pxd_capturedSysTicks(int unitmap);
+Private Declare Function PXD_CAPTUREDSYSTICKS Lib "XCLIBWNT.DLL" Alias "pxd_capturedSysTicks"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,uint32)pxd_capturedSysTicksHi(int unitmap);
+Private Declare Function PXD_CAPTUREDSYSTICKSHI Lib "XCLIBWNT.DLL" Alias "pxd_capturedSysTicksHi"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pxvbtime_t)pxd_capturedFieldCount(int unitmap);
+Private Declare Function PXD_CAPTUREDFIELDCOUNT Lib "XCLIBWNT.DLL" Alias "pxd_capturedFieldCount"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pxvbtime_t)pxd_buffersFieldCount(int unitmap,pxbuffer_t buffer);
+Private Declare Function PXD_BUFFERSFIELDCOUNT Lib "XCLIBWNT.DLL" Alias "pxd_buffersFieldCount"  _
+(ByVal c_unitmap as Long, ByVal c_buffer as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,uint32)pxd_buffersSysTicks(int unitmap,pxbuffer_t buffer);
+Private Declare Function PXD_BUFFERSSYSTICKS Lib "XCLIBWNT.DLL" Alias "pxd_buffersSysTicks"  _
+(ByVal c_unitmap as Long, ByVal c_buffer as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_buffersSysTicks2(int unitmap,pxbuffer_t buffer,uint32 ticks[2]);
+' The `ticks' parameter has been declared expecting a dimensioned Long array w. 2 elements to be passed
+Private Declare Function PXD_BUFFERSSYSTICKS2 Lib "XCLIBWNT.DLL" Alias "pxd_buffersSysTicks2"  _
+(ByVal c_unitmap as Long, ByVal c_buffer as Long, c_ticks as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_buffersGPIn(int unitmap,pxbuffer_t buffer);
+Private Declare Function PXD_BUFFERSGPIN Lib "XCLIBWNT.DLL" Alias "pxd_buffersGPIn"  _
+(ByVal c_unitmap as Long, ByVal c_buffer as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_doSnap(pxdstate_s*,int unitmap,pxbuffer_t buffer,ulong timeout);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_DOSNAP Lib "XCLIBWNT.DLL" Alias "pxe_doSnap"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_buffer as Long, ByVal c_timeout as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goSnap(pxdstate_s*,int unitmap,pxbuffer_t buffer);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GOSNAP Lib "XCLIBWNT.DLL" Alias "pxe_goSnap"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_buffer as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goSnapPair(pxdstate_s*,int unitmap,pxbuffer_t buffer1,pxbuffer_t buffer2);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GOSNAPPAIR Lib "XCLIBWNT.DLL" Alias "pxe_goSnapPair"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_buffer1 as Long, ByVal c_buffer2 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goLive(pxdstate_s*,int unitmap,pxbuffer_t buffer);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GOLIVE Lib "XCLIBWNT.DLL" Alias "pxe_goLive"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_buffer as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goUnLive(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GOUNLIVE Lib "XCLIBWNT.DLL" Alias "pxe_goUnLive"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goAbortLive(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GOABORTLIVE Lib "XCLIBWNT.DLL" Alias "pxe_goAbortLive"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goLivePair(pxdstate_s*,int unitmap,pxbuffer_t buffer1,pxbuffer_t buffer2);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GOLIVEPAIR Lib "XCLIBWNT.DLL" Alias "pxe_goLivePair"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_buffer1 as Long, ByVal c_buffer2 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goLiveSeq(pxdstate_s*,int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxbuffer_t incbuf,pxbuffer_t numbuf,int period);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GOLIVESEQ Lib "XCLIBWNT.DLL" Alias "pxe_goLiveSeq"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_startbuf as Long, ByVal c_endbuf as Long,  _
+ByVal c_incbuf as Long, ByVal c_numbuf as Long, ByVal c_period as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goLiveTrig(pxdstate_s*,int unitmap,pxbuffer_t buffer,uint gpin10mask,uint gpout20value,uint gpout20mask,uint gpout20when,
+' uint gpin30wait,uint gpin30mask,uint gpout40value,uint gpout40mask,uint option50,uint field50,
+' uint gpout50value,uint gpout50mask,uint delay60,uint gpout60value,uint gpout60mask,uint delay70,
+' uint field70,uint capture70,uint gpin80mask,uint gpout80value,uint gpout80mask);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GOLIVETRIG Lib "XCLIBWNT.DLL" Alias "pxe_goLiveTrig"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_buffer as Long, ByVal c_gpin10mask as Long,  _
+ByVal c_gpout20value as Long, ByVal c_gpout20mask as Long, ByVal c_gpout20when as Long,  _
+ByVal c_gpin30wait as Long, ByVal c_gpin30mask as Long, ByVal c_gpout40value as Long,  _
+ByVal c_gpout40mask as Long, ByVal c_option50 as Long, ByVal c_field50 as Long,  _
+ByVal c_gpout50value as Long, ByVal c_gpout50mask as Long, ByVal c_delay60 as Long,  _
+ByVal c_gpout60value as Long, ByVal c_gpout60mask as Long, ByVal c_delay70 as Long,  _
+ByVal c_field70 as Long, ByVal c_capture70 as Long, ByVal c_gpin80mask as Long,  _
+ByVal c_gpout80value as Long, ByVal c_gpout80mask as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goLiveSeqTrig(pxdstate_s*,int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxbuffer_t incbuf,pxbuffer_t numbuf,int period,
+' uint rsvd1,uint rsvd2,uint trig20wait,uint trig20slct,pxvbtime_t trig20delay,uint rsvd3,uint rsvd4,
+' uint rsvd5,uint rsvd6,pxvbtime_t rsvd7,uint rsvd8,uint rsvd9,uint trig40wait,uint trig40slct,
+' pxvbtime_t trig40delay,uint rsvd10,uint rsvd11,uint rsvd12,uint rsvd13,uint rsvd14,uint rsvd15);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GOLIVESEQTRIG Lib "XCLIBWNT.DLL" Alias "pxe_goLiveSeqTrig"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_startbuf as Long, ByVal c_endbuf as Long,  _
+ByVal c_incbuf as Long, ByVal c_numbuf as Long, ByVal c_period as Long, ByVal c_rsvd1 as Long,  _
+ByVal c_rsvd2 as Long, ByVal c_trig20wait as Long, ByVal c_trig20slct as Long, ByVal c_trig20delay as Long,  _
+ByVal c_rsvd3 as Long, ByVal c_rsvd4 as Long, ByVal c_rsvd5 as Long, ByVal c_rsvd6 as Long,  _
+ByVal c_rsvd7 as Long, ByVal c_rsvd8 as Long, ByVal c_rsvd9 as Long, ByVal c_trig40wait as Long,  _
+ByVal c_trig40slct as Long, ByVal c_trig40delay as Long, ByVal c_rsvd10 as Long,  _
+ByVal c_rsvd11 as Long, ByVal c_rsvd12 as Long, ByVal c_rsvd13 as Long, ByVal c_rsvd14 as Long,  _
+ByVal c_rsvd15 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goneLive(pxdstate_s*,int unitmap,int rsvd);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GONELIVE Lib "XCLIBWNT.DLL" Alias "pxe_goneLive"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_videoFieldsPerFrame(pxdstate_s*);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_VIDEOFIELDSPERFRAME Lib "XCLIBWNT.DLL" Alias "pxe_videoFieldsPerFrame"  _
+(ByVal c_noname1 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_videoFieldsPerFrames(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_VIDEOFIELDSPERFRAMES Lib "XCLIBWNT.DLL" Alias "pxe_videoFieldsPerFrames"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pxvbtime_t)pxe_videoFieldCount(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_VIDEOFIELDCOUNT Lib "XCLIBWNT.DLL" Alias "pxe_videoFieldCount"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pxbuffer_t)pxe_capturedBuffer(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_CAPTUREDBUFFER Lib "XCLIBWNT.DLL" Alias "pxe_capturedBuffer"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,uint32)pxe_capturedSysTicks(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_CAPTUREDSYSTICKS Lib "XCLIBWNT.DLL" Alias "pxe_capturedSysTicks"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,uint32)pxe_capturedSysTicksHi(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_CAPTUREDSYSTICKSHI Lib "XCLIBWNT.DLL" Alias "pxe_capturedSysTicksHi"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pxvbtime_t)pxe_capturedFieldCount(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_CAPTUREDFIELDCOUNT Lib "XCLIBWNT.DLL" Alias "pxe_capturedFieldCount"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,pxvbtime_t)pxe_buffersFieldCount(pxdstate_s*,int unitmap,pxbuffer_t buffer);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_BUFFERSFIELDCOUNT Lib "XCLIBWNT.DLL" Alias "pxe_buffersFieldCount"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_buffer as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,uint32)pxe_buffersSysTicks(pxdstate_s*,int unitmap,pxbuffer_t buffer);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_BUFFERSSYSTICKS Lib "XCLIBWNT.DLL" Alias "pxe_buffersSysTicks"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_buffer as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_buffersSysTicks2(pxdstate_s*,int unitmap,pxbuffer_t buffer,uint32 ticks[2]);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `ticks' parameter has been declared expecting a dimensioned Long array w. 2 elements to be passed
+Private Declare Function PXE_BUFFERSSYSTICKS2 Lib "XCLIBWNT.DLL" Alias "pxe_buffersSysTicks2"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_buffer as Long, c_ticks as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_buffersGPIn(pxdstate_s*,int unitmap,pxbuffer_t buffer);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_BUFFERSGPIN Lib "XCLIBWNT.DLL" Alias "pxe_buffersGPIn"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_buffer as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setVidMux(int unitmap,int inmux);
+Private Declare Function PXD_SETVIDMUX Lib "XCLIBWNT.DLL" Alias "pxd_setVidMux"  _
+(ByVal c_unitmap as Long, ByVal c_inmux as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_getVidMux(int unitmap);
+Private Declare Function PXD_GETVIDMUX Lib "XCLIBWNT.DLL" Alias "pxd_getVidMux"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setContrastBrightness(int unitmap,double contrast,double brightness);
+Private Declare Function PXD_SETCONTRASTBRIGHTNESS Lib "XCLIBWNT.DLL" Alias "pxd_setContrastBrightness"  _
+(ByVal c_unitmap as Long, ByVal c_contrast as Double, ByVal c_brightness as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setHueSaturation(int unitmap,double hue,double Ugain,double Vgain);
+Private Declare Function PXD_SETHUESATURATION Lib "XCLIBWNT.DLL" Alias "pxd_setHueSaturation"  _
+(ByVal c_unitmap as Long, ByVal c_hue as Double, ByVal c_Ugain as Double, ByVal c_Vgain as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_getContrast(int unitmap);
+Private Declare Function PXD_GETCONTRAST Lib "XCLIBWNT.DLL" Alias "pxd_getContrast"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_getBrightness(int unitmap);
+Private Declare Function PXD_GETBRIGHTNESS Lib "XCLIBWNT.DLL" Alias "pxd_getBrightness"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_getHue(int unitmap);
+Private Declare Function PXD_GETHUE Lib "XCLIBWNT.DLL" Alias "pxd_getHue"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_getUGain(int unitmap);
+Private Declare Function PXD_GETUGAIN Lib "XCLIBWNT.DLL" Alias "pxd_getUGain"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_getVGain(int unitmap);
+Private Declare Function PXD_GETVGAIN Lib "XCLIBWNT.DLL" Alias "pxd_getVGain"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setVidMux(pxdstate_s*,int unitmap,int inmux);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SETVIDMUX Lib "XCLIBWNT.DLL" Alias "pxe_setVidMux"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_inmux as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_getVidMux(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETVIDMUX Lib "XCLIBWNT.DLL" Alias "pxe_getVidMux"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setContrastBrightness(pxdstate_s*,int unitmap,double contrast,double brightness);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SETCONTRASTBRIGHTNESS Lib "XCLIBWNT.DLL" Alias "pxe_setContrastBrightness"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_contrast as Double, ByVal c_brightness as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setHueSaturation(pxdstate_s*,int unitmap,double hue,double Ugain,double Vgain);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SETHUESATURATION Lib "XCLIBWNT.DLL" Alias "pxe_setHueSaturation"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_hue as Double, ByVal c_Ugain as Double,  _
+ByVal c_Vgain as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_getContrast(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETCONTRAST Lib "XCLIBWNT.DLL" Alias "pxe_getContrast"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_getBrightness(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETBRIGHTNESS Lib "XCLIBWNT.DLL" Alias "pxe_getBrightness"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_getHue(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETHUE Lib "XCLIBWNT.DLL" Alias "pxe_getHue"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_getUGain(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETUGAIN Lib "XCLIBWNT.DLL" Alias "pxe_getUGain"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_getVGain(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETVGAIN Lib "XCLIBWNT.DLL" Alias "pxe_getVGain"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setAdcGainOffset(int unitmap,int rsvd,double gainA,double offsetA,double gainB,double offsetB);
+Private Declare Function PXD_SETADCGAINOFFSET Lib "XCLIBWNT.DLL" Alias "pxd_setAdcGainOffset"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_gainA as Double, ByVal c_offsetA as Double,  _
+ByVal c_gainB as Double, ByVal c_offsetB as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setAdcColorGainOffsets(int unitmap,int rsvd,double gainsA[4],double gainsB[4],double offsetsA[4],double offsetsB[4]);
+' The `gainsA' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+' The `gainsB' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+' The `offsetsA' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+' The `offsetsB' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+Private Declare Function PXD_SETADCCOLORGAINOFFSETS Lib "XCLIBWNT.DLL" Alias "pxd_setAdcColorGainOffsets"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, c_gainsA as Any, c_gainsB as Any,  _
+c_offsetsA as Any, c_offsetsB as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_getAdcGainA(int unitmap);
+Private Declare Function PXD_GETADCGAINA Lib "XCLIBWNT.DLL" Alias "pxd_getAdcGainA"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_getAdcGainB(int unitmap);
+Private Declare Function PXD_GETADCGAINB Lib "XCLIBWNT.DLL" Alias "pxd_getAdcGainB"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_getAdcGainsA(int unitmap,double gainsA[4]);
+' The `gainsA' parameter has been declared expecting a dimensioned Double array to be passed
+Private Declare Function PXD_GETADCGAINSA Lib "XCLIBWNT.DLL" Alias "pxd_getAdcGainsA"  _
+(ByVal c_unitmap as Long, c_gainsA as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_getAdcGainsB(int unitmap,double gainsB[4]);
+' The `gainsB' parameter has been declared expecting a dimensioned Double array to be passed
+Private Declare Function PXD_GETADCGAINSB Lib "XCLIBWNT.DLL" Alias "pxd_getAdcGainsB"  _
+(ByVal c_unitmap as Long, c_gainsB as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_getAdcOffsetsA(int unitmap,double offsetsA[4]);
+' The `offsetsA' parameter has been declared expecting a dimensioned Double array to be passed
+Private Declare Function PXD_GETADCOFFSETSA Lib "XCLIBWNT.DLL" Alias "pxd_getAdcOffsetsA"  _
+(ByVal c_unitmap as Long, c_offsetsA as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_getAdcOffsetsB(int unitmap,double offsetsB[4]);
+' The `offsetsB' parameter has been declared expecting a dimensioned Double array to be passed
+Private Declare Function PXD_GETADCOFFSETSB Lib "XCLIBWNT.DLL" Alias "pxd_getAdcOffsetsB"  _
+(ByVal c_unitmap as Long, c_offsetsB as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_getAdcOffsetA(int unitmap);
+Private Declare Function PXD_GETADCOFFSETA Lib "XCLIBWNT.DLL" Alias "pxd_getAdcOffsetA"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_getAdcOffsetB(int unitmap);
+Private Declare Function PXD_GETADCOFFSETB Lib "XCLIBWNT.DLL" Alias "pxd_getAdcOffsetB"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setAdcGainOffset(pxdstate_s*,int unitmap,int rsvd,double gainA,double offsetA,double gainB,double offsetB);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SETADCGAINOFFSET Lib "XCLIBWNT.DLL" Alias "pxe_setAdcGainOffset"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_gainA as Double,  _
+ByVal c_offsetA as Double, ByVal c_gainB as Double, ByVal c_offsetB as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setAdcColorGainOffsets(pxdstate_s*,int unitmap,int rsvd,double gainsA[4],double gainsB[4],double offsetsA[4],double offsetsB[4]);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `gainsA' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+' The `gainsB' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+' The `offsetsA' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+' The `offsetsB' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+Private Declare Function PXE_SETADCCOLORGAINOFFSETS Lib "XCLIBWNT.DLL" Alias "pxe_setAdcColorGainOffsets"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd as Long, c_gainsA as Any,  _
+c_gainsB as Any, c_offsetsA as Any, c_offsetsB as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_getAdcGainA(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETADCGAINA Lib "XCLIBWNT.DLL" Alias "pxe_getAdcGainA"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_getAdcGainB(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETADCGAINB Lib "XCLIBWNT.DLL" Alias "pxe_getAdcGainB"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_getAdcGainsA(pxdstate_s*,int unitmap,double gainsA[4]);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `gainsA' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+Private Declare Function PXE_GETADCGAINSA Lib "XCLIBWNT.DLL" Alias "pxe_getAdcGainsA"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, c_gainsA as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_getAdcGainsB(pxdstate_s*,int unitmap,double gainsB[4]);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `gainsB' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+Private Declare Function PXE_GETADCGAINSB Lib "XCLIBWNT.DLL" Alias "pxe_getAdcGainsB"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, c_gainsB as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_getAdcOffsetsA(pxdstate_s*,int unitmap,double offsetsA[4]);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `offsetsA' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+Private Declare Function PXE_GETADCOFFSETSA Lib "XCLIBWNT.DLL" Alias "pxe_getAdcOffsetsA"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, c_offsetsA as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_getAdcOffsetsB(pxdstate_s*,int unitmap,double offsetsB[4]);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `offsetsB' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+Private Declare Function PXE_GETADCOFFSETSB Lib "XCLIBWNT.DLL" Alias "pxe_getAdcOffsetsB"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, c_offsetsB as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_getAdcOffsetA(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETADCOFFSETA Lib "XCLIBWNT.DLL" Alias "pxe_getAdcOffsetA"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_getAdcOffsetB(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETADCOFFSETB Lib "XCLIBWNT.DLL" Alias "pxe_getAdcOffsetB"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setExsyncPrin(int unitmap,uint exsync,uint prin);
+Private Declare Function PXD_SETEXSYNCPRIN Lib "XCLIBWNT.DLL" Alias "pxd_setExsyncPrin"  _
+(ByVal c_unitmap as Long, ByVal c_exsync as Long, ByVal c_prin as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,uint)pxd_getExsync(int unitmap);
+Private Declare Function PXD_GETEXSYNC Lib "XCLIBWNT.DLL" Alias "pxd_getExsync"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,uint)pxd_getPrin(int unitmap);
+Private Declare Function PXD_GETPRIN Lib "XCLIBWNT.DLL" Alias "pxd_getPrin"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setExsyncPrincMode(int unitmap,uint exsyncbits,uint princbits);
+Private Declare Function PXD_SETEXSYNCPRINCMODE Lib "XCLIBWNT.DLL" Alias "pxd_setExsyncPrincMode"  _
+(ByVal c_unitmap as Long, ByVal c_exsyncbits as Long, ByVal c_princbits as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,uint)pxd_getExsyncMode(int unitmap);
+Private Declare Function PXD_GETEXSYNCMODE Lib "XCLIBWNT.DLL" Alias "pxd_getExsyncMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,uint)pxd_getPrincMode(int unitmap);
+Private Declare Function PXD_GETPRINCMODE Lib "XCLIBWNT.DLL" Alias "pxd_getPrincMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setExsyncPrin(pxdstate_s*,int unitmap,uint exsync,uint prin);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SETEXSYNCPRIN Lib "XCLIBWNT.DLL" Alias "pxe_setExsyncPrin"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_exsync as Long, ByVal c_prin as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,uint)pxe_getExsync(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETEXSYNC Lib "XCLIBWNT.DLL" Alias "pxe_getExsync"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,uint)pxe_getPrin(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETPRIN Lib "XCLIBWNT.DLL" Alias "pxe_getPrin"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setExsyncPrincMode(pxdstate_s*,int unitmap,uint exsyncbits,uint princbits);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SETEXSYNCPRINCMODE Lib "XCLIBWNT.DLL" Alias "pxe_setExsyncPrincMode"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_exsyncbits as Long, ByVal c_princbits as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,uint)pxe_getExsyncMode(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETEXSYNCMODE Lib "XCLIBWNT.DLL" Alias "pxe_getExsyncMode"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,uint)pxe_getPrincMode(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETPRINCMODE Lib "XCLIBWNT.DLL" Alias "pxe_getPrincMode"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_getGPIn(int unitmap,int data);
+Private Declare Function PXD_GETGPIN Lib "XCLIBWNT.DLL" Alias "pxd_getGPIn"  _
+(ByVal c_unitmap as Long, ByVal c_data as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setGPIn(int unitmap,int data);
+Private Declare Function PXD_SETGPIN Lib "XCLIBWNT.DLL" Alias "pxd_setGPIn"  _
+(ByVal c_unitmap as Long, ByVal c_data as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setGPOut(int unitmap,int data);
+Private Declare Function PXD_SETGPOUT Lib "XCLIBWNT.DLL" Alias "pxd_setGPOut"  _
+(ByVal c_unitmap as Long, ByVal c_data as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_getGPOut(int unitmap,int data);
+Private Declare Function PXD_GETGPOUT Lib "XCLIBWNT.DLL" Alias "pxd_getGPOut"  _
+(ByVal c_unitmap as Long, ByVal c_data as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_getGPTrigger(int unitmap,int which);
+Private Declare Function PXD_GETGPTRIGGER Lib "XCLIBWNT.DLL" Alias "pxd_getGPTrigger"  _
+(ByVal c_unitmap as Long, ByVal c_which as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setCameraLinkCCOut(int unitmap,int data);
+Private Declare Function PXD_SETCAMERALINKCCOUT Lib "XCLIBWNT.DLL" Alias "pxd_setCameraLinkCCOut"  _
+(ByVal c_unitmap as Long, ByVal c_data as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_getCameraLinkCCOut(int unitmap,int data);
+Private Declare Function PXD_GETCAMERALINKCCOUT Lib "XCLIBWNT.DLL" Alias "pxd_getCameraLinkCCOut"  _
+(ByVal c_unitmap as Long, ByVal c_data as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_getGPIn(pxdstate_s*,int unitmap,int data);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETGPIN Lib "XCLIBWNT.DLL" Alias "pxe_getGPIn"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_data as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setGPIn(pxdstate_s*,int unitmap,int data);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SETGPIN Lib "XCLIBWNT.DLL" Alias "pxe_setGPIn"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_data as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setGPOut(pxdstate_s*,int unitmap,int data);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SETGPOUT Lib "XCLIBWNT.DLL" Alias "pxe_setGPOut"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_data as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_getGPOut(pxdstate_s*,int unitmap,int data);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETGPOUT Lib "XCLIBWNT.DLL" Alias "pxe_getGPOut"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_data as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_getGPTrigger(pxdstate_s*,int unitmap,int which);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETGPTRIGGER Lib "XCLIBWNT.DLL" Alias "pxe_getGPTrigger"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_which as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setCameraLinkCCOut(pxdstate_s*,int unitmap,int data);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SETCAMERALINKCCOUT Lib "XCLIBWNT.DLL" Alias "pxe_setCameraLinkCCOut"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_data as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_getCameraLinkCCOut(pxdstate_s*,int unitmap,int data);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_GETCAMERALINKCCOUT Lib "XCLIBWNT.DLL" Alias "pxe_getCameraLinkCCOut"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_data as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,HGLOBAL)pxd_renderDIBCreate(int unitmap,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int mode,int options);
+Private Declare Function PXD_RENDERDIBCREATE Lib "XCLIBWNT.DLL" Alias "pxd_renderDIBCreate"  _
+(ByVal c_unitmap as Long, ByVal c_buf as Long, ByVal c_ulx as Long, ByVal c_uly as Long,  _
+ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_mode as Long, ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_renderDIBFree(HGLOBAL hDIB);
+' The `hDIB' parameter has been declared expecting a Windows global handle to be passed
+Private Declare Function PXD_RENDERDIBFREE Lib "XCLIBWNT.DLL" Alias "pxd_renderDIBFree"  _
+(ByVal c_hDIB as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_renderStretchDIBits(int unitmap,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int options,
+' HDC hDC,uint nX,uint nY,uint nWidth,uint nHeight,int winoptions);
+' The `hDC' parameter has been declared expecting a Windows handle to a device context (hDC) to be passed
+Private Declare Function PXD_RENDERSTRETCHDIBITS Lib "XCLIBWNT.DLL" Alias "pxd_renderStretchDIBits"  _
+(ByVal c_unitmap as Long, ByVal c_buf as Long, ByVal c_ulx as Long, ByVal c_uly as Long,  _
+ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_options as Long, ByVal c_hDC as Long,  _
+ByVal c_nX as Long, ByVal c_nY as Long, ByVal c_nWidth as Long, ByVal c_nHeight as Long,  _
+ByVal c_winoptions as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,HGLOBAL)pxe_renderDIBCreate(pxdstate_s*,int unitmap,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int mode,int options);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_RENDERDIBCREATE Lib "XCLIBWNT.DLL" Alias "pxe_renderDIBCreate"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_buf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_mode as Long,  _
+ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_renderDIBFree(pxdstate_s*,HGLOBAL hDIB);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `hDIB' parameter has been declared expecting a Windows global handle to be passed
+Private Declare Function PXE_RENDERDIBFREE Lib "XCLIBWNT.DLL" Alias "pxe_renderDIBFree"  _
+(ByVal c_noname1 as Long, ByVal c_hDIB as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_renderStretchDIBits(pxdstate_s*,int unitmap,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int options,
+' HDC hDC,uint nX,uint nY,uint nWidth,uint nHeight,int winoptions);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `hDC' parameter has been declared expecting a Windows handle to a device context (hDC) to be passed
+Private Declare Function PXE_RENDERSTRETCHDIBITS Lib "XCLIBWNT.DLL" Alias "pxe_renderStretchDIBits"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_buf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_options as Long,  _
+ByVal c_hDC as Long, ByVal c_nX as Long, ByVal c_nY as Long, ByVal c_nWidth as Long,  _
+ByVal c_nHeight as Long, ByVal c_winoptions as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_saveBmp(int unitmap,const char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_SAVEBMP Lib "XCLIBWNT.DLL" Alias "pxd_saveBmp"  _
+(ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_buf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_savemode as Long,  _
+ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_loadBmp(int unitmap,const char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int loadmode,int options);
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_LOADBMP Lib "XCLIBWNT.DLL" Alias "pxd_loadBmp"  _
+(ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_buf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_loadmode as Long,  _
+ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_saveTga(int unitmap,const char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_SAVETGA Lib "XCLIBWNT.DLL" Alias "pxd_saveTga"  _
+(ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_buf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_savemode as Long,  _
+ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_savePcx(int unitmap,const char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_SAVEPCX Lib "XCLIBWNT.DLL" Alias "pxd_savePcx"  _
+(ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_buf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_savemode as Long,  _
+ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_saveTiff(int unitmap,const char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_SAVETIFF Lib "XCLIBWNT.DLL" Alias "pxd_saveTiff"  _
+(ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_buf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_savemode as Long,  _
+ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_loadTiff(int unitmap,const char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int loadmode,int options);
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_LOADTIFF Lib "XCLIBWNT.DLL" Alias "pxd_loadTiff"  _
+(ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_buf as Long, ByVal c_ulx as Long,  _
+ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long, ByVal c_loadmode as Long,  _
+ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_saveRawBuffers(int unitmap,const char*pathname,pxbuffer_t startbuf,pxbuffer_t endbuf,void*filehandle,pxbuffer_t fileoffset,uint32 alignment,int options);
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_SAVERAWBUFFERS Lib "XCLIBWNT.DLL" Alias "pxd_saveRawBuffers"  _
+(ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_startbuf as Long,  _
+ByVal c_endbuf as Long, c_filehandle as Any, ByVal c_fileoffset as Long, ByVal c_alignment as Long,  _
+ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_loadRawBuffers(int unitmap,const char*pathname,pxbuffer_t startbuf,pxbuffer_t endbuf,void*filehandle,pxbuffer_t fileoffset,uint32 alignment,int options);
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXD_LOADRAWBUFFERS Lib "XCLIBWNT.DLL" Alias "pxd_loadRawBuffers"  _
+(ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_startbuf as Long,  _
+ByVal c_endbuf as Long, c_filehandle as Any, ByVal c_fileoffset as Long, ByVal c_alignment as Long,  _
+ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_saveBmp(pxdstate_s*,int unitmap,const char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_SAVEBMP Lib "XCLIBWNT.DLL" Alias "pxe_saveBmp"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_buf as Long,  _
+ByVal c_ulx as Long, ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long,  _
+ByVal c_savemode as Long, ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_loadBmp(pxdstate_s*,int unitmap,const char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int loadmode,int options);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_LOADBMP Lib "XCLIBWNT.DLL" Alias "pxe_loadBmp"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_buf as Long,  _
+ByVal c_ulx as Long, ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long,  _
+ByVal c_loadmode as Long, ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_saveTga(pxdstate_s*,int unitmap,const char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_SAVETGA Lib "XCLIBWNT.DLL" Alias "pxe_saveTga"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_buf as Long,  _
+ByVal c_ulx as Long, ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long,  _
+ByVal c_savemode as Long, ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_savePcx(pxdstate_s*,int unitmap,const char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_SAVEPCX Lib "XCLIBWNT.DLL" Alias "pxe_savePcx"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_buf as Long,  _
+ByVal c_ulx as Long, ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long,  _
+ByVal c_savemode as Long, ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_saveTiff(pxdstate_s*,int unitmap,const char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_SAVETIFF Lib "XCLIBWNT.DLL" Alias "pxe_saveTiff"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_buf as Long,  _
+ByVal c_ulx as Long, ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long,  _
+ByVal c_savemode as Long, ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_loadTiff(pxdstate_s*,int unitmap,const char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int loadmode,int options);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_LOADTIFF Lib "XCLIBWNT.DLL" Alias "pxe_loadTiff"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_buf as Long,  _
+ByVal c_ulx as Long, ByVal c_uly as Long, ByVal c_lrx as Long, ByVal c_lry as Long,  _
+ByVal c_loadmode as Long, ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_saveRawBuffers(pxdstate_s*,int unitmap,const char*pathname,pxbuffer_t startbuf,pxbuffer_t endbuf,void*filehandle,pxbuffer_t fileoffset,uint32 alignment,int options);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_SAVERAWBUFFERS Lib "XCLIBWNT.DLL" Alias "pxe_saveRawBuffers"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_startbuf as Long,  _
+ByVal c_endbuf as Long, c_filehandle as Any, ByVal c_fileoffset as Long, ByVal c_alignment as Long,  _
+ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_loadRawBuffers(pxdstate_s*,int unitmap,const char*pathname,pxbuffer_t startbuf,pxbuffer_t endbuf,void*filehandle,pxbuffer_t fileoffset,uint32 alignment,int options);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `pathname' parameter has been declared expecting a double quoted String to be passed
+Private Declare Function PXE_LOADRAWBUFFERS Lib "XCLIBWNT.DLL" Alias "pxe_loadRawBuffers"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_pathname as String, ByVal c_startbuf as Long,  _
+ByVal c_endbuf as Long, c_filehandle as Any, ByVal c_fileoffset as Long, ByVal c_alignment as Long,  _
+ByVal c_options as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_renderDirectVideoUnLive(int unitmap,HWND hWnd);
+' The `hWnd' parameter has been declared expecting a Windows handle to a window (hWnd) to be passed
+Private Declare Function PXD_RENDERDIRECTVIDEOUNLIVE Lib "XCLIBWNT.DLL" Alias "pxd_renderDirectVideoUnLive"  _
+(ByVal c_unitmap as Long, ByVal c_hWnd as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_renderDirectVideoLive(int unitmap,HWND hWnd,uint nX,uint nY,
+' uint nWidth,uint nHeight,COLORREF ClrKey1,COLORREF ClrKey2);
+' The `hWnd' parameter has been declared expecting a Windows handle to a window (hWnd) to be passed
+Private Declare Function PXD_RENDERDIRECTVIDEOLIVE Lib "XCLIBWNT.DLL" Alias "pxd_renderDirectVideoLive"  _
+(ByVal c_unitmap as Long, ByVal c_hWnd as Long, ByVal c_nX as Long, ByVal c_nY as Long,  _
+ByVal c_nWidth as Long, ByVal c_nHeight as Long, ByVal c_ClrKey1 as Long, ByVal c_ClrKey2 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_renderDirectVideoDone(int unitmap,HWND hWnd);
+' The `hWnd' parameter has been declared expecting a Windows handle to a window (hWnd) to be passed
+Private Declare Function PXD_RENDERDIRECTVIDEODONE Lib "XCLIBWNT.DLL" Alias "pxd_renderDirectVideoDone"  _
+(ByVal c_unitmap as Long, ByVal c_hWnd as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_renderDirectVideoInit(int unitmap,HWND hWnd);
+' The `hWnd' parameter has been declared expecting a Windows handle to a window (hWnd) to be passed
+Private Declare Function PXD_RENDERDIRECTVIDEOINIT Lib "XCLIBWNT.DLL" Alias "pxd_renderDirectVideoInit"  _
+(ByVal c_unitmap as Long, ByVal c_hWnd as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_renderDirectVideoUnLive(pxdstate_s*,int unitmap,HWND hWnd);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `hWnd' parameter has been declared expecting a Windows handle to a window (hWnd) to be passed
+Private Declare Function PXE_RENDERDIRECTVIDEOUNLIVE Lib "XCLIBWNT.DLL" Alias "pxe_renderDirectVideoUnLive"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_hWnd as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_renderDirectVideoLive(pxdstate_s*,int unitmap,HWND hWnd,uint nX,uint nY,
+' uint nWidth,uint nHeight,COLORREF ClrKey1,COLORREF ClrKey2);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `hWnd' parameter has been declared expecting a Windows handle to a window (hWnd) to be passed
+Private Declare Function PXE_RENDERDIRECTVIDEOLIVE Lib "XCLIBWNT.DLL" Alias "pxe_renderDirectVideoLive"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_hWnd as Long, ByVal c_nX as Long,  _
+ByVal c_nY as Long, ByVal c_nWidth as Long, ByVal c_nHeight as Long, ByVal c_ClrKey1 as Long,  _
+ByVal c_ClrKey2 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_renderDirectVideoDone(pxdstate_s*,int unitmap,HWND hWnd);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `hWnd' parameter has been declared expecting a Windows handle to a window (hWnd) to be passed
+Private Declare Function PXE_RENDERDIRECTVIDEODONE Lib "XCLIBWNT.DLL" Alias "pxe_renderDirectVideoDone"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_hWnd as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_renderDirectVideoInit(pxdstate_s*,int unitmap,HWND hWnd);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `hWnd' parameter has been declared expecting a Windows handle to a window (hWnd) to be passed
+Private Declare Function PXE_RENDERDIRECTVIDEOINIT Lib "XCLIBWNT.DLL" Alias "pxe_renderDirectVideoInit"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_hWnd as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventFieldCreate(int unitmap);
+Private Declare Function PXD_EVENTFIELDCREATE Lib "XCLIBWNT.DLL" Alias "pxd_eventFieldCreate"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventFieldCreate2(int unitmap,int type);
+Private Declare Function PXD_EVENTFIELDCREATE2 Lib "XCLIBWNT.DLL" Alias "pxd_eventFieldCreate2"  _
+(ByVal c_unitmap as Long, ByVal c_type as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,void)pxd_eventFieldClose(int unitmap,HANDLE hEvent);
+' The `hEvent' parameter has been declared expecting a Windows handle to be passed
+Private Declare Sub PXD_EVENTFIELDCLOSE Lib "XCLIBWNT.DLL" Alias "pxd_eventFieldClose"  _
+(ByVal c_unitmap as Long, ByVal c_hEvent as Long)
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventCapturedFieldCreate(int unitmap);
+Private Declare Function PXD_EVENTCAPTUREDFIELDCREATE Lib "XCLIBWNT.DLL" Alias "pxd_eventCapturedFieldCreate"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventCapturedFieldCreate2(int unitmap,int type);
+Private Declare Function PXD_EVENTCAPTUREDFIELDCREATE2 Lib "XCLIBWNT.DLL" Alias "pxd_eventCapturedFieldCreate2"  _
+(ByVal c_unitmap as Long, ByVal c_type as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,void)pxd_eventCapturedFieldClose(int unitmap,HANDLE hEvent);
+' The `hEvent' parameter has been declared expecting a Windows handle to be passed
+Private Declare Sub PXD_EVENTCAPTUREDFIELDCLOSE Lib "XCLIBWNT.DLL" Alias "pxd_eventCapturedFieldClose"  _
+(ByVal c_unitmap as Long, ByVal c_hEvent as Long)
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventGPTriggerCreate(int unitmap,int which,int rsvd);
+Private Declare Function PXD_EVENTGPTRIGGERCREATE Lib "XCLIBWNT.DLL" Alias "pxd_eventGPTriggerCreate"  _
+(ByVal c_unitmap as Long, ByVal c_which as Long, ByVal c_rsvd as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventGPTriggerCreate2(int unitmap,int which,int rsvd,int type);
+Private Declare Function PXD_EVENTGPTRIGGERCREATE2 Lib "XCLIBWNT.DLL" Alias "pxd_eventGPTriggerCreate2"  _
+(ByVal c_unitmap as Long, ByVal c_which as Long, ByVal c_rsvd as Long, ByVal c_type as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,void)pxd_eventGPTriggerClose(int unitmap,int which,int rsvd,HANDLE hEvent);
+' The `hEvent' parameter has been declared expecting a Windows handle to be passed
+Private Declare Sub PXD_EVENTGPTRIGGERCLOSE Lib "XCLIBWNT.DLL" Alias "pxd_eventGPTriggerClose"  _
+(ByVal c_unitmap as Long, ByVal c_which as Long, ByVal c_rsvd as Long, ByVal c_hEvent as Long)
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventFaultCreate(int unitmap,int rsvd);
+Private Declare Function PXD_EVENTFAULTCREATE Lib "XCLIBWNT.DLL" Alias "pxd_eventFaultCreate"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventFaultCreate2(int unitmap,int rsvd,int type);
+Private Declare Function PXD_EVENTFAULTCREATE2 Lib "XCLIBWNT.DLL" Alias "pxd_eventFaultCreate2"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_type as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,void)pxd_eventFaultClose(int unitmap,int rsvd,HANDLE hEvent);
+' The `hEvent' parameter has been declared expecting a Windows handle to be passed
+Private Declare Sub PXD_EVENTFAULTCLOSE Lib "XCLIBWNT.DLL" Alias "pxd_eventFaultClose"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_hEvent as Long)
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventSerialCreate(int unitmap,int which,int rsvd,int type);
+Private Declare Function PXD_EVENTSERIALCREATE Lib "XCLIBWNT.DLL" Alias "pxd_eventSerialCreate"  _
+(ByVal c_unitmap as Long, ByVal c_which as Long, ByVal c_rsvd as Long, ByVal c_type as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,void)pxd_eventSerialClose(int unitmap,int which,int rsvd,HANDLE hEvent);
+' The `hEvent' parameter has been declared expecting a Windows handle to be passed
+Private Declare Sub PXD_EVENTSERIALCLOSE Lib "XCLIBWNT.DLL" Alias "pxd_eventSerialClose"  _
+(ByVal c_unitmap as Long, ByVal c_which as Long, ByVal c_rsvd as Long, ByVal c_hEvent as Long)
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventFieldCreate(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_EVENTFIELDCREATE Lib "XCLIBWNT.DLL" Alias "pxe_eventFieldCreate"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventFieldCreate2(pxdstate_s*,int unitmap,int type);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_EVENTFIELDCREATE2 Lib "XCLIBWNT.DLL" Alias "pxe_eventFieldCreate2"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_type as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,void)pxe_eventFieldClose(pxdstate_s*,int unitmap,HANDLE hEvent);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `hEvent' parameter has been declared expecting a Windows handle to be passed
+Private Declare Sub PXE_EVENTFIELDCLOSE Lib "XCLIBWNT.DLL" Alias "pxe_eventFieldClose"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_hEvent as Long)
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventCapturedFieldCreate(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_EVENTCAPTUREDFIELDCREATE Lib "XCLIBWNT.DLL" Alias "pxe_eventCapturedFieldCreate"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventCapturedFieldCreate2(pxdstate_s*,int unitmap,int type);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_EVENTCAPTUREDFIELDCREATE2 Lib "XCLIBWNT.DLL" Alias "pxe_eventCapturedFieldCreate2"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_type as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,void)pxe_eventCapturedFieldClose(pxdstate_s*,int unitmap,HANDLE hEvent);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `hEvent' parameter has been declared expecting a Windows handle to be passed
+Private Declare Sub PXE_EVENTCAPTUREDFIELDCLOSE Lib "XCLIBWNT.DLL" Alias "pxe_eventCapturedFieldClose"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_hEvent as Long)
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventGPTriggerCreate(pxdstate_s*,int unitmap,int which,int rsvd);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_EVENTGPTRIGGERCREATE Lib "XCLIBWNT.DLL" Alias "pxe_eventGPTriggerCreate"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_which as Long, ByVal c_rsvd as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventGPTriggerCreate2(pxdstate_s*,int unitmap,int which,int rsvd,int type);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_EVENTGPTRIGGERCREATE2 Lib "XCLIBWNT.DLL" Alias "pxe_eventGPTriggerCreate2"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_which as Long, ByVal c_rsvd as Long,  _
+ByVal c_type as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,void)pxe_eventGPTriggerClose(pxdstate_s*,int unitmap,int which,int rsvd,HANDLE hEvent);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `hEvent' parameter has been declared expecting a Windows handle to be passed
+Private Declare Sub PXE_EVENTGPTRIGGERCLOSE Lib "XCLIBWNT.DLL" Alias "pxe_eventGPTriggerClose"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_which as Long, ByVal c_rsvd as Long,  _
+ByVal c_hEvent as Long)
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventFaultCreate(pxdstate_s*,int unitmap,int rsvd);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_EVENTFAULTCREATE Lib "XCLIBWNT.DLL" Alias "pxe_eventFaultCreate"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventFaultCreate2(pxdstate_s*,int unitmap,int rsvd,int type);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_EVENTFAULTCREATE2 Lib "XCLIBWNT.DLL" Alias "pxe_eventFaultCreate2"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_type as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,void)pxe_eventFaultClose(pxdstate_s*,int unitmap,int rsvd,HANDLE hEvent);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `hEvent' parameter has been declared expecting a Windows handle to be passed
+Private Declare Sub PXE_EVENTFAULTCLOSE Lib "XCLIBWNT.DLL" Alias "pxe_eventFaultClose"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_hEvent as Long)
+
+' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventSerialCreate(pxdstate_s*,int unitmap,int which,int rsvd,int type);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_EVENTSERIALCREATE Lib "XCLIBWNT.DLL" Alias "pxe_eventSerialCreate"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_which as Long, ByVal c_rsvd as Long,  _
+ByVal c_type as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,void)pxe_eventSerialClose(pxdstate_s*,int unitmap,int which,int rsvd,HANDLE hEvent);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `hEvent' parameter has been declared expecting a Windows handle to be passed
+Private Declare Sub PXE_EVENTSERIALCLOSE Lib "XCLIBWNT.DLL" Alias "pxe_eventSerialClose"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_which as Long, ByVal c_rsvd as Long,  _
+ByVal c_hEvent as Long)
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setImageDarkBalance(int unitmap,uint referenceRGB[3],uint targetRGB[3],double gamma);
+' The `referenceRGB' parameter has been declared expecting a dimensioned Long array to be passed
+' The `targetRGB' parameter has been declared expecting a dimensioned Long array w. 3 elements to be passed
+Private Declare Function PXD_SETIMAGEDARKBALANCE Lib "XCLIBWNT.DLL" Alias "pxd_setImageDarkBalance"  _
+(ByVal c_unitmap as Long, c_referenceRGB as Any, c_targetRGB as Any, ByVal c_gamma as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setImageBrightBalance(int unitmap,uint referenceRGB[3],uint targetRGB[3],double gamma);
+' The `referenceRGB' parameter has been declared expecting a dimensioned Long array to be passed
+' The `targetRGB' parameter has been declared expecting a dimensioned Long array w. 3 elements to be passed
+Private Declare Function PXD_SETIMAGEBRIGHTBALANCE Lib "XCLIBWNT.DLL" Alias "pxd_setImageBrightBalance"  _
+(ByVal c_unitmap as Long, c_referenceRGB as Any, c_targetRGB as Any, ByVal c_gamma as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setImageDarkBalance(pxdstate_s*,int unitmap,uint referenceRGB[3],uint targetRGB[3],double gamma);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `referenceRGB' parameter has been declared expecting a dimensioned Long array w. 3 elements to be passed
+' The `targetRGB' parameter has been declared expecting a dimensioned Long array w. 3 elements to be passed
+Private Declare Function PXE_SETIMAGEDARKBALANCE Lib "XCLIBWNT.DLL" Alias "pxe_setImageDarkBalance"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, c_referenceRGB as Any, c_targetRGB as Any,  _
+ByVal c_gamma as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setImageBrightBalance(pxdstate_s*,int unitmap,uint referenceRGB[3],uint targetRGB[3],double gamma);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `referenceRGB' parameter has been declared expecting a dimensioned Long array w. 3 elements to be passed
+' The `targetRGB' parameter has been declared expecting a dimensioned Long array w. 3 elements to be passed
+Private Declare Function PXE_SETIMAGEBRIGHTBALANCE Lib "XCLIBWNT.DLL" Alias "pxe_setImageBrightBalance"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, c_referenceRGB as Any, c_targetRGB as Any,  _
+ByVal c_gamma as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_serialConfigure(int unitmap,int rsvd0,double baud,int bits,int parity,int stopbits,int rsvd1,int rsvd2,int rsvd3);
+Private Declare Function PXD_SERIALCONFIGURE Lib "XCLIBWNT.DLL" Alias "pxd_serialConfigure"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd0 as Long, ByVal c_baud as Double, ByVal c_bits as Long,  _
+ByVal c_parity as Long, ByVal c_stopbits as Long, ByVal c_rsvd1 as Long, ByVal c_rsvd2 as Long,  _
+ByVal c_rsvd3 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_serialRead(int unitmap,int rsvd0,uchar*buf,int cnt);
+' The `buf' parameter has been declared expecting a dimensioned Byte array to be passed
+Private Declare Function PXD_SERIALREAD Lib "XCLIBWNT.DLL" Alias "pxd_serialRead"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd0 as Long, c_buf as Any, ByVal c_cnt as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_serialWrite(int unitmap,int rsvd0,uchar*buf,int cnt);
+' The `buf' parameter has been declared expecting a dimensioned Byte array to be passed
+Private Declare Function PXD_SERIALWRITE Lib "XCLIBWNT.DLL" Alias "pxd_serialWrite"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd0 as Long, c_buf as Any, ByVal c_cnt as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_serialRead(int unitmap,int rsvd0,char buf[],int cnt);
+' Duplicate declaration
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_serialWrite(int unitmap,int rsvd0,char buf[],int cnt);
+' Duplicate declaration
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_serialConfigure(pxdstate_s*,int unitmap,int rsvd0,double baud,int bits,int parity,int stopbits,int rsvd1,int rsvd2,int rsvd3);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SERIALCONFIGURE Lib "XCLIBWNT.DLL" Alias "pxe_serialConfigure"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd0 as Long, ByVal c_baud as Double,  _
+ByVal c_bits as Long, ByVal c_parity as Long, ByVal c_stopbits as Long, ByVal c_rsvd1 as Long,  _
+ByVal c_rsvd2 as Long, ByVal c_rsvd3 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_serialRead(pxdstate_s*,int unitmap,int rsvd0,uchar*buf,int cnt);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `buf' parameter has been declared expecting a dimensioned Byte array to be passed
+Private Declare Function PXE_SERIALREAD Lib "XCLIBWNT.DLL" Alias "pxe_serialRead"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd0 as Long, c_buf as Any,  _
+ByVal c_cnt as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_serialWrite(pxdstate_s*,int unitmap,int rsvd0,uchar*buf,int cnt);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `buf' parameter has been declared expecting a dimensioned Byte array to be passed
+Private Declare Function PXE_SERIALWRITE Lib "XCLIBWNT.DLL" Alias "pxe_serialWrite"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd0 as Long, c_buf as Any,  _
+ByVal c_cnt as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_serialRead(pxdstate_s*,int unitmap,int rsvd0,char buf[],int cnt);
+' Duplicate declaration
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_serialWrite(pxdstate_s*,int unitmap,int rsvd0,char buf[],int cnt);
+' Duplicate declaration
+
+' _cDcl(__declspec(dllexport) ,__cdecl,sint32)clSerialInit();
+Private Declare Function CLSERIALINIT Lib "XCLIBWNT.DLL" Alias "clSerialInit"  _
+() as Long
+
+' _cDcl(__declspec(dllexport) ,__cdecl,void)clSerialClose();
+Private Declare Sub CLSERIALCLOSE Lib "XCLIBWNT.DLL" Alias "clSerialClose"  _
+()
+
+' _cDcl(__declspec(dllexport) ,__cdecl,sint32)clSerialRead();
+Private Declare Function CLSERIALREAD Lib "XCLIBWNT.DLL" Alias "clSerialRead"  _
+() as Long
+
+' _cDcl(__declspec(dllexport) ,__cdecl,sint32)clSerialWrite();
+Private Declare Function CLSERIALWRITE Lib "XCLIBWNT.DLL" Alias "clSerialWrite"  _
+() as Long
+
+' _cDcl(__declspec(dllexport) ,__cdecl,sint32)clGetNumBytesAvail();
+Private Declare Function CLGETNUMBYTESAVAIL Lib "XCLIBWNT.DLL" Alias "clGetNumBytesAvail"  _
+() as Long
+
+' _cDcl(__declspec(dllexport) ,__cdecl,sint32)clFlushPort();
+Private Declare Function CLFLUSHPORT Lib "XCLIBWNT.DLL" Alias "clFlushPort"  _
+() as Long
+
+' _cDcl(__declspec(dllexport) ,__cdecl,sint32)clGetErrorText();
+Private Declare Function CLGETERRORTEXT Lib "XCLIBWNT.DLL" Alias "clGetErrorText"  _
+() as Long
+
+' _cDcl(__declspec(dllexport) ,__cdecl,sint32)clGetNumSerialPorts();
+Private Declare Function CLGETNUMSERIALPORTS Lib "XCLIBWNT.DLL" Alias "clGetNumSerialPorts"  _
+() as Long
+
+' _cDcl(__declspec(dllexport) ,__cdecl,sint32)clGetSerialPortIdentifier();
+Private Declare Function CLGETSERIALPORTIDENTIFIER Lib "XCLIBWNT.DLL" Alias "clGetSerialPortIdentifier"  _
+() as Long
+
+' _cDcl(__declspec(dllexport) ,__cdecl,sint32)clGetManufacturerInfo();
+Private Declare Function CLGETMANUFACTURERINFO Lib "XCLIBWNT.DLL" Alias "clGetManufacturerInfo"  _
+() as Long
+
+' _cDcl(__declspec(dllexport) ,__cdecl,sint32)clGetSupportedBaudRates();
+Private Declare Function CLGETSUPPORTEDBAUDRATES Lib "XCLIBWNT.DLL" Alias "clGetSupportedBaudRates"  _
+() as Long
+
+' _cDcl(__declspec(dllexport) ,__cdecl,sint32)clSetBaudRate();
+Private Declare Function CLSETBAUDRATE Lib "XCLIBWNT.DLL" Alias "clSetBaudRate"  _
+() as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV2112_setExposureAndGain(int unitmap,int rsvd,double exposure,double redgain,double grngain,double blugain);
+Private Declare Function PXD_SV2112_SETEXPOSUREANDGAIN Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_setExposureAndGain"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_exposure as Double, ByVal c_redgain as Double,  _
+ByVal c_grngain as Double, ByVal c_blugain as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV2112_setResolutionAndTiming(int unitmap,int rsvd,int decimation,int aoileft,int aoitop,int aoiwidth,int aoiheight,
+' int scandirection,double pixelClkFreq,double rsvd2,int rsvd3);
+Private Declare Function PXD_SV2112_SETRESOLUTIONANDTIMING Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_setResolutionAndTiming"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_decimation as Long, ByVal c_aoileft as Long,  _
+ByVal c_aoitop as Long, ByVal c_aoiwidth as Long, ByVal c_aoiheight as Long, ByVal c_scandirection as Long,  _
+ByVal c_pixelClkFreq as Double, ByVal c_rsvd2 as Double, ByVal c_rsvd3 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV2112_setVideoAndTriggerMode(int unitmap,int rsvd,int videomode,int controlledvideomode,int controlledtrigger);
+Private Declare Function PXD_SV2112_SETVIDEOANDTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_setVideoAndTriggerMode"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_videomode as Long, ByVal c_controlledvideomode as Long,  _
+ByVal c_controlledtrigger as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV2112_setCtrlExposureAndRate(int unitmap,int rsvd,double exposure,double framerate);
+Private Declare Function PXD_SV2112_SETCTRLEXPOSUREANDRATE Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_setCtrlExposureAndRate"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_exposure as Double, ByVal c_framerate as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV2112_getExposure(int unitmap);
+Private Declare Function PXD_SV2112_GETEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_getExposure"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV2112_getGain(int unitmap,int color);
+Private Declare Function PXD_SV2112_GETGAIN Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_getGain"  _
+(ByVal c_unitmap as Long, ByVal c_color as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV2112_getDecimation(int unitmap);
+Private Declare Function PXD_SV2112_GETDECIMATION Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_getDecimation"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV2112_getAoiTop(int unitmap);
+Private Declare Function PXD_SV2112_GETAOITOP Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_getAoiTop"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV2112_getAoiLeft(int unitmap);
+Private Declare Function PXD_SV2112_GETAOILEFT Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_getAoiLeft"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV2112_getPixelClock(int unitmap);
+Private Declare Function PXD_SV2112_GETPIXELCLOCK Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_getPixelClock"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV2112_getScanDirection(int unitmap);
+Private Declare Function PXD_SV2112_GETSCANDIRECTION Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_getScanDirection"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV2112_getVideoMode(int unitmap);
+Private Declare Function PXD_SV2112_GETVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_getVideoMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV2112_getCtrlVideoMode(int unitmap);
+Private Declare Function PXD_SV2112_GETCTRLVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_getCtrlVideoMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV2112_getCtrlTriggerMode(int unitmap);
+Private Declare Function PXD_SV2112_GETCTRLTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_getCtrlTriggerMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV2112_getCtrlFrameRate(int unitmap);
+Private Declare Function PXD_SV2112_GETCTRLFRAMERATE Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_getCtrlFrameRate"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV2112_getCtrlExposure(int unitmap);
+Private Declare Function PXD_SV2112_GETCTRLEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_getCtrlExposure"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV2112_getMinMaxExposure(int unitmap,double exposure);
+Private Declare Function PXD_SV2112_GETMINMAXEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_getMinMaxExposure"  _
+(ByVal c_unitmap as Long, ByVal c_exposure as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV2112_getMinMaxCtrlExposure(int unitmap,double exposure);
+Private Declare Function PXD_SV2112_GETMINMAXCTRLEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV2112_getMinMaxCtrlExposure"  _
+(ByVal c_unitmap as Long, ByVal c_exposure as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1310_setExposureGainOffset(int unitmap,int rsvd,double exposure,double gain,double offset,double rsvd2,double rsvd3);
+Private Declare Function PXD_SV1310_SETEXPOSUREGAINOFFSET Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_setExposureGainOffset"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_exposure as Double, ByVal c_gain as Double,  _
+ByVal c_offset as Double, ByVal c_rsvd2 as Double, ByVal c_rsvd3 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1310_setColorGain(int unitmap,int rsvd,double greenR,double red,double blue,double greenB);
+Private Declare Function PXD_SV1310_SETCOLORGAIN Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_setColorGain"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_greenR as Double, ByVal c_red as Double,  _
+ByVal c_blue as Double, ByVal c_greenB as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1310_setResolutionAndTiming(int unitmap,int rsvd,int subsample,int aoileft,int aoitop,int aoiwidth,int aoiheight,
+' int readoutdirection,double pixelClkFreq,double framePeriod,double rsvd2);
+Private Declare Function PXD_SV1310_SETRESOLUTIONANDTIMING Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_setResolutionAndTiming"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_subsample as Long, ByVal c_aoileft as Long,  _
+ByVal c_aoitop as Long, ByVal c_aoiwidth as Long, ByVal c_aoiheight as Long, ByVal c_readoutdirection as Long,  _
+ByVal c_pixelClkFreq as Double, ByVal c_framePeriod as Double, ByVal c_rsvd2 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1310_setVideoAndTriggerMode(int unitmap,int rsvd,int videomode,int controlledmode,int controlledtrigger,int strobemode,int rsvd2,int rsvd3);
+Private Declare Function PXD_SV1310_SETVIDEOANDTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_setVideoAndTriggerMode"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_videomode as Long, ByVal c_controlledmode as Long,  _
+ByVal c_controlledtrigger as Long, ByVal c_strobemode as Long, ByVal c_rsvd2 as Long,  _
+ByVal c_rsvd3 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1310_setCtrlRate(int unitmap,int rsvd,double rsvd2,double framerate,double rsvd3);
+Private Declare Function PXD_SV1310_SETCTRLRATE Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_setCtrlRate"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_rsvd2 as Double, ByVal c_framerate as Double,  _
+ByVal c_rsvd3 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV1310_getExposure(int unitmap);
+Private Declare Function PXD_SV1310_GETEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getExposure"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV1310_getGain(int unitmap);
+Private Declare Function PXD_SV1310_GETGAIN Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getGain"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV1310_getOffset(int unitmap);
+Private Declare Function PXD_SV1310_GETOFFSET Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getOffset"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1310_getSubsample(int unitmap);
+Private Declare Function PXD_SV1310_GETSUBSAMPLE Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getSubsample"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1310_getAoiTop(int unitmap);
+Private Declare Function PXD_SV1310_GETAOITOP Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getAoiTop"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1310_getAoiLeft(int unitmap);
+Private Declare Function PXD_SV1310_GETAOILEFT Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getAoiLeft"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1310_getReadoutDirection(int unitmap);
+Private Declare Function PXD_SV1310_GETREADOUTDIRECTION Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getReadoutDirection"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV1310_getPixelClock(int unitmap);
+Private Declare Function PXD_SV1310_GETPIXELCLOCK Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getPixelClock"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV1310_getFramePeriod(int unitmap);
+Private Declare Function PXD_SV1310_GETFRAMEPERIOD Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getFramePeriod"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV1310_getCtrlFrameRate(int unitmap);
+Private Declare Function PXD_SV1310_GETCTRLFRAMERATE Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getCtrlFrameRate"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1310_getVideoMode(int unitmap);
+Private Declare Function PXD_SV1310_GETVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getVideoMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1310_getCtrlVideoMode(int unitmap);
+Private Declare Function PXD_SV1310_GETCTRLVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getCtrlVideoMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1310_getCtrlTriggerMode(int unitmap);
+Private Declare Function PXD_SV1310_GETCTRLTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getCtrlTriggerMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1310_getStrobeMode(int unitmap);
+Private Declare Function PXD_SV1310_GETSTROBEMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getStrobeMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV1310_getColorGain(int unitmap,int color);
+Private Declare Function PXD_SV1310_GETCOLORGAIN Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getColorGain"  _
+(ByVal c_unitmap as Long, ByVal c_color as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV1310_getMinMaxExposure(int unitmap,double exposure);
+Private Declare Function PXD_SV1310_GETMINMAXEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getMinMaxExposure"  _
+(ByVal c_unitmap as Long, ByVal c_exposure as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV1310_getMinMaxFramePeriod(int unitmap,double frameperiod);
+Private Declare Function PXD_SV1310_GETMINMAXFRAMEPERIOD Lib "XCLIBWNT.DLL" Alias "pxd_SV1310_getMinMaxFramePeriod"  _
+(ByVal c_unitmap as Long, ByVal c_frameperiod as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1281_setExposureGainOffset(int unitmap,int rsvd,double exposure,
+' double gain,double offset,double rsvd2,double rsvd3);
+Private Declare Function PXD_SV1281_SETEXPOSUREGAINOFFSET Lib "XCLIBWNT.DLL" Alias "pxd_SV1281_setExposureGainOffset"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_exposure as Double, ByVal c_gain as Double,  _
+ByVal c_offset as Double, ByVal c_rsvd2 as Double, ByVal c_rsvd3 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1281_setResolutionAndTiming(int unitmap,int rsvd,int rsvd1,
+' int aoileft,int aoitop,int aoiwidth,int aoiheight,
+' int rsvd4,double pixelClkFreq,double rsvd2,double rsvd3);
+Private Declare Function PXD_SV1281_SETRESOLUTIONANDTIMING Lib "XCLIBWNT.DLL" Alias "pxd_SV1281_setResolutionAndTiming"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_rsvd1 as Long, ByVal c_aoileft as Long,  _
+ByVal c_aoitop as Long, ByVal c_aoiwidth as Long, ByVal c_aoiheight as Long, ByVal c_rsvd4 as Long,  _
+ByVal c_pixelClkFreq as Double, ByVal c_rsvd2 as Double, ByVal c_rsvd3 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1281_setVideoAndTriggerMode(int unitmap,int rsvd,int videomode,int controlledvideomode,int controlledtrigger,int rsvd1,int rsvd2,int rsvd3);
+Private Declare Function PXD_SV1281_SETVIDEOANDTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV1281_setVideoAndTriggerMode"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_videomode as Long, ByVal c_controlledvideomode as Long,  _
+ByVal c_controlledtrigger as Long, ByVal c_rsvd1 as Long, ByVal c_rsvd2 as Long,  _
+ByVal c_rsvd3 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1281_setCtrlRate(int unitmap,int rsvd,double rsvd2,double framerate,double rsvd3);
+Private Declare Function PXD_SV1281_SETCTRLRATE Lib "XCLIBWNT.DLL" Alias "pxd_SV1281_setCtrlRate"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_rsvd2 as Double, ByVal c_framerate as Double,  _
+ByVal c_rsvd3 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV1281_getExposure(int unitmap);
+Private Declare Function PXD_SV1281_GETEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV1281_getExposure"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV1281_getGain(int unitmap);
+Private Declare Function PXD_SV1281_GETGAIN Lib "XCLIBWNT.DLL" Alias "pxd_SV1281_getGain"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV1281_getOffset(int unitmap);
+Private Declare Function PXD_SV1281_GETOFFSET Lib "XCLIBWNT.DLL" Alias "pxd_SV1281_getOffset"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1281_getAoiTop(int unitmap);
+Private Declare Function PXD_SV1281_GETAOITOP Lib "XCLIBWNT.DLL" Alias "pxd_SV1281_getAoiTop"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1281_getAoiLeft(int unitmap);
+Private Declare Function PXD_SV1281_GETAOILEFT Lib "XCLIBWNT.DLL" Alias "pxd_SV1281_getAoiLeft"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV1281_getPixelClock(int unitmap);
+Private Declare Function PXD_SV1281_GETPIXELCLOCK Lib "XCLIBWNT.DLL" Alias "pxd_SV1281_getPixelClock"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1281_getVideoMode(int unitmap);
+Private Declare Function PXD_SV1281_GETVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV1281_getVideoMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1281_getCtrlVideoMode(int unitmap);
+Private Declare Function PXD_SV1281_GETCTRLVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV1281_getCtrlVideoMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV1281_getCtrlTriggerMode(int unitmap);
+Private Declare Function PXD_SV1281_GETCTRLTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV1281_getCtrlTriggerMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV1281_getCtrlFrameRate(int unitmap);
+Private Declare Function PXD_SV1281_GETCTRLFRAMERATE Lib "XCLIBWNT.DLL" Alias "pxd_SV1281_getCtrlFrameRate"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV1281_getMinMaxExposure(int unitmap,double exposure);
+Private Declare Function PXD_SV1281_GETMINMAXEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV1281_getMinMaxExposure"  _
+(ByVal c_unitmap as Long, ByVal c_exposure as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV9M001_setExposureAndGain(int unitmap,int rsvd,double exposure,double redgain,double grnrgain,double bluegain,double grnbgain);
+Private Declare Function PXD_SV9M001_SETEXPOSUREANDGAIN Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_setExposureAndGain"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_exposure as Double, ByVal c_redgain as Double,  _
+ByVal c_grnrgain as Double, ByVal c_bluegain as Double, ByVal c_grnbgain as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV9M001_setResolutionAndTiming(int unitmap,int rsvd,int subsample,int aoileft,int aoitop,int aoiwidth,int aoiheight,int scandirection,double pixelClkFreq,double framePeriod,double rsvd2);
+Private Declare Function PXD_SV9M001_SETRESOLUTIONANDTIMING Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_setResolutionAndTiming"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_subsample as Long, ByVal c_aoileft as Long,  _
+ByVal c_aoitop as Long, ByVal c_aoiwidth as Long, ByVal c_aoiheight as Long, ByVal c_scandirection as Long,  _
+ByVal c_pixelClkFreq as Double, ByVal c_framePeriod as Double, ByVal c_rsvd2 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV9M001_setVideoAndTriggerMode(int unitmap,int rsvd,int videomode,int controlledmode,int controlledtrigger,int rsvd4,int rsvd2,int rsvd3);
+Private Declare Function PXD_SV9M001_SETVIDEOANDTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_setVideoAndTriggerMode"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_videomode as Long, ByVal c_controlledmode as Long,  _
+ByVal c_controlledtrigger as Long, ByVal c_rsvd4 as Long, ByVal c_rsvd2 as Long,  _
+ByVal c_rsvd3 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV9M001_setCtrlRate(int unitmap,int rsvd,double rsvd2,double framerate,double rsvd3);
+Private Declare Function PXD_SV9M001_SETCTRLRATE Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_setCtrlRate"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_rsvd2 as Double, ByVal c_framerate as Double,  _
+ByVal c_rsvd3 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV9M001_setExposureAndDigitalGain(int unitmap,int rsvd,double exposure,double digitalgain,double rsvd2,double rsvd3,double rsvd4);
+Private Declare Function PXD_SV9M001_SETEXPOSUREANDDIGITALGAIN Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_setExposureAndDigitalGain"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_exposure as Double, ByVal c_digitalgain as Double,  _
+ByVal c_rsvd2 as Double, ByVal c_rsvd3 as Double, ByVal c_rsvd4 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV9M001_getExposure(int unitmap);
+Private Declare Function PXD_SV9M001_GETEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_getExposure"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV9M001_getAoiTop(int unitmap);
+Private Declare Function PXD_SV9M001_GETAOITOP Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_getAoiTop"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV9M001_getAoiLeft(int unitmap);
+Private Declare Function PXD_SV9M001_GETAOILEFT Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_getAoiLeft"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV9M001_getGain(int unitmap,int color);
+Private Declare Function PXD_SV9M001_GETGAIN Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_getGain"  _
+(ByVal c_unitmap as Long, ByVal c_color as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV9M001_getPixelClock(int unitmap);
+Private Declare Function PXD_SV9M001_GETPIXELCLOCK Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_getPixelClock"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV9M001_getFramePeriod(int unitmap);
+Private Declare Function PXD_SV9M001_GETFRAMEPERIOD Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_getFramePeriod"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV9M001_getVideoMode(int unitmap);
+Private Declare Function PXD_SV9M001_GETVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_getVideoMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV9M001_getCtrlFrameRate(int unitmap);
+Private Declare Function PXD_SV9M001_GETCTRLFRAMERATE Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_getCtrlFrameRate"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV9M001_getCtrlVideoMode(int unitmap);
+Private Declare Function PXD_SV9M001_GETCTRLVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_getCtrlVideoMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV9M001_getCtrlTriggerMode(int unitmap);
+Private Declare Function PXD_SV9M001_GETCTRLTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_getCtrlTriggerMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV9M001_getSubsample(int unitmap);
+Private Declare Function PXD_SV9M001_GETSUBSAMPLE Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_getSubsample"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV9M001_getScanDirection(int unitmap);
+Private Declare Function PXD_SV9M001_GETSCANDIRECTION Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_getScanDirection"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV9M001_getDigitalGain(int unitmap);
+Private Declare Function PXD_SV9M001_GETDIGITALGAIN Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_getDigitalGain"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV9M001_getMinMaxExposure(int unitmap,double exposure);
+Private Declare Function PXD_SV9M001_GETMINMAXEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV9M001_getMinMaxExposure"  _
+(ByVal c_unitmap as Long, ByVal c_exposure as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV642_setExposureAndGain(int unitmap,int rsvd1,double exposure,double redgain,double grnrgain,double bluegain,double grnbgain,int gainrange);
+Private Declare Function PXD_SV642_SETEXPOSUREANDGAIN Lib "XCLIBWNT.DLL" Alias "pxd_SV642_setExposureAndGain"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd1 as Long, ByVal c_exposure as Double, ByVal c_redgain as Double,  _
+ByVal c_grnrgain as Double, ByVal c_bluegain as Double, ByVal c_grnbgain as Double,  _
+ByVal c_gainrange as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV642_setResolutionAndTiming(int unitmap,int rsvd,int rsvd2,int aoileft,int aoitop,int aoiwidth,int aoiheight,int rsvd3,double pixelClkFreq,double framePeriod,double rsvd4);
+Private Declare Function PXD_SV642_SETRESOLUTIONANDTIMING Lib "XCLIBWNT.DLL" Alias "pxd_SV642_setResolutionAndTiming"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_rsvd2 as Long, ByVal c_aoileft as Long,  _
+ByVal c_aoitop as Long, ByVal c_aoiwidth as Long, ByVal c_aoiheight as Long, ByVal c_rsvd3 as Long,  _
+ByVal c_pixelClkFreq as Double, ByVal c_framePeriod as Double, ByVal c_rsvd4 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV642_setVideoAndTriggerMode(int unitmap,int rsvd,int videomode,int controlledmode,int controlledtrigger,int rsvd4,int rsvd2,int rsvd3);
+Private Declare Function PXD_SV642_SETVIDEOANDTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV642_setVideoAndTriggerMode"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_videomode as Long, ByVal c_controlledmode as Long,  _
+ByVal c_controlledtrigger as Long, ByVal c_rsvd4 as Long, ByVal c_rsvd2 as Long,  _
+ByVal c_rsvd3 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV642_setCtrlRate(int unitmap,int rsvd,double rsvd2,double framerate,double rsvd3);
+Private Declare Function PXD_SV642_SETCTRLRATE Lib "XCLIBWNT.DLL" Alias "pxd_SV642_setCtrlRate"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_rsvd2 as Double, ByVal c_framerate as Double,  _
+ByVal c_rsvd3 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV642_getExposure(int unitmap);
+Private Declare Function PXD_SV642_GETEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV642_getExposure"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV642_getAoiTop(int unitmap);
+Private Declare Function PXD_SV642_GETAOITOP Lib "XCLIBWNT.DLL" Alias "pxd_SV642_getAoiTop"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV642_getAoiLeft(int unitmap);
+Private Declare Function PXD_SV642_GETAOILEFT Lib "XCLIBWNT.DLL" Alias "pxd_SV642_getAoiLeft"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV642_getGain(int unitmap,int color);
+Private Declare Function PXD_SV642_GETGAIN Lib "XCLIBWNT.DLL" Alias "pxd_SV642_getGain"  _
+(ByVal c_unitmap as Long, ByVal c_color as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV642_getPixelClock(int unitmap);
+Private Declare Function PXD_SV642_GETPIXELCLOCK Lib "XCLIBWNT.DLL" Alias "pxd_SV642_getPixelClock"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV642_getFramePeriod(int unitmap);
+Private Declare Function PXD_SV642_GETFRAMEPERIOD Lib "XCLIBWNT.DLL" Alias "pxd_SV642_getFramePeriod"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV642_getVideoMode(int unitmap);
+Private Declare Function PXD_SV642_GETVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV642_getVideoMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV642_getCtrlFrameRate(int unitmap);
+Private Declare Function PXD_SV642_GETCTRLFRAMERATE Lib "XCLIBWNT.DLL" Alias "pxd_SV642_getCtrlFrameRate"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV642_getCtrlVideoMode(int unitmap);
+Private Declare Function PXD_SV642_GETCTRLVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV642_getCtrlVideoMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV642_getCtrlTriggerMode(int unitmap);
+Private Declare Function PXD_SV642_GETCTRLTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV642_getCtrlTriggerMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV642_getGainRange(int unitmap);
+Private Declare Function PXD_SV642_GETGAINRANGE Lib "XCLIBWNT.DLL" Alias "pxd_SV642_getGainRange"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV642_getMinMaxExposure(int unitmap,double exposure);
+Private Declare Function PXD_SV642_GETMINMAXEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV642_getMinMaxExposure"  _
+(ByVal c_unitmap as Long, ByVal c_exposure as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV643_setExposureAndGain(int unitmap,int rsvd1,double exposure,double gain);
+Private Declare Function PXD_SV643_SETEXPOSUREANDGAIN Lib "XCLIBWNT.DLL" Alias "pxd_SV643_setExposureAndGain"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd1 as Long, ByVal c_exposure as Double, ByVal c_gain as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV643_setExposureAndGainOffset(int unitmap,int rsvd1,double exposure,double gain,double offset,double rsvd2);
+Private Declare Function PXD_SV643_SETEXPOSUREANDGAINOFFSET Lib "XCLIBWNT.DLL" Alias "pxd_SV643_setExposureAndGainOffset"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd1 as Long, ByVal c_exposure as Double, ByVal c_gain as Double,  _
+ByVal c_offset as Double, ByVal c_rsvd2 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV643_setResolutionAndTiming(int unitmap,int rsvd,int subsample,int aoileft,int aoitop,int aoiwidth,int aoiheight,int rsvd3,double pixelClkFreq,double framePeriod,double rsvd4);
+Private Declare Function PXD_SV643_SETRESOLUTIONANDTIMING Lib "XCLIBWNT.DLL" Alias "pxd_SV643_setResolutionAndTiming"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_subsample as Long, ByVal c_aoileft as Long,  _
+ByVal c_aoitop as Long, ByVal c_aoiwidth as Long, ByVal c_aoiheight as Long, ByVal c_rsvd3 as Long,  _
+ByVal c_pixelClkFreq as Double, ByVal c_framePeriod as Double, ByVal c_rsvd4 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV643_setVideoAndTriggerMode(int unitmap,int rsvd,int videomode,int controlledmode,int controlledtrigger,int rsvd4,int rsvd2,int rsvd3);
+Private Declare Function PXD_SV643_SETVIDEOANDTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV643_setVideoAndTriggerMode"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_videomode as Long, ByVal c_controlledmode as Long,  _
+ByVal c_controlledtrigger as Long, ByVal c_rsvd4 as Long, ByVal c_rsvd2 as Long,  _
+ByVal c_rsvd3 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV643_setCtrlExposureAndRate(int unitmap,int rsvd,double exposure,double framerate,double rsvd3);
+Private Declare Function PXD_SV643_SETCTRLEXPOSUREANDRATE Lib "XCLIBWNT.DLL" Alias "pxd_SV643_setCtrlExposureAndRate"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_exposure as Double, ByVal c_framerate as Double,  _
+ByVal c_rsvd3 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV643_getExposure(int unitmap);
+Private Declare Function PXD_SV643_GETEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV643_getExposure"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV643_getAoiTop(int unitmap);
+Private Declare Function PXD_SV643_GETAOITOP Lib "XCLIBWNT.DLL" Alias "pxd_SV643_getAoiTop"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV643_getAoiLeft(int unitmap);
+Private Declare Function PXD_SV643_GETAOILEFT Lib "XCLIBWNT.DLL" Alias "pxd_SV643_getAoiLeft"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV643_getGain(int unitmap);
+Private Declare Function PXD_SV643_GETGAIN Lib "XCLIBWNT.DLL" Alias "pxd_SV643_getGain"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV643_getOffset(int unitmap);
+Private Declare Function PXD_SV643_GETOFFSET Lib "XCLIBWNT.DLL" Alias "pxd_SV643_getOffset"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV643_getPixelClock(int unitmap);
+Private Declare Function PXD_SV643_GETPIXELCLOCK Lib "XCLIBWNT.DLL" Alias "pxd_SV643_getPixelClock"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV643_getFramePeriod(int unitmap);
+Private Declare Function PXD_SV643_GETFRAMEPERIOD Lib "XCLIBWNT.DLL" Alias "pxd_SV643_getFramePeriod"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV643_getVideoMode(int unitmap);
+Private Declare Function PXD_SV643_GETVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV643_getVideoMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV643_getCtrlFrameRate(int unitmap);
+Private Declare Function PXD_SV643_GETCTRLFRAMERATE Lib "XCLIBWNT.DLL" Alias "pxd_SV643_getCtrlFrameRate"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV643_getCtrlExposure(int unitmap);
+Private Declare Function PXD_SV643_GETCTRLEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV643_getCtrlExposure"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV643_getCtrlVideoMode(int unitmap);
+Private Declare Function PXD_SV643_GETCTRLVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV643_getCtrlVideoMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV643_getCtrlTriggerMode(int unitmap);
+Private Declare Function PXD_SV643_GETCTRLTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SV643_getCtrlTriggerMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SV643_getSubsample(int unitmap);
+Private Declare Function PXD_SV643_GETSUBSAMPLE Lib "XCLIBWNT.DLL" Alias "pxd_SV643_getSubsample"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV643_getMinMaxExposure(int unitmap,double exposure);
+Private Declare Function PXD_SV643_GETMINMAXEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV643_getMinMaxExposure"  _
+(ByVal c_unitmap as Long, ByVal c_exposure as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SV643_getMinMaxCtrlExposure(int unitmap,double exposure);
+Private Declare Function PXD_SV643_GETMINMAXCTRLEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SV643_getMinMaxCtrlExposure"  _
+(ByVal c_unitmap as Long, ByVal c_exposure as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_setExposureGainOffset(
+' int unitmap,int rsvd,double exposure,double gainA,double offsetA,double gainB,double offsetB);
+Private Declare Function PXD_SILICONVIDEO_SETEXPOSUREGAINOFFSET Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_setExposureGainOffset"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_exposure as Double, ByVal c_gainA as Double,  _
+ByVal c_offsetA as Double, ByVal c_gainB as Double, ByVal c_offsetB as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_setExposureColorGainOffsets(
+' int unitmap,int rsvd,double exposure,double gainsA[4],double gainsB[4],double offsetsA[4],double offsetsB[4]);
+' The `gainsA' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+' The `gainsB' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+' The `offsetsA' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+' The `offsetsB' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+Private Declare Function PXD_SILICONVIDEO_SETEXPOSURECOLORGAINOFFSETS Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_setExposureColorGainOffsets"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_exposure as Double, c_gainsA as Any,  _
+c_gainsB as Any, c_offsetsA as Any, c_offsetsB as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_setExposure(int unitmap,int rsvd,double exposure);
+Private Declare Function PXD_SILICONVIDEO_SETEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_setExposure"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_exposure as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_setVideoAndTriggerMode(
+' int unitmap,int rsvd,int videomode,int controlledmode,int controlledtrigger,int rsvd1,int rsvd2,int rsvd3,int rsvd4);
+Private Declare Function PXD_SILICONVIDEO_SETVIDEOANDTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_setVideoAndTriggerMode"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_videomode as Long, ByVal c_controlledmode as Long,  _
+ByVal c_controlledtrigger as Long, ByVal c_rsvd1 as Long, ByVal c_rsvd2 as Long,  _
+ByVal c_rsvd3 as Long, ByVal c_rsvd4 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_setResolutionAndTiming(
+' int unitmap,int rsvd1,int subsample,int aoileft,int aoitop,int aoiwidth,int aoiheight,int scandirection,
+' int bitdepth,int rsvd3,int rsvd4,double pixelClkFreq,double framePeriod,double rsvd5,double rsvd6,double rsvd7);
+Private Declare Function PXD_SILICONVIDEO_SETRESOLUTIONANDTIMING Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_setResolutionAndTiming"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd1 as Long, ByVal c_subsample as Long, ByVal c_aoileft as Long,  _
+ByVal c_aoitop as Long, ByVal c_aoiwidth as Long, ByVal c_aoiheight as Long, ByVal c_scandirection as Long,  _
+ByVal c_bitdepth as Long, ByVal c_rsvd3 as Long, ByVal c_rsvd4 as Long, ByVal c_pixelClkFreq as Double,  _
+ByVal c_framePeriod as Double, ByVal c_rsvd5 as Double, ByVal c_rsvd6 as Double,  _
+ByVal c_rsvd7 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_setCtrlRates(
+' int unitmap,int rsvd,double exposure,double framerate,double rsvd2,double rsvd3,double rsvd4);
+Private Declare Function PXD_SILICONVIDEO_SETCTRLRATES Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_setCtrlRates"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_exposure as Double, ByVal c_framerate as Double,  _
+ByVal c_rsvd2 as Double, ByVal c_rsvd3 as Double, ByVal c_rsvd4 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_setAxC(int unitmap,int rsvd,
+' int agcA,int agcB,int rsvd2,int rsvd3,int aec,int rsvd4,int rsvd5,int rsvd6,int rsvd7);
+Private Declare Function PXD_SILICONVIDEO_SETAXC Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_setAxC"  _
+(ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_agcA as Long, ByVal c_agcB as Long,  _
+ByVal c_rsvd2 as Long, ByVal c_rsvd3 as Long, ByVal c_aec as Long, ByVal c_rsvd4 as Long,  _
+ByVal c_rsvd5 as Long, ByVal c_rsvd6 as Long, ByVal c_rsvd7 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getCameraType(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETCAMERATYPE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getCameraType"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getExposure(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getExposure"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getAoiTop(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETAOITOP Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getAoiTop"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getAoiLeft(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETAOILEFT Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getAoiLeft"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getAoiWidth(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETAOIWIDTH Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getAoiWidth"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getAoiHeight(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETAOIHEIGHT Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getAoiHeight"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getPixelClock(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETPIXELCLOCK Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getPixelClock"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getFramePeriod(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETFRAMEPERIOD Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getFramePeriod"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getSubsample(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETSUBSAMPLE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getSubsample"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getScanDirection(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETSCANDIRECTION Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getScanDirection"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getVideoMode(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getVideoMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getCtrlExposure(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETCTRLEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getCtrlExposure"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getCtrlFrameRate(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETCTRLFRAMERATE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getCtrlFrameRate"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getCtrlVideoMode(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETCTRLVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getCtrlVideoMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getCtrlTriggerMode(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETCTRLTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getCtrlTriggerMode"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getGainA(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETGAINA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getGainA"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getGainB(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETGAINB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getGainB"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getGainsA(int unitmap,double gainsA[4]);
+' The `gainsA' parameter has been declared expecting a dimensioned Double array to be passed
+Private Declare Function PXD_SILICONVIDEO_GETGAINSA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getGainsA"  _
+(ByVal c_unitmap as Long, c_gainsA as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getGainsB(int unitmap,double gainsB[4]);
+' The `gainsB' parameter has been declared expecting a dimensioned Double array to be passed
+Private Declare Function PXD_SILICONVIDEO_GETGAINSB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getGainsB"  _
+(ByVal c_unitmap as Long, c_gainsB as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getOffsetsA(int unitmap,double offsetsA[4]);
+' The `offsetsA' parameter has been declared expecting a dimensioned Double array to be passed
+Private Declare Function PXD_SILICONVIDEO_GETOFFSETSA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getOffsetsA"  _
+(ByVal c_unitmap as Long, c_offsetsA as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getOffsetsB(int unitmap,double offsetsB[4]);
+' The `offsetsB' parameter has been declared expecting a dimensioned Double array to be passed
+Private Declare Function PXD_SILICONVIDEO_GETOFFSETSB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getOffsetsB"  _
+(ByVal c_unitmap as Long, c_offsetsB as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getOffsetA(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETOFFSETA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getOffsetA"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getOffsetB(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETOFFSETB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getOffsetB"  _
+(ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxExposure(int unitmap,double exposure);
+Private Declare Function PXD_SILICONVIDEO_GETMINMAXEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxExposure"  _
+(ByVal c_unitmap as Long, ByVal c_exposure as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxFramePeriod(int unitmap,double framePeriod);
+Private Declare Function PXD_SILICONVIDEO_GETMINMAXFRAMEPERIOD Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxFramePeriod"  _
+(ByVal c_unitmap as Long, ByVal c_framePeriod as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxCtrlFrameRate(int unitmap,double frameRate);
+Private Declare Function PXD_SILICONVIDEO_GETMINMAXCTRLFRAMERATE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxCtrlFrameRate"  _
+(ByVal c_unitmap as Long, ByVal c_frameRate as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxCtrlExposure(int unitmap,double exposure);
+Private Declare Function PXD_SILICONVIDEO_GETMINMAXCTRLEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxCtrlExposure"  _
+(ByVal c_unitmap as Long, ByVal c_exposure as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxPixelClock(int unitmap,double pixelClkFreq);
+Private Declare Function PXD_SILICONVIDEO_GETMINMAXPIXELCLOCK Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxPixelClock"  _
+(ByVal c_unitmap as Long, ByVal c_pixelClkFreq as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxGainA(int unitmap,double gain);
+Private Declare Function PXD_SILICONVIDEO_GETMINMAXGAINA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxGainA"  _
+(ByVal c_unitmap as Long, ByVal c_gain as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxGainB(int unitmap,double gain);
+Private Declare Function PXD_SILICONVIDEO_GETMINMAXGAINB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxGainB"  _
+(ByVal c_unitmap as Long, ByVal c_gain as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxOffsetA(int unitmap,double offset);
+Private Declare Function PXD_SILICONVIDEO_GETMINMAXOFFSETA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxOffsetA"  _
+(ByVal c_unitmap as Long, ByVal c_offset as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxOffsetB(int unitmap,double offset);
+Private Declare Function PXD_SILICONVIDEO_GETMINMAXOFFSETB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxOffsetB"  _
+(ByVal c_unitmap as Long, ByVal c_offset as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getMinMaxAoiWidth(int unitmap,int width);
+Private Declare Function PXD_SILICONVIDEO_GETMINMAXAOIWIDTH Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxAoiWidth"  _
+(ByVal c_unitmap as Long, ByVal c_width as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getMinMaxAoiHeight(int unitmap,int height);
+Private Declare Function PXD_SILICONVIDEO_GETMINMAXAOIHEIGHT Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxAoiHeight"  _
+(ByVal c_unitmap as Long, ByVal c_height as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getAgcA(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETAGCA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getAgcA"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getAgcB(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETAGCB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getAgcB"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getAec(int unitmap);
+Private Declare Function PXD_SILICONVIDEO_GETAEC Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getAec"  _
+(ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getMinMaxAgcA(int unitmap,int agc);
+Private Declare Function PXD_SILICONVIDEO_GETMINMAXAGCA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxAgcA"  _
+(ByVal c_unitmap as Long, ByVal c_agc as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getMinMaxAgcB(int unitmap,int agc);
+Private Declare Function PXD_SILICONVIDEO_GETMINMAXAGCB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxAgcB"  _
+(ByVal c_unitmap as Long, ByVal c_agc as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getMinMaxAec(int unitmap,int aec);
+Private Declare Function PXD_SILICONVIDEO_GETMINMAXAEC Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxAec"  _
+(ByVal c_unitmap as Long, ByVal c_aec as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getMinMaxResolution(int unitmap,int subsamplep[],int aoileftp[],int aoitopp[],int aoiwidthp[],int aoiheightp[],int scandirectionp[],int bitdepthp[],int rsvd3[],int rsvd4[]);
+' The `subsamplep' parameter has been declared expecting a dimensioned Long array to be passed
+' The `aoileftp' parameter has been declared expecting a dimensioned Long array to be passed
+' The `aoitopp' parameter has been declared expecting a dimensioned Long array to be passed
+' The `aoiwidthp' parameter has been declared expecting a dimensioned Long array to be passed
+' The `aoiheightp' parameter has been declared expecting a dimensioned Long array to be passed
+' The `scandirectionp' parameter has been declared expecting a dimensioned Long array to be passed
+' The `bitdepthp' parameter has been declared expecting a dimensioned Long array to be passed
+' The `rsvd3' parameter has been declared expecting a dimensioned Long array to be passed
+' The `rsvd4' parameter has been declared expecting a dimensioned Long array to be passed
+Private Declare Function PXD_SILICONVIDEO_GETMINMAXRESOLUTION Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxResolution"  _
+(ByVal c_unitmap as Long, c_subsamplep as Any, c_aoileftp as Any, c_aoitopp as Any,  _
+c_aoiwidthp as Any, c_aoiheightp as Any, c_scandirectionp as Any, c_bitdepthp as Any,  _
+c_rsvd3 as Any, c_rsvd4 as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_setExposureGainOffset(pxdstate_s*,
+' int unitmap,int rsvd,double exposure,double gainA,double offsetA,double gainB,double offsetB);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_SETEXPOSUREGAINOFFSET Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_setExposureGainOffset"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_exposure as Double,  _
+ByVal c_gainA as Double, ByVal c_offsetA as Double, ByVal c_gainB as Double, ByVal c_offsetB as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_setExposureColorGainOffsets(pxdstate_s*,
+' int unitmap,int rsvd,double exposure,double gainsA[4],double gainsB[4],double offsetsA[4],double offsetsB[4]);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `gainsA' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+' The `gainsB' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+' The `offsetsA' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+' The `offsetsB' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+Private Declare Function PXE_SILICONVIDEO_SETEXPOSURECOLORGAINOFFSETS Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_setExposureColorGainOffsets"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_exposure as Double,  _
+c_gainsA as Any, c_gainsB as Any, c_offsetsA as Any, c_offsetsB as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_setExposure(pxdstate_s*,int unitmap,int rsvd,double exposure);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_SETEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_setExposure"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_exposure as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_setVideoAndTriggerMode(pxdstate_s*,
+' int unitmap,int rsvd,int videomode,int controlledmode,int controlledtrigger,int rsdv1,int rsvd2,int rsvd3,int rsvd4);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_SETVIDEOANDTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_setVideoAndTriggerMode"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_videomode as Long,  _
+ByVal c_controlledmode as Long, ByVal c_controlledtrigger as Long, ByVal c_rsdv1 as Long,  _
+ByVal c_rsvd2 as Long, ByVal c_rsvd3 as Long, ByVal c_rsvd4 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_setResolutionAndTiming(pxdstate_s*,
+' int unitmap,int rsvd1,int subsample,int aoileft,int aoitop,int aoiwidth,int aoiheight,int scandirection,
+' int bitdepth,int rsvd3,int rsvd4,double pixelClkFreq,double framePeriod,double rsvd5,double rsvd6,double rsvd7);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_SETRESOLUTIONANDTIMING Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_setResolutionAndTiming"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd1 as Long, ByVal c_subsample as Long,  _
+ByVal c_aoileft as Long, ByVal c_aoitop as Long, ByVal c_aoiwidth as Long, ByVal c_aoiheight as Long,  _
+ByVal c_scandirection as Long, ByVal c_bitdepth as Long, ByVal c_rsvd3 as Long,  _
+ByVal c_rsvd4 as Long, ByVal c_pixelClkFreq as Double, ByVal c_framePeriod as Double,  _
+ByVal c_rsvd5 as Double, ByVal c_rsvd6 as Double, ByVal c_rsvd7 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_setCtrlRates(pxdstate_s*,
+' int unitmap,int rsvd,double exposure,double framerate,double rsvd2,double rsvd3,double rsvd4);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_SETCTRLRATES Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_setCtrlRates"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_exposure as Double,  _
+ByVal c_framerate as Double, ByVal c_rsvd2 as Double, ByVal c_rsvd3 as Double, ByVal c_rsvd4 as Double) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_setAxC(pxdstate_s*,int unitmap,int rsvd,
+' int agcA,int agcB,int rsvd2,int rsvd3,int aec,int rsvd4,int rsvd5,int rsvd6,int rsvd7);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_SETAXC Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_setAxC"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_rsvd as Long, ByVal c_agcA as Long,  _
+ByVal c_agcB as Long, ByVal c_rsvd2 as Long, ByVal c_rsvd3 as Long, ByVal c_aec as Long,  _
+ByVal c_rsvd4 as Long, ByVal c_rsvd5 as Long, ByVal c_rsvd6 as Long, ByVal c_rsvd7 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getCameraType(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETCAMERATYPE Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getCameraType"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getExposure(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getExposure"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getAoiTop(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETAOITOP Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getAoiTop"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getAoiLeft(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETAOILEFT Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getAoiLeft"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getAoiWidth(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETAOIWIDTH Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getAoiWidth"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getAoiHeight(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETAOIHEIGHT Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getAoiHeight"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getPixelClock(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETPIXELCLOCK Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getPixelClock"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getFramePeriod(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETFRAMEPERIOD Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getFramePeriod"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getSubsample(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETSUBSAMPLE Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getSubsample"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getScanDirection(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETSCANDIRECTION Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getScanDirection"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getVideoMode(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getVideoMode"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getCtrlExposure(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETCTRLEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getCtrlExposure"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getCtrlFrameRate(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETCTRLFRAMERATE Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getCtrlFrameRate"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getCtrlVideoMode(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETCTRLVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getCtrlVideoMode"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getCtrlTriggerMode(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETCTRLTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getCtrlTriggerMode"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getGainA(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETGAINA Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getGainA"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getGainB(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETGAINB Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getGainB"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getGainsA(pxdstate_s*,int unitmap,double gainsA[4]);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `gainsA' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+Private Declare Function PXE_SILICONVIDEO_GETGAINSA Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getGainsA"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, c_gainsA as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getGainsB(pxdstate_s*,int unitmap,double gainsB[4]);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `gainsB' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+Private Declare Function PXE_SILICONVIDEO_GETGAINSB Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getGainsB"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, c_gainsB as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getOffsetsA(pxdstate_s*,int unitmap,double offsetsA[4]);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `offsetsA' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+Private Declare Function PXE_SILICONVIDEO_GETOFFSETSA Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getOffsetsA"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, c_offsetsA as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getOffsetsB(pxdstate_s*,int unitmap,double offsetsB[4]);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `offsetsB' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+Private Declare Function PXE_SILICONVIDEO_GETOFFSETSB Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getOffsetsB"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, c_offsetsB as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getOffsetA(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETOFFSETA Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getOffsetA"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getOffsetB(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETOFFSETB Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getOffsetB"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxExposure(pxdstate_s*,int unitmap,double exposure);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETMINMAXEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getMinMaxExposure"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_exposure as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxFramePeriod(pxdstate_s*,int unitmap,double framePeriod);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETMINMAXFRAMEPERIOD Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getMinMaxFramePeriod"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_framePeriod as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxCtrlFrameRate(pxdstate_s*,int unitmap,double frameRate);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETMINMAXCTRLFRAMERATE Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getMinMaxCtrlFrameRate"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_frameRate as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxCtrlExposure(pxdstate_s*,int unitmap,double exposure);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETMINMAXCTRLEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getMinMaxCtrlExposure"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_exposure as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxPixelClock(pxdstate_s*,int unitmap,double pixelClkFreq);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETMINMAXPIXELCLOCK Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getMinMaxPixelClock"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_pixelClkFreq as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxGainA(pxdstate_s*,int unitmap,double gain);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETMINMAXGAINA Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getMinMaxGainA"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_gain as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxGainB(pxdstate_s*,int unitmap,double gain);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETMINMAXGAINB Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getMinMaxGainB"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_gain as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxOffsetA(pxdstate_s*,int unitmap,double offset);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETMINMAXOFFSETA Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getMinMaxOffsetA"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_offset as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxOffsetB(pxdstate_s*,int unitmap,double offset);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETMINMAXOFFSETB Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getMinMaxOffsetB"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_offset as Double) as Double
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getMinMaxAoiWidth(pxdstate_s*,int unitmap,int width);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETMINMAXAOIWIDTH Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getMinMaxAoiWidth"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_width as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getMinMaxAoiHeight(pxdstate_s*,int unitmap,int height);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETMINMAXAOIHEIGHT Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getMinMaxAoiHeight"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_height as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getAgcA(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETAGCA Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getAgcA"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getAgcB(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETAGCB Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getAgcB"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getAec(pxdstate_s*,int unitmap);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETAEC Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getAec"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getMinMaxAgcA(pxdstate_s*,int unitmap,int agc);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETMINMAXAGCA Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getMinMaxAgcA"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_agc as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getMinMaxAgcB(pxdstate_s*,int unitmap,int agc);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETMINMAXAGCB Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getMinMaxAgcB"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_agc as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getMinMaxAec(pxdstate_s*,int unitmap,int aec);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_SILICONVIDEO_GETMINMAXAEC Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getMinMaxAec"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, ByVal c_aec as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getMinMaxResolution(pxdstate_s*,int unitmap,int subsamplep[],int aoileftp[],int aoitopp[],int aoiwidthp[],int aoiheightp[],int scandirectionp[],int bitdepthp[],int rsvd3[],int rsvd4[]);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+' The `subsamplep' parameter has been declared expecting a dimensioned Long array to be passed
+' The `aoileftp' parameter has been declared expecting a dimensioned Long array to be passed
+' The `aoitopp' parameter has been declared expecting a dimensioned Long array to be passed
+' The `aoiwidthp' parameter has been declared expecting a dimensioned Long array to be passed
+' The `aoiheightp' parameter has been declared expecting a dimensioned Long array to be passed
+' The `scandirectionp' parameter has been declared expecting a dimensioned Long array to be passed
+' The `bitdepthp' parameter has been declared expecting a dimensioned Long array to be passed
+' The `rsvd3' parameter has been declared expecting a dimensioned Long array to be passed
+' The `rsvd4' parameter has been declared expecting a dimensioned Long array to be passed
+Private Declare Function PXE_SILICONVIDEO_GETMINMAXRESOLUTION Lib "XCLIBWNT.DLL" Alias "pxe_SILICONVIDEO_getMinMaxResolution"  _
+(ByVal c_noname1 as Long, ByVal c_unitmap as Long, c_subsamplep as Any, c_aoileftp as Any,  _
+c_aoitopp as Any, c_aoiwidthp as Any, c_aoiheightp as Any, c_scandirectionp as Any,  _
+c_bitdepthp as Any, c_rsvd3 as Any, c_rsvd4 as Any) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,xclibs_s*)pxd_xclibEscape(int rsvd1,int rsvd2,int rsvd3);
+' Uses advanced or unrecognized C constructs
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxd_xclibEscaped(int rsvd1,int rsvd2,int rsvd3);
+Private Declare Function PXD_XCLIBESCAPED Lib "XCLIBWNT.DLL" Alias "pxd_xclibEscaped"  _
+(ByVal c_rsvd1 as Long, ByVal c_rsvd2 as Long, ByVal c_rsvd3 as Long) as Long
+
+' _cDcl(__declspec(dllexport),__stdcall,xclibs_s*)pxe_xclibEscape(pxdstate_s*,int rsvd1,int rsvd2,int rsvd3);
+' Uses advanced or unrecognized C constructs
+
+' _cDcl(__declspec(dllexport),__stdcall,int)pxe_xclibEscaped(pxdstate_s*,int rsvd1,int rsvd2,int rsvd3);
+' The `noname1' parameter has been declared expecting a pxe_XCLIBinstantiate() instance to be passed
+Private Declare Function PXE_XCLIBESCAPED Lib "XCLIBWNT.DLL" Alias "pxe_xclibEscaped"  _
+(ByVal c_noname1 as Long, ByVal c_rsvd1 as Long, ByVal c_rsvd2 as Long, ByVal c_rsvd3 as Long) as Long
+
+
+'  Helpful constants:
+Const ascii_b = 98  ' an asc("b")
+Const ascii_e = 101 ' an asc("e")
+Const ascii_n = 110 ' an asc("n")
+Const ascii_o = 111 ' an asc("o")
+Const ascii_p = 112 ' an asc("p")
+Const ascii_s = 115 ' an asc("s")
+Const ascii_r = 114 ' an asc("r")
+Const ascii_v = 118 ' an asc("v")
+Const ascii_w = 119 ' an asc("w")
+Const ascii_z = 122 ' an asc("z")
+Const ascii_capB = 66  ' an asc("B")
+Const ascii_capG = 71  ' an asc("G")
+Const ascii_capR = 82  ' an asc("R")
+Const PXFNXT       = &h1 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXFODD       = &h2 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXFEVN       = &h4 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXFNOW       = &h8 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXSDIGI      = &h10 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXSDISP      = &h20 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXSIMOP      = &h40 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXSBLCK      = &h80 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXSNVOT      = &h81 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXAWAIT      = &h0 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXASYNC      = &h1000 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXABORT      = &h2000 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXAALL       = &h3000 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXIBXTC      = &h80 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXPIXBLT     = &h0 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXPIXBATN    = &h1 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXPIXBRT     = &h2 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXPIXBWT     = &h3 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXPIXBXT     = &h4 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXODONE      = &h1 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXOPRUN      = &h0 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+Const PXREAD       = &h0 
+Const PXRITE       = &h1 
+Const PXDATUCHAR   = &h1 
+Const PXDATUSHORT  = &h2 
+Const PXDATUINT    = &h4 
+Const PXDATULONG   = &h8 
+Const PXDATFLOAT   = &h10 
+Const PXDATDOUBLE  = &h20 
+Const PXDATMSB     = &h100 
+Const PXDATLSB     = &h200 
+Const PXDATDIRTY   = &h400 
+Const PXDATENDIAN  = &h800 
+Const PXRXSCAN     = &h0 
+Const PXRYSCAN     = &h2 
+Const PXRZSCAN     = &h4 
+Const PXRXYZSCAN   = &h6 
+Const PXIWRAP      = &h40 
+Const PXIASYNC     = &h800 
+Const PXIMAYMOD    = &h1000 
+Const PXIXYVALID   = &h2000 
+Const PXHINTNONE   = &h0 
+Const PXHINTFRAME  = &h10 
+Const PXHINTGREY   = &h1 
+Const PXHINTGRAY   = &h1 
+Const PXHINTINDEX  = &h11 
+Const PXHINTBAYER  = &h21 
+Const PXHINTCOMPLEX= &h2 
+Const PXHINTCBYCRY = &h12 
+Const PXHINTYCBYCR = &h22 
+Const PXHINTBGR    = &h3 
+Const PXHINTYCRCB  = &h13 
+Const PXHINTBSH    = &h23 
+Const PXHINTRGB    = &h43 
+Const PXHINTBGRX   = &h4 
+Const PXHINTYCRCBX = &h14 
+Const PXHINTRGBX   = &h24 
+Const PXHINTCMY    = &h63 
+Const PXHINTCMYK   = &h44 
+Const PXHINTPIXIES = &hf 
+Const PXHINTUSER   = &h7000 
+Const PXHINTUSERN  = &hfff 
+Const PXUNITUNKNOWN     = &h0 
+Const PXUNITRATIO       = &h72 
+Const PXUNITINCH        = &hbc 
+Const PXUNITFOOT        = &hb8 
+Const PXUNITMETER       = &h6d 
+Const PXUNITMILLIMETER  = &hb7 
+Const PXUNITCENTIMETER  = &hab 
+Const PXUNITSECOND      = &h83 
+Const PXIP8BLOB_CONNECT4   = &h0 
+Const PXIP8BLOB_NOCLEAR    = &h2 
+Const PXIP8BLOB_PERIMITER  = &h4 
+Const PXIP8BLOB_IGNOREEDGE = &h8 
+Const PXIP8BLOB_CONVEX     = &h100 
+Const PXIP8BLOB_NOHOLE     = &h200 
+Const CLR_INVALID          = &hffffffff 
