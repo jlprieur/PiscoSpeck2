@@ -4,6 +4,10 @@
 * Author:      JLP
 * Version:     28/09/2015
 ******************************************************************************/
+#include "wx/wx.h"
+#include "wx/datetime.h"
+#include "wx/intl.h"
+
 #include "asp2_frame.h"
 #include "asp2_frame_id.h"  // Menu identifiers
 #include "asp_display_panel.h" // JLP_AspDispPanel class
@@ -99,6 +103,34 @@ BEGIN_EVENT_TABLE(AspFrame, wxFrame)
 
 END_EVENT_TABLE()
 
+/**********************************************************************
+* Display clock
+* WARNING: if problem
+// so the clock format matches the user locale
+// e.g., 24 vs 12 hour format
+//        m_locale.Init();
+//
+// private:
+//  wxlocale m_locale
+* at the beginning of the program...
+***********************************************************************/
+void AspFrame::CDisplayClockOnStatusBar()
+{
+/****
+   m_clockDisplay = new wxStaticText(this, wxID_ANY, "",
+                              wxALIGN_RIGHT, wxDefaultSize,
+                              wxALIGN_CENTRE_HORIZONTAL | wxST_NO_AUTORESIZE);
+   wxFont font    = m_clockDisplay->GetFont();
+   font.MakeBold().MakeLarger();
+   m_clockDisplay->SetFont(font);
+***/
+
+   CDisplay_UpdateClock();
+
+// Start the UT clock timer:
+   m_clockTimer.Bind(wxEVT_TIMER, &AspFrame::CDisplay_OnUpdateClock, this);
+   m_clockTimer.Start(1000);
+}
 /********************************************************************
 * Create and setup the toolbar on top of main frame
 ********************************************************************/

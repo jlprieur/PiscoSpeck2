@@ -5,12 +5,16 @@
 	"asp2_app.h"
 	"asp2_frame.h"
 
+1538054215 e.h"
+
 1504604934 c:\jlp_src\piscospeck2\mondrian.xpm
 
 1511705013 c:\jlp_src\piscospeck2\asp2_app.h
 	"wx/wx.h"
 	"wx/thread.h"
 	<wx/app.h>
+
+1538054218 
 
 1506411415 c:\wxwidgets-3.1.0\include\wx\wx.h
 	"wx/defs.h"
@@ -93,6 +97,8 @@
 	"wx/validate.h"
 	"wx/valtext.h"
 
+1538054191 t.h"
+
 1506411416 c:\wxwidgets-3.1.0\include\wx\defs.h
 	"wx/platform.h"
 	"wx/version.h"
@@ -107,6 +113,8 @@
 	"wx/msw/winundef.h"
 	"wx/features.h"
 
+1538054193 es.h"
+
 1506411418 c:\wxwidgets-3.1.0\include\wx\platform.h
 	<unistd.h>
 	<TargetConditionals.h>
@@ -120,6 +128,8 @@
 	<TargetConditionals.h>
 	<AvailabilityMacros.h>
 	"wx/chkconf.h"
+
+1538054199 f.h"
 
 1506411433 c:\wxwidgets-3.1.0\include\wx\osx\config_xcode.h
 
@@ -147,6 +157,8 @@
 	"wx/unix/chkconf.h"
 	"wx/univ/chkconf.h"
 
+1538054191 hkconf.h"
+
 1506411428 c:\wxwidgets-3.1.0\include\wx\msw\chkconf.h
 
 1506411436 c:\wxwidgets-3.1.0\include\wx\gtk\chkconf.h
@@ -154,6 +166,8 @@
 1506411434 c:\wxwidgets-3.1.0\include\wx\osx\chkconf.h
 	"wx/osx/iphone/chkconf.h"
 	"wx/osx/cocoa/chkconf.h"
+
+1538054201 coa/chkconf.h"
 
 1506411434 c:\wxwidgets-3.1.0\include\wx\osx\iphone\chkconf.h
 
@@ -177,6 +191,8 @@
 1506411417 c:\wxwidgets-3.1.0\include\wx\cpp.h
 	"wx/compiler.h"
 
+1538054203 er.h"
+
 1506411415 c:\wxwidgets-3.1.0\include\wx\dlimpexp.h
 
 1506411418 c:\wxwidgets-3.1.0\include\wx\debug.h
@@ -185,6 +201,8 @@
 	"wx/chartype.h"
 	"wx/cpp.h"
 	"wx/dlimpexp.h"
+
+1538054191 xp.h"
 
 1506411415 c:\wxwidgets-3.1.0\include\wx\chartype.h
 	"wx/platform.h"
@@ -200,6 +218,8 @@
 	<tchar.h>
 	<ctype.h>
 
+1538054193 
+
 1506411419 c:\wxwidgets-3.1.0\include\wx\windowid.h
 
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\defs.h
@@ -214,6 +234,8 @@
 	"wx/rtti.h"
 	"wx/xti2.h"
 	"wx/msw/msvcrt.h"
+
+1538054190 vcrt.h"
 
 1506411415 c:\wxwidgets-3.1.0\include\wx\memory.h
 	"wx/defs.h"
@@ -262,12 +284,16 @@
 	<tr1/type_traits>
 	"wx/stringimpl.h"
 
+1538054196 impl.h"
+
 1506411413 c:\wxwidgets-3.1.0\include\wx\strconv.h
 	"wx/defs.h"
 	"wx/chartype.h"
 	"wx/buffer.h"
 	<stdlib.h>
 	"wx/fontenc.h"
+
+1538054218 c.h"
 
 1506411420 c:\wxwidgets-3.1.0\include\wx\buffer.h
 	"wx/chartype.h"
@@ -282,6 +308,8 @@
 	"wx/stringimpl.h"
 	<algorithm>
 
+1538054204 >
+
 1506411416 c:\wxwidgets-3.1.0\include\wx\stringimpl.h
 	"wx/defs.h"
 	"wx/chartype.h"
@@ -291,16 +319,22 @@
 	<string>
 	"wx/afterstd.h"
 
+1538054197 td.h"
+
 1506411418 c:\wxwidgets-3.1.0\include\wx\beforestd.h
 
 1506411414 c:\wxwidgets-3.1.0\include\wx\afterstd.h
 	"wx/msw/winundef.h"
+
+1538054207 nundef.h"
 
 1506411414 c:\wxwidgets-3.1.0\include\wx\stringops.h
 	"wx/chartype.h"
 	"wx/stringimpl.h"
 	"wx/unichar.h"
 	"wx/buffer.h"
+
+1538054198 .h"
 
 1506411420 c:\wxwidgets-3.1.0\include\wx\tls.h
 	"wx/defs.h"
@@ -321,6 +355,8 @@
 
 1506411417 c:\wxwidgets-3.1.0\include\wx\thread.h
 	"wx/defs.h"
+
+1538054216 "
 
 1506411419 c:\wxwidgets-3.1.0\include\wx\vector.h
 	"wx/defs.h"
@@ -364,6 +400,8 @@
 	"wx/wxcrt.h"
 	"wx/wxcrtvararg.h"
 
+1538054193 ararg.h"
+
 1506411415 c:\wxwidgets-3.1.0\include\wx\wxcrt.h
 	"wx/wxcrtbase.h"
 	"wx/string.h"
@@ -380,10 +418,14 @@
 	"wx/chartype.h"
 	"wx/strvararg.h"
 
+1538054199 arg.h"
+
 1506411419 c:\wxwidgets-3.1.0\include\wx\xti.h
 	"wx/defs.h"
 	"wx/xtitypes.h"
 	"wx/xtihandler.h"
+
+1538054191 dler.h"
 
 1506411421 c:\wxwidgets-3.1.0\include\wx\xtitypes.h
 	"wx/defs.h"
@@ -429,6 +471,8 @@
 	"wx/fontenc.h"
 	"wx/language.h"
 
+1538054197 ge.h"
+
 1506411421 c:\wxwidgets-3.1.0\include\wx\translation.h
 	"wx/defs.h"
 	"wx/string.h"
@@ -438,12 +482,16 @@
 	"wx/strconv.h"
 	"wx/scopedptr.h"
 
+1538054190 ptr.h"
+
 1506411420 c:\wxwidgets-3.1.0\include\wx\language.h
 	"wx/defs.h"
 
 1506411415 c:\wxwidgets-3.1.0\include\wx\scopedptr.h
 	"wx/defs.h"
 	"wx/checkeddelete.h"
+
+1538054190 ddelete.h"
 
 1506411416 c:\wxwidgets-3.1.0\include\wx\checkeddelete.h
 	"wx/cpp.h"
@@ -461,6 +509,8 @@
 	"wx/iosfwrap.h"
 	"wx/generic/logg.h"
 
+1538054196 c/logg.h"
+
 1506411424 c:\wxwidgets-3.1.0\include\wx\generic\logg.h
 
 1506411417 c:\wxwidgets-3.1.0\include\wx\xtihandler.h
@@ -471,9 +521,13 @@
 	"wx/memory.h"
 	"wx/flags.h"
 
+1538054191 h"
+
 1506411418 c:\wxwidgets-3.1.0\include\wx\xti2.h
 	"wx/xtiprop.h"
 	"wx/xtictor.h"
+
+1538054192 r.h"
 
 1506411419 c:\wxwidgets-3.1.0\include\wx\xtiprop.h
 	"wx/defs.h"
@@ -513,6 +567,8 @@
 	"wx/longlong.h"
 	"wx/anystr.h"
 	"wx/dynarray.h"
+
+1538054193 ay.h"
 
 1506411422 c:\wxwidgets-3.1.0\include\wx\longlong.h
 	"wx/defs.h"
@@ -567,10 +623,14 @@
 	"wx/meta/convertible.h"
 	"wx/meta/removeref.h"
 
+1538054194 emoveref.h"
+
 1506411421 c:\wxwidgets-3.1.0\include\wx\clntdata.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/hashmap.h"
+
+1537797300 p.h"
 
 1506411420 c:\wxwidgets-3.1.0\include\wx\gdicmn.h
 	"wx/defs.h"
@@ -662,6 +722,8 @@
 	<fcntl.h>
 	<sys/types.h>
 
+1538054193 .h>
+
 1506411419 c:\wxwidgets-3.1.0\include\wx\imagbmp.h
 	"wx/image.h"
 
@@ -669,6 +731,8 @@
 	"wx/defs.h"
 	"wx/image.h"
 	"wx/versioninfo.h"
+
+1538054190 ninfo.h"
 
 1506411414 c:\wxwidgets-3.1.0\include\wx\versioninfo.h
 	"wx/string.h"
@@ -717,6 +781,8 @@
 	"wx/osx/colour.h"
 	"wx/qt/colour.h"
 
+1538054193 our.h"
+
 1506411428 c:\wxwidgets-3.1.0\include\wx\msw\colour.h
 	"wx/object.h"
 
@@ -742,6 +808,8 @@
 	"wx/generic/paletteg.h"
 	"wx/osx/palette.h"
 	"wx/qt/palette.h"
+
+1538054196 ette.h"
 
 1506411427 c:\wxwidgets-3.1.0\include\wx\msw\palette.h
 	"wx/gdiobj.h"
@@ -773,17 +841,25 @@
 1506411434 c:\wxwidgets-3.1.0\include\wx\osx\colour.h
 	"wx/osx/core/colour.h"
 
+1538054201 re/colour.h"
+
 1506411435 c:\wxwidgets-3.1.0\include\wx\osx\core\colour.h
 	"wx/object.h"
 	"wx/string.h"
 	"wx/osx/core/cfref.h"
 
+1538054201 re/cfref.h"
+
 1506411435 c:\wxwidgets-3.1.0\include\wx\osx\core\cfref.h
 	<unistd.h>
 	<AvailabilityMacros.h>
 
+1538054202 ityMacros.h>
+
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\colour.h
 	<QtGui/QColor>
+
+1506411439 lor>
 
 1506411423 c:\wxwidgets-3.1.0\include\wx\dfb\cursor.h
 
@@ -805,6 +881,8 @@
 	"wx/osx/bitmap.h"
 	"wx/qt/bitmap.h"
 	"wx/generic/mask.h"
+
+1538054192 c/mask.h"
 
 1506411428 c:\wxwidgets-3.1.0\include\wx\msw\bitmap.h
 	"wx/msw/gdiimage.h"
@@ -830,6 +908,8 @@
 1506411423 c:\wxwidgets-3.1.0\include\wx\dfb\bitmap.h
 	"wx/dfb/dfbptr.h"
 
+1538054215 bptr.h"
+
 1506411423 c:\wxwidgets-3.1.0\include\wx\dfb\dfbptr.h
 
 1506411434 c:\wxwidgets-3.1.0\include\wx\osx\bitmap.h
@@ -842,6 +922,8 @@
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\cursor.h
 	"wx/image.h"
 	<QtGui/QCursor>
+
+1506411439 rsor>
 
 1506411419 c:\wxwidgets-3.1.0\include\wx\utils.h
 	"wx/object.h"
@@ -865,6 +947,8 @@
 1506411416 c:\wxwidgets-3.1.0\include\wx\mousestate.h
 	"wx/gdicmn.h"
 	"wx/kbdstate.h"
+
+1538054192 te.h"
 
 1506411421 c:\wxwidgets-3.1.0\include\wx\kbdstate.h
 	"wx/defs.h"
@@ -898,11 +982,15 @@
 	"wx/qt/app.h"
 	"wx/univ/theme.h"
 
+1538054191 heme.h"
+
 1506411421 c:\wxwidgets-3.1.0\include\wx\eventfilter.h
 	"wx/defs.h"
 
 1506411421 c:\wxwidgets-3.1.0\include\wx\build.h
 	"wx/version.h"
+
+1538054194 n.h"
 
 1506411419 c:\wxwidgets-3.1.0\include\wx\cmdargs.h
 	"wx/arrstr.h"
@@ -912,8 +1000,12 @@
 	"wx/chartype.h"
 	"wx/msw/init.h"
 
+1538054194 it.h"
+
 1506411428 c:\wxwidgets-3.1.0\include\wx\msw\init.h
 	"wx/msw/wrapwin.h"
+
+1538054206 apwin.h"
 
 1506411432 c:\wxwidgets-3.1.0\include\wx\unix\app.h
 	<signal.h>
@@ -941,6 +1033,8 @@
 1506411428 c:\wxwidgets-3.1.0\include\wx\msw\icon.h
 	"wx/msw/gdiimage.h"
 
+1538054206 iimage.h"
+
 1506411441 c:\wxwidgets-3.1.0\include\wx\motif\icon.h
 	"wx/bitmap.h"
 
@@ -967,6 +1061,8 @@
 	"wx/icon.h"
 	"wx/strconv.h"
 
+1538054218 v.h"
+
 1506411420 c:\wxwidgets-3.1.0\include\wx\frame.h
 	"wx/toplevel.h"
 	"wx/statusbr.h"
@@ -977,6 +1073,8 @@
 	"wx/motif/frame.h"
 	"wx/osx/frame.h"
 	"wx/qt/frame.h"
+
+1538054197 me.h"
 
 1506411415 c:\wxwidgets-3.1.0\include\wx\toplevel.h
 	"wx/nonownedwnd.h"
@@ -992,12 +1090,16 @@
 	"wx/qt/toplevel.h"
 	"wx/univ/toplevel.h"
 
+1538054192 oplevel.h"
+
 1506411417 c:\wxwidgets-3.1.0\include\wx\nonownedwnd.h
 	"wx/window.h"
 	"wx/dfb/nonownedwnd.h"
 	"wx/gtk/nonownedwnd.h"
 	"wx/osx/nonownedwnd.h"
 	"wx/msw/nonownedwnd.h"
+
+1506411417 nownedwnd.h"
 
 1506411418 c:\wxwidgets-3.1.0\include\wx\window.h
 	"wx/event.h"
@@ -1021,6 +1123,8 @@
 	"wx/osx/window.h"
 	"wx/qt/window.h"
 	"wx/univ/window.h"
+
+1538054195 indow.h"
 
 1506411413 c:\wxwidgets-3.1.0\include\wx\font.h
 	"wx/defs.h"
@@ -1066,6 +1170,8 @@
 	"wx/osx/region.h"
 	"wx/qt/region.h"
 
+1538054192 ion.h"
+
 1506411427 c:\wxwidgets-3.1.0\include\wx\msw\region.h
 
 1506411436 c:\wxwidgets-3.1.0\include\wx\gtk\region.h
@@ -1082,6 +1188,8 @@
 	"wx/osx/carbon/region.h"
 	"wx/generic/region.h"
 
+1538054201 c/region.h"
+
 1506411435 c:\wxwidgets-3.1.0\include\wx\osx\carbon\region.h
 	"wx/list.h"
 
@@ -1089,6 +1197,8 @@
 
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\region.h
 	<QtGui/QRegion>
+
+1506411439 gion>
 
 1506411415 c:\wxwidgets-3.1.0\include\wx\validate.h
 	"wx/defs.h"
@@ -1105,6 +1215,8 @@
 	"wx/osx/accel.h"
 	"wx/qt/accel.h"
 
+1538054195 el.h"
+
 1506411424 c:\wxwidgets-3.1.0\include\wx\generic\accel.h
 
 1506411427 c:\wxwidgets-3.1.0\include\wx\msw\accel.h
@@ -1117,6 +1229,8 @@
 1506411436 c:\wxwidgets-3.1.0\include\wx\gtk\accel.h
 	"wx/generic/accel.h"
 
+1538054211 c/accel.h"
+
 1506411422 c:\wxwidgets-3.1.0\include\wx\gtk1\accel.h
 	"wx/generic/accel.h"
 
@@ -1128,15 +1242,21 @@
 	<QtCore/QList>
 	<QtWidgets/QShortcut>
 
+1506411439 /QShortcut>
+
 1506411419 c:\wxwidgets-3.1.0\include\wx\access.h
 	"wx/defs.h"
 	"wx/variant.h"
 	"wx/msw/ole/access.h"
 
+1538054191 e/access.h"
+
 1506411430 c:\wxwidgets-3.1.0\include\wx\msw\ole\access.h
 
 1506411427 c:\wxwidgets-3.1.0\include\wx\msw\window.h
 	"wx/settings.h"
+
+1538054206 gs.h"
 
 1506411421 c:\wxwidgets-3.1.0\include\wx\settings.h
 	"wx/colour.h"
@@ -1172,6 +1292,8 @@
 	"wx/dfb/brush.h"
 	"wx/osx/brush.h"
 	"wx/qt/brush.h"
+
+1538054196 sh.h"
 
 1506411426 c:\wxwidgets-3.1.0\include\wx\msw\brush.h
 
@@ -1216,6 +1338,8 @@
 	"wx/image.h"
 	"wx/region.h"
 	"wx/affinematrix2d.h"
+
+1538054197 matrix2d.h"
 
 1506411421 c:\wxwidgets-3.1.0\include\wx\pen.h
 	"wx/gdiobj.h"
@@ -1264,9 +1388,13 @@
 	"wx/defs.h"
 	"wx/affinematrix2dbase.h"
 
+1538054197 matrix2dbase.h"
+
 1506411422 c:\wxwidgets-3.1.0\include\wx\affinematrix2dbase.h
 	"wx/defs.h"
 	"wx/geometry.h"
+
+1538054192 ry.h"
 
 1506411421 c:\wxwidgets-3.1.0\include\wx\geometry.h
 	"wx/defs.h"
@@ -1277,6 +1405,8 @@
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\window.h
 	<QtWidgets/QWidget>
 	<QtWidgets/QScrollArea>
+
+1506411439 /QScrollArea>
 
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\window.h
 	"wx/bitmap.h"
@@ -1290,6 +1420,8 @@
 1506411434 c:\wxwidgets-3.1.0\include\wx\osx\nonownedwnd.h
 	"wx/window.h"
 	"wx/graphics.h"
+
+1537797300 cs.h"
 
 1506411420 c:\wxwidgets-3.1.0\include\wx\graphics.h
 	"wx/defs.h"
@@ -1313,6 +1445,8 @@
 	"wx/tracker.h"
 	"wx/meta/convertible.h"
 	"wx/meta/int2type.h"
+
+1538054196 nt2type.h"
 
 1506411426 c:\wxwidgets-3.1.0\include\wx\meta\int2type.h
 
@@ -1344,6 +1478,8 @@
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\inphand.h
 	"wx/univ/inpcons.h"
 
+1538054203 npcons.h"
+
 1506411417 c:\wxwidgets-3.1.0\include\wx\statusbr.h
 	"wx/defs.h"
 	"wx/control.h"
@@ -1356,6 +1492,8 @@
 	"wx/qt/statusbar.h"
 	"wx/generic/statusbr.h"
 
+1538054194 c/statusbr.h"
+
 1506411420 c:\wxwidgets-3.1.0\include\wx\control.h
 	"wx/defs.h"
 	"wx/window.h"
@@ -1367,6 +1505,8 @@
 	"wx/gtk1/control.h"
 	"wx/osx/control.h"
 	"wx/qt/control.h"
+
+1538054193 trol.h"
 
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\control.h
 	"wx/univ/inphand.h"
@@ -1408,6 +1548,8 @@
 	"wx/osx/tooltip.h"
 	"wx/qt/tooltip.h"
 
+1538054193 ltip.h"
+
 1506411426 c:\wxwidgets-3.1.0\include\wx\msw\tooltip.h
 	"wx/object.h"
 	"wx/gdicmn.h"
@@ -1440,6 +1582,8 @@
 	<QtWidgets/QLabel>
 	<QtWidgets/QStatusBar>
 
+1506411439 /QStatusBar>
+
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\frame.h
 
 1506411428 c:\wxwidgets-3.1.0\include\wx\msw\frame.h
@@ -1466,11 +1610,15 @@
 	"wx/osx/toolbar.h"
 	"wx/qt/toolbar.h"
 
+1538054194 lbar.h"
+
 1506411418 c:\wxwidgets-3.1.0\include\wx\tbarbase.h
 	"wx/defs.h"
 	"wx/bitmap.h"
 	"wx/list.h"
 	"wx/control.h"
+
+1538054199 l.h"
 
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\toolbar.h
 	"wx/button.h"
@@ -1486,6 +1634,8 @@
 	"wx/osx/button.h"
 	"wx/qt/button.h"
 
+1538054193 ton.h"
+
 1506411414 c:\wxwidgets-3.1.0\include\wx\anybutton.h
 	"wx/defs.h"
 	"wx/bitmap.h"
@@ -1496,8 +1646,12 @@
 	"wx/osx/anybutton.h"
 	"wx/qt/anybutton.h"
 
+1538054195 button.h"
+
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\anybutton.h
 	"wx/univ/inphand.h"
+
+1538054203 nphand.h"
 
 1506411426 c:\wxwidgets-3.1.0\include\wx\msw\anybutton.h
 
@@ -1507,6 +1661,8 @@
 
 1506411438 c:\wxwidgets-3.1.0\include\wx\qt\anybutton.h
 	<QtWidgets/QPushButton>
+
+1506411438 /QPushButton>
 
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\button.h
 	"wx/bitmap.h"
@@ -1534,11 +1690,15 @@
 	"wx/dynarray.h"
 	"wx/imaglist.h"
 
+1538054190 st.h"
+
 1506411414 c:\wxwidgets-3.1.0\include\wx\imaglist.h
 	"wx/defs.h"
 	"wx/generic/imaglist.h"
 	"wx/msw/imaglist.h"
 	"wx/osx/imaglist.h"
+
+1538054195 aglist.h"
 
 1506411423 c:\wxwidgets-3.1.0\include\wx\generic\imaglist.h
 	"wx/gdicmn.h"
@@ -1564,6 +1724,8 @@
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\toolbar.h
 	<QtWidgets/QToolBar>
 
+1506411439 /QToolBar>
+
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\frame.h
 	"wx/frame.h"
 	<QtWidgets/QMainWindow>
@@ -1582,6 +1744,8 @@
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\app.h
 	<QtWidgets/QApplication>
 
+1506411439 /QApplication>
+
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\theme.h
 	"wx/string.h"
 
@@ -1592,6 +1756,8 @@
 
 1506411421 c:\wxwidgets-3.1.0\include\wx\time.h
 	"wx/longlong.h"
+
+1538054190 ng.h"
 
 1506411415 c:\wxwidgets-3.1.0\include\wx\timer.h
 	"wx/defs.h"
@@ -1617,6 +1783,8 @@
 	"wx/univ/panel.h"
 	"wx/msw/panel.h"
 	"wx/generic/panelg.h"
+
+1538054194 c/panelg.h"
 
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\panel.h
 
@@ -1651,17 +1819,23 @@
 	"wx/osx/menuitem.h"
 	"wx/qt/menuitem.h"
 
+1538054194 uitem.h"
+
 1506411437 c:\wxwidgets-3.1.0\include\wx\univ\menuitem.h
 
 1506411426 c:\wxwidgets-3.1.0\include\wx\msw\menuitem.h
 	"wx/bitmap.h"
 	"wx/ownerdrw.h"
 
+1538054206 rw.h"
+
 1506411422 c:\wxwidgets-3.1.0\include\wx\ownerdrw.h
 	"wx/defs.h"
 	"wx/font.h"
 	"wx/colour.h"
 	"wx/msw/ownerdrw.h"
+
+1538054191 nerdrw.h"
 
 1506411429 c:\wxwidgets-3.1.0\include\wx\msw\ownerdrw.h
 
@@ -1682,6 +1856,8 @@
 	"wx/menuitem.h"
 	<QtWidgets/QAction>
 
+1506411438 /QAction>
+
 1506411417 c:\wxwidgets-3.1.0\include\wx\menu.h
 	"wx/defs.h"
 	"wx/list.h"
@@ -1694,6 +1870,8 @@
 	"wx/gtk1/menu.h"
 	"wx/osx/menu.h"
 	"wx/qt/menu.h"
+
+1538054196 u.h"
 
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\menu.h
 	"wx/accel.h"
@@ -1720,6 +1898,8 @@
 	<QtWidgets/QMenu>
 	<QtWidgets/QMenuBar>
 
+1506411439 /QMenuBar>
+
 1506411417 c:\wxwidgets-3.1.0\include\wx\dialog.h
 	"wx/toplevel.h"
 	"wx/containr.h"
@@ -1731,6 +1911,8 @@
 	"wx/gtk1/dialog.h"
 	"wx/osx/dialog.h"
 	"wx/qt/dialog.h"
+
+1538054195 log.h"
 
 1506411414 c:\wxwidgets-3.1.0\include\wx\sharedptr.h
 	"wx/defs.h"
@@ -1761,6 +1943,8 @@
 	"wx/dialog.h"
 	<QtWidgets/QDialog>
 
+1506411439 /QDialog>
+
 1506411418 c:\wxwidgets-3.1.0\include\wx\msgdlg.h
 	"wx/defs.h"
 	"wx/dialog.h"
@@ -1771,6 +1955,8 @@
 	"wx/gtk/msgdlg.h"
 	"wx/osx/msgdlg.h"
 	"wx/qt/msgdlg.h"
+
+1538054191 dlg.h"
 
 1506411415 c:\wxwidgets-3.1.0\include\wx\stockitem.h
 	"wx/defs.h"
@@ -1791,6 +1977,8 @@
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\msgdlg.h
 	"wx/msgdlg.h"
 	<QtWidgets/QMessageBox>
+
+1506411439 /QMessageBox>
 
 1506411414 c:\wxwidgets-3.1.0\include\wx\dataobj.h
 	"wx/defs.h"
@@ -1819,6 +2007,8 @@
 	"wx/motif/dataobj2.h"
 	"wx/osx/dataobj2.h"
 	"wx/qt/dataobj2.h"
+
+1538054192 aobj2.h"
 
 1506411430 c:\wxwidgets-3.1.0\include\wx\msw\ole\dataform.h
 
@@ -1872,11 +2062,15 @@
 	"wx/motif/ctrlsub.h"
 	"wx/qt/ctrlsub.h"
 
+1538054195 lsub.h"
+
 1506411428 c:\wxwidgets-3.1.0\include\wx\msw\ctrlsub.h
 
 1506411441 c:\wxwidgets-3.1.0\include\wx\motif\ctrlsub.h
 	"wx/dynarray.h"
 	"wx/generic/ctrlsub.h"
+
+1538054216 c/ctrlsub.h"
 
 1506411424 c:\wxwidgets-3.1.0\include\wx\generic\ctrlsub.h
 	"wx/dynarray.h"
@@ -1894,6 +2088,8 @@
 	"wx/osx/bmpbuttn.h"
 	"wx/qt/bmpbuttn.h"
 
+1538054190 buttn.h"
+
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\bmpbuttn.h
 
 1506411426 c:\wxwidgets-3.1.0\include\wx\msw\bmpbuttn.h
@@ -1903,6 +2099,8 @@
 
 1506411440 c:\wxwidgets-3.1.0\include\wx\motif\bmpbuttn.h
 	"wx/motif/bmpmotif.h"
+
+1538054216 bmpmotif.h"
 
 1506411441 c:\wxwidgets-3.1.0\include\wx\motif\bmpmotif.h
 	"wx/defs.h"
@@ -1928,11 +2126,15 @@
 	"wx/osx/checkbox.h"
 	"wx/qt/checkbox.h"
 
+1538054197 ckbox.h"
+
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\checkbox.h
 	"wx/button.h"
 
 1506411428 c:\wxwidgets-3.1.0\include\wx\msw\checkbox.h
 	"wx/msw/ownerdrawnbutton.h"
+
+1538054206 nerdrawnbutton.h"
 
 1506411426 c:\wxwidgets-3.1.0\include\wx\msw\ownerdrawnbutton.h
 
@@ -1947,6 +2149,8 @@
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\checkbox.h
 	<QtWidgets/QCheckBox>
 
+1506411439 /QCheckBox>
+
 1506411413 c:\wxwidgets-3.1.0\include\wx\checklst.h
 	"wx/defs.h"
 	"wx/listbox.h"
@@ -1957,6 +2161,8 @@
 	"wx/gtk1/checklst.h"
 	"wx/osx/checklst.h"
 	"wx/qt/checklst.h"
+
+1538054195 cklst.h"
 
 1506411414 c:\wxwidgets-3.1.0\include\wx\listbox.h
 	"wx/defs.h"
@@ -1969,6 +2175,8 @@
 	"wx/osx/listbox.h"
 	"wx/qt/listbox.h"
 
+1538054197 tbox.h"
+
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\listbox.h
 	"wx/scrolwin.h"
 	"wx/dynarray.h"
@@ -1980,12 +2188,16 @@
 	"wx/gtk1/scrolwin.h"
 	"wx/generic/scrolwin.h"
 
+1538054193 c/scrolwin.h"
+
 1506411437 c:\wxwidgets-3.1.0\include\wx\gtk\scrolwin.h
 
 1506411423 c:\wxwidgets-3.1.0\include\wx\gtk1\scrolwin.h
 
 1506411424 c:\wxwidgets-3.1.0\include\wx\generic\scrolwin.h
 	"wx/recguard.h"
+
+1538054199 rd.h"
 
 1506411416 c:\wxwidgets-3.1.0\include\wx\recguard.h
 	"wx/defs.h"
@@ -1996,6 +2208,8 @@
 1506411440 c:\wxwidgets-3.1.0\include\wx\motif\listbox.h
 	"wx/ctrlsub.h"
 	"wx/clntdata.h"
+
+1538054216 ta.h"
 
 1506411435 c:\wxwidgets-3.1.0\include\wx\gtk\listbox.h
 
@@ -2009,12 +2223,16 @@
 1506411438 c:\wxwidgets-3.1.0\include\wx\qt\listbox.h
 	<QtWidgets/QListWidget>
 
+1506411438 /QListWidget>
+
 1506411437 c:\wxwidgets-3.1.0\include\wx\univ\checklst.h
 
 1506411426 c:\wxwidgets-3.1.0\include\wx\msw\checklst.h
 
 1506411440 c:\wxwidgets-3.1.0\include\wx\motif\checklst.h
 	"wx/listbox.h"
+
+1538054205 x.h"
 
 1506411435 c:\wxwidgets-3.1.0\include\wx\gtk\checklst.h
 
@@ -2035,8 +2253,12 @@
 	"wx/osx/choice.h"
 	"wx/qt/choice.h"
 
+1538054196 ice.h"
+
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\choice.h
 	"wx/combobox.h"
+
+1538054216 ox.h"
 
 1506411416 c:\wxwidgets-3.1.0\include\wx\combobox.h
 	"wx/defs.h"
@@ -2050,6 +2272,8 @@
 	"wx/gtk1/combobox.h"
 	"wx/osx/combobox.h"
 	"wx/qt/combobox.h"
+
+1538054194 bobox.h"
 
 1506411419 c:\wxwidgets-3.1.0\include\wx\textctrl.h
 	"wx/defs.h"
@@ -2067,6 +2291,8 @@
 	"wx/osx/textctrl.h"
 	"wx/qt/textctrl.h"
 
+1538054194 tctrl.h"
+
 1506411414 c:\wxwidgets-3.1.0\include\wx\textentry.h
 	"wx/filefn.h"
 	"wx/gdicmn.h"
@@ -2075,6 +2301,8 @@
 	"wx/msw/textentry.h"
 	"wx/motif/textentry.h"
 	"wx/qt/textentry.h"
+
+1538054195 tentry.h"
 
 1506411435 c:\wxwidgets-3.1.0\include\wx\gtk\textentry.h
 
@@ -2115,9 +2343,13 @@
 	"wx/control.h"
 	"wx/textctrl.h"
 
+1538054210 rl.h"
+
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\textctrl.h
 	<QtWidgets/QLineEdit>
 	<QtWidgets/QTextEdit>
+
+1506411439 /QTextEdit>
 
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\combobox.h
 	"wx/combo.h"
@@ -2131,6 +2363,8 @@
 	"wx/time.h"
 	"wx/msw/combo.h"
 	"wx/generic/combo.h"
+
+1538054191 c/combo.h"
 
 1506411420 c:\wxwidgets-3.1.0\include\wx\renderer.h
 	"wx/gdicmn.h"
@@ -2154,6 +2388,8 @@
 	"wx/choice.h"
 	"wx/textentry.h"
 
+1538054216 try.h"
+
 1506411440 c:\wxwidgets-3.1.0\include\wx\motif\combobox.h
 	"wx/choice.h"
 	"wx/textentry.h"
@@ -2173,6 +2409,8 @@
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\combobox.h
 	"wx/choice.h"
 	<QtWidgets/QComboBox>
+
+1506411439 /QComboBox>
 
 1506411427 c:\wxwidgets-3.1.0\include\wx\msw\choice.h
 
@@ -2203,6 +2441,8 @@
 	"wx/osx/scrolbar.h"
 	"wx/qt/scrolbar.h"
 
+1538054190 olbar.h"
+
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\scrolbar.h
 	"wx/univ/scrarrow.h"
 	"wx/renderer.h"
@@ -2224,6 +2464,8 @@
 	"wx/scrolbar.h"
 	<QtWidgets/QScrollBar>
 
+1506411439 /QScrollBar>
+
 1506411420 c:\wxwidgets-3.1.0\include\wx\stattext.h
 	"wx/defs.h"
 	"wx/control.h"
@@ -2235,11 +2477,17 @@
 	"wx/osx/stattext.h"
 	"wx/qt/stattext.h"
 
+1538054197 ttext.h"
+
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\stattext.h
 	"wx/generic/stattextg.h"
 
+1538054203 c/stattextg.h"
+
 1506411423 c:\wxwidgets-3.1.0\include\wx\generic\stattextg.h
 	"wx/stattext.h"
+
+1538054201 xt.h"
 
 1506411428 c:\wxwidgets-3.1.0\include\wx\msw\stattext.h
 
@@ -2254,6 +2502,8 @@
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\stattext.h
 	<QtWidgets/QLabel>
 
+1506411439 /QLabel>
+
 1506411418 c:\wxwidgets-3.1.0\include\wx\statbmp.h
 	"wx/defs.h"
 	"wx/control.h"
@@ -2266,6 +2516,8 @@
 	"wx/gtk1/statbmp.h"
 	"wx/osx/statbmp.h"
 	"wx/qt/statbmp.h"
+
+1538054191 tbmp.h"
 
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\statbmp.h
 	"wx/bitmap.h"
@@ -2287,6 +2539,8 @@
 
 1506411434 c:\wxwidgets-3.1.0\include\wx\osx\statbmp.h
 	"wx/generic/statbmpg.h"
+
+1538054200 c/statbmpg.h"
 
 1506411424 c:\wxwidgets-3.1.0\include\wx\generic\statbmpg.h
 	"wx/statbmp.h"
@@ -2321,6 +2575,8 @@
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\statbox.h
 	<QtWidgets/QGroupBox>
 
+1506411439 /QGroupBox>
+
 1506411420 c:\wxwidgets-3.1.0\include\wx\radiobox.h
 	"wx/defs.h"
 	"wx/ctrlsub.h"
@@ -2332,6 +2588,8 @@
 	"wx/gtk1/radiobox.h"
 	"wx/osx/radiobox.h"
 	"wx/qt/radiobox.h"
+
+1538054190 iobox.h"
 
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\radiobox.h
 	"wx/statbox.h"
@@ -2358,6 +2616,8 @@
 	<QtWidgets/QButtonGroup>
 	<QtWidgets/QVBoxLayout>
 
+1506411439 /QVBoxLayout>
+
 1506411413 c:\wxwidgets-3.1.0\include\wx\radiobut.h
 	"wx/defs.h"
 	"wx/control.h"
@@ -2368,6 +2628,8 @@
 	"wx/gtk1/radiobut.h"
 	"wx/osx/radiobut.h"
 	"wx/qt/radiobut.h"
+
+1538054194 iobut.h"
 
 1506411437 c:\wxwidgets-3.1.0\include\wx\univ\radiobut.h
 	"wx/checkbox.h"
@@ -2386,6 +2648,8 @@
 1506411438 c:\wxwidgets-3.1.0\include\wx\qt\radiobut.h
 	<QtWidgets/QRadioButton>
 
+1506411438 /QRadioButton>
+
 1506411419 c:\wxwidgets-3.1.0\include\wx\slider.h
 	"wx/defs.h"
 	"wx/control.h"
@@ -2397,8 +2661,12 @@
 	"wx/osx/slider.h"
 	"wx/qt/slider.h"
 
+1538054193 der.h"
+
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\slider.h
 	"wx/univ/scrthumb.h"
+
+1538054203 crthumb.h"
 
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\scrthumb.h
 	"wx/timer.h"
@@ -2420,8 +2688,12 @@
 	"wx/window.h"
 	"wx/containr.h"
 
+1538054199 nr.h"
+
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\slider.h
 	<QtWidgets/QSlider>
+
+1506411439 /QSlider>
 
 1506411413 c:\wxwidgets-3.1.0\include\wx\gauge.h
 	"wx/defs.h"
@@ -2450,6 +2722,8 @@
 1506411438 c:\wxwidgets-3.1.0\include\wx\qt\gauge.h
 	<QtWidgets/QProgressBar>
 
+1506411438 /QProgressBar>
+
 1506411415 c:\wxwidgets-3.1.0\include\wx\dirdlg.h
 	"wx/defs.h"
 	"wx/dialog.h"
@@ -2474,6 +2748,8 @@
 1506411438 c:\wxwidgets-3.1.0\include\wx\qt\dirdlg.h
 	<QtWidgets/QFileDialog>
 
+1506411438 /QFileDialog>
+
 1506411414 c:\wxwidgets-3.1.0\include\wx\layout.h
 	"wx/object.h"
 
@@ -2485,12 +2761,16 @@
 	"wx/defs.h"
 	"wx/generic/choicdgg.h"
 
+1538054192 c/choicdgg.h"
+
 1506411423 c:\wxwidgets-3.1.0\include\wx\generic\choicdgg.h
 	"wx/dynarray.h"
 	"wx/dialog.h"
 
 1506411413 c:\wxwidgets-3.1.0\include\wx\textdlg.h
 	"wx/generic/textdlgg.h"
+
+1538054190 c/textdlgg.h"
 
 1506411424 c:\wxwidgets-3.1.0\include\wx\generic\textdlgg.h
 	"wx/defs.h"
@@ -2514,6 +2794,8 @@
 	"wx/osx/filedlg.h"
 	"wx/qt/filedlg.h"
 
+1538054190 edlg.h"
+
 1506411424 c:\wxwidgets-3.1.0\include\wx\generic\filedlgg.h
 	"wx/listctrl.h"
 	"wx/datetime.h"
@@ -2522,12 +2804,16 @@
 	"wx/filedlg.h"
 	"wx/generic/filectrlg.h"
 
+1538054197 c/filectrlg.h"
+
 1506411414 c:\wxwidgets-3.1.0\include\wx\listctrl.h
 	"wx/defs.h"
 	"wx/listbase.h"
 	"wx/msw/listctrl.h"
 	"wx/qt/listctrl.h"
 	"wx/generic/listctrl.h"
+
+1538054197 c/listctrl.h"
 
 1506411414 c:\wxwidgets-3.1.0\include\wx\listbase.h
 	"wx/colour.h"
@@ -2536,6 +2822,8 @@
 	"wx/event.h"
 	"wx/control.h"
 	"wx/systhemectrl.h"
+
+1538054190 mectrl.h"
 
 1506411420 c:\wxwidgets-3.1.0\include\wx\systhemectrl.h
 	"wx/defs.h"
@@ -2549,6 +2837,8 @@
 	"wx/textctrl.h"
 	<QtWidgets/QTreeWidget>
 
+1506411438 /QTreeWidget>
+
 1506411423 c:\wxwidgets-3.1.0\include\wx\generic\listctrl.h
 	"wx/containr.h"
 	"wx/scrolwin.h"
@@ -2559,6 +2849,8 @@
 	"wx/bitmap.h"
 	"wx/icon.h"
 	"wx/iconbndl.h"
+
+1538054196 dl.h"
 
 1506411424 c:\wxwidgets-3.1.0\include\wx\generic\filectrlg.h
 	"wx/containr.h"
@@ -2591,6 +2883,8 @@
 	"wx/filefn.h"
 	"wx/convauto.h"
 
+1538054194 to.h"
+
 1506411417 c:\wxwidgets-3.1.0\include\wx\convauto.h
 	"wx/strconv.h"
 	"wx/fontenc.h"
@@ -2602,8 +2896,12 @@
 1506411435 c:\wxwidgets-3.1.0\include\wx\gtk\filedlg.h
 	"wx/gtk/filectrl.h"
 
+1538054208 lectrl.h"
+
 1506411422 c:\wxwidgets-3.1.0\include\wx\gtk1\filedlg.h
 	"wx/generic/filedlgg.h"
+
+1538054210 c/filedlgg.h"
 
 1506411433 c:\wxwidgets-3.1.0\include\wx\osx\filedlg.h
 
@@ -2666,6 +2964,8 @@
 	"asp2_decode_thread.h"
 	"jlp_camera_display.h"
 
+1538064011 a_display.h"
+
 1506411422 c:\wxwidgets-3.1.0\include\wx\wxprec.h
 	"wx/defs.h"
 	"wx/chartype.h"
@@ -2687,6 +2987,8 @@
 	"wx/msw/wrapwin.h"
 	<commctrl.h>
 	"wx/msw/missing.h"
+
+1538054205 ssing.h"
 
 1506411426 c:\wxwidgets-3.1.0\include\wx\msw\missing.h
 	<windows.h>
@@ -2711,6 +3013,8 @@
 	"wx/motif/tglbtn.h"
 	"wx/osx/tglbtn.h"
 	"wx/qt/tglbtn.h"
+
+1538054197 btn.h"
 
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\tglbtn.h
 
@@ -2739,6 +3043,8 @@
 	"wx/notebook.h"
 	"wx/choicebk.h"
 
+1538054193 bk.h"
+
 1506411419 c:\wxwidgets-3.1.0\include\wx\withimages.h
 	"wx/defs.h"
 	"wx/icon.h"
@@ -2754,6 +3060,8 @@
 	"wx/gtk1/notebook.h"
 	"wx/osx/notebook.h"
 	"wx/qt/notebook.h"
+
+1538054197 ebook.h"
 
 1506411438 c:\wxwidgets-3.1.0\include\wx\univ\notebook.h
 	"wx/arrstr.h"
@@ -2777,6 +3085,8 @@
 1506411439 c:\wxwidgets-3.1.0\include\wx\qt\notebook.h
 	<QtWidgets/QTabWidget>
 
+1506411439 /QTabWidget>
+
 1506411421 c:\wxwidgets-3.1.0\include\wx\choicebk.h
 	"wx/defs.h"
 	"wx/bookctrl.h"
@@ -2797,6 +3107,8 @@
 	"wx/html/helpctrl.h"
 	"wx/generic/helpext.h"
 
+1538054198 c/helpext.h"
+
 1506411414 c:\wxwidgets-3.1.0\include\wx\helpbase.h
 	"wx/defs.h"
 	"wx/object.h"
@@ -2807,10 +3119,14 @@
 1506411426 c:\wxwidgets-3.1.0\include\wx\msw\helpchm.h
 	"wx/helpbase.h"
 
+1538054200 se.h"
+
 1506411435 c:\wxwidgets-3.1.0\include\wx\html\helpctrl.h
 	"wx/defs.h"
 	"wx/helpbase.h"
 	"wx/html/helpfrm.h"
+
+1538054218 elpfrm.h"
 
 1506411435 c:\wxwidgets-3.1.0\include\wx\html\helpfrm.h
 	"wx/defs.h"
@@ -2829,6 +3145,8 @@
 	"wx/html/htmlwin.h"
 	"wx/html/helpwnd.h"
 	"wx/html/htmprint.h"
+
+1538054218 tmprint.h"
 
 1506411435 c:\wxwidgets-3.1.0\include\wx\html\helpdata.h
 	"wx/defs.h"
@@ -2849,6 +3167,8 @@
 	"wx/confbase.h"
 	"wx/msw/regconf.h"
 	"wx/fileconf.h"
+
+1538054198 nf.h"
 
 1506411415 c:\wxwidgets-3.1.0\include\wx\confbase.h
 	"wx/defs.h"
@@ -2893,6 +3213,8 @@
 1506411418 c:\wxwidgets-3.1.0\include\wx\splitter.h
 	"wx/event.h"
 	"wx/generic/splitter.h"
+
+1538054197 c/splitter.h"
 
 1506411424 c:\wxwidgets-3.1.0\include\wx\generic\splitter.h
 	"wx/window.h"
@@ -2959,6 +3281,8 @@
 	"wx/defs.h"
 	"wx/filesys.h"
 
+1537797300 s.h"
+
 1506411435 c:\wxwidgets-3.1.0\include\wx\html\helpwnd.h
 	"wx/defs.h"
 	"wx/helpbase.h"
@@ -2993,6 +3317,8 @@
 	"wx/qt/printqt.h"
 	"wx/generic/printps.h"
 
+1538054193 c/printps.h"
+
 1506411428 c:\wxwidgets-3.1.0\include\wx\msw\printwin.h
 	"wx/prntbase.h"
 
@@ -3026,6 +3352,8 @@
 	"wx/dialog.h"
 	"wx/intl.h"
 	"wx/cmndata.h"
+
+1538054195 a.h"
 
 1506411424 c:\wxwidgets-3.1.0\include\wx\generic\helpext.h
 	"wx/helpbase.h"
@@ -3071,6 +3399,8 @@
 	"jlp_gseg_wxwid.h"
 	"jlp_gsegraf.h"
 
+1537797300 af.h"
+
 1506411419 c:\wxwidgets-3.1.0\include\wx\mstream.h
 	"wx/defs.h"
 	"wx/stream.h"
@@ -3107,6 +3437,8 @@
 	"wx/osx/clipbrd.h"
 	"wx/qt/clipbrd.h"
 
+1538054193 pbrd.h"
+
 1506411428 c:\wxwidgets-3.1.0\include\wx\msw\clipbrd.h
 
 1506411441 c:\wxwidgets-3.1.0\include\wx\motif\clipbrd.h
@@ -3138,6 +3470,8 @@
 1537797301 c:\jlp_src\jlplib\jlp_splot\jlp_gdev.h
 	<stdlib.h>
 	"jlp_gdev_def.h"
+
+1504604935 def.h"
 
 1537797301 c:\jlp_src\jlplib\jlp_splot\jlp_gdev_def.h
 	<stdio.h>
@@ -3175,6 +3509,8 @@
 1506411417 c:\wxwidgets-3.1.0\include\wx\dcps.h
 	"wx/generic/dcpsg.h"
 
+1538054193 c/dcpsg.h"
+
 1506411423 c:\wxwidgets-3.1.0\include\wx\generic\dcpsg.h
 	"wx/defs.h"
 	"wx/dc.h"
@@ -3188,8 +3524,12 @@
 	<cstddef>
 	<glibconfig.h>
 
+1537797300 g.h>
+
 1496141020 c:\jlp_src\jlplib\jlp_gsegraf\jlp_gseg.h
 	"jlp_gsegraf_defs.h"
+
+1537797300 af_defs.h"
 
 1505717927 c:\jlp_src\jlplib\jlp_gsegraf\jlp_gsegraf.h
 	<stdio.h>
@@ -3199,6 +3539,8 @@
 	"jlp_gseg_utils.h"
 	"jlp_gsegraf_defs.h"
 	"jlp_gsegraf_prototypes.h"
+
+1537797300 af_prototypes.h"
 
 1501417132 c:\jlp_src\jlplib\jlp_gsegraf\jlp_gseg_utils.h
 	"jlp_gsegraf_defs.h"
@@ -3229,10 +3571,14 @@
 	"jlp_wx_image1.h"
 	"jlp_wxlogbook.h"
 
+1537797300 book.h"
+
 1506411421 c:\wxwidgets-3.1.0\include\wx\progdlg.h
 	"wx/defs.h"
 	"wx/generic/progdlgg.h"
 	"wx/msw/progdlg.h"
+
+1538054191 ogdlg.h"
 
 1506411424 c:\wxwidgets-3.1.0\include\wx\generic\progdlgg.h
 	"wx/dialog.h"
@@ -3244,6 +3590,8 @@
 	"wx/wx.h"
 	"jlp_camera_utils.h"
 
+1513005300 a_utils.h"
+
 1512562671 c:\jlp_src\piscospeck2\asp2_camera\jlp_camera_utils.h
 	"asp2_typedef.h"
 
@@ -3254,6 +3602,8 @@
 	"asp2_defs.h"
 	"asp2_typedef.h"
 	"asp2_rw_config_files.h"
+
+1518611940 onfig_files.h"
 
 1511705017 c:\jlp_src\piscospeck2\asp2_frame\asp2_defs.h
 	"wx/wxprec.h"
@@ -3283,6 +3633,8 @@
 	"wx/defs.h"
 	"wx/generic/numdlgg.h"
 
+1538054192 c/numdlgg.h"
+
 1506411423 c:\wxwidgets-3.1.0\include\wx\generic\numdlgg.h
 	"wx/defs.h"
 	"wx/dialog.h"
@@ -3306,6 +3658,8 @@
 	"jlp_gdev_wxwid.h"
 	"jlp_camera_utils.h"
 	"jlp_camera1.h"
+
+1513000641 a1.h"
 
 1511705015 c:\jlp_src\piscospeck2\asp2_process\asp2_decode_thread.h
 	"wx/wx.h"
@@ -3336,6 +3690,8 @@
 	"fftw3.h"
 	"jlp_num_rename.h"
 
+1537797302 ename.h"
+
 1537797301 c:\jlp_src\jlplib\jlp_numeric\fftw3.h
 	<stdio.h>
 	<stddef.h>
@@ -3348,6 +3704,8 @@
 	<stdint.h>
 	"fitsio.h"
 	"jlp_fitsio_rename.h"
+
+1537797301 o_rename.h"
 
 1537797301 c:\jlp_src\jlplib\cfitsio\incl\fitsio.h
 	<stdio.h>
@@ -3369,6 +3727,8 @@
 	"asp2_rw_config_files.h"
 	"asp2_3dfits_rd_utils.h"
 
+1513010153 ts_rd_utils.h"
+
 1509983959 c:\jlp_src\piscospeck2\asp2_fits\asp2_3dfits_rd_utils.h
 	<stdio.h>
 	<string.h>
@@ -3382,6 +3742,8 @@
 	"asp2_typedef.h"
 	"asp2_rw_config_files.h"
 	"asp2_3dfits_wr_utils.h"
+
+1509981562 ts_wr_utils.h"
 
 1509981286 c:\jlp_src\piscospeck2\asp2_fits\asp2_3dfits_wr_utils.h
 	<stdio.h>
@@ -3406,6 +3768,8 @@
 	"wx/filename.h"
 	"asp2_3D_infits.h"
 
+1513092849 nfits.h"
+
 1513005300 source:c:\jlp_src\piscospeck2\asp2_camera\jlp_camera1.cpp
 	<stdio.h>
 	<string.h>
@@ -3424,6 +3788,8 @@
 	<stdio.h>
 	"jlp_camera_display_mutex.h"
 
+1518618655 a_display_mutex.h"
+
 1507310503 c:\jlp_src\piscospeck2\asp2_camera\jlp_camera_display_mutex.h
 	"asp2_typedef.h"
 
@@ -3437,9 +3803,13 @@
 	"jlp_raptor_panel.h"
 	"jlp_fitscube_panel.h"
 
+1512411949 ube_panel.h"
+
 1518622347 c:\jlp_src\piscospeck2\jlp_andor\jlp_andor_cam1.h
 	"jlp_camera1.h"
 	"jlp_andor_utils.h"
+
+1516012308 _utils.h"
 
 1516011564 c:\jlp_src\piscospeck2\jlp_andor\jlp_andor_utils.h
 	"wx/wxprec.h"
@@ -3461,10 +3831,14 @@
 	"jlp_andor_cam1.h"
 	"jlp_camera_panel.h"
 
+1516789337 a_panel.h"
+
 1518622347 c:\jlp_src\piscospeck2\jlp_raptor\jlp_raptor_cam1.h
 	"jlp_camera1.h"
 	"jlp_raptor_utils.h"
 	"epix_xcliball.h"
+
+1508863071 ball.h"
 
 1516613451 c:\jlp_src\piscospeck2\jlp_raptor\jlp_raptor_utils.h
 	"wx/wxprec.h"
@@ -3488,12 +3862,16 @@
 	"epix_xclibsc.h"
 	"epix_pxlibcam.h"
 
+1508164601 bcam.h"
+
 1405084790 c:\jlp_src\piscospeck2\jlp_raptor\epix_inc\epix_cext.h
 	<sys/types.h>
 
 1508163914 c:\jlp_src\piscospeck2\jlp_raptor\epix_inc\epix_pximage.h
 	"epix_cext_hps.h"
 	"epix_cext_hpe.h"
+
+1508164315 _hpe.h"
 
 1508163417 c:\jlp_src\piscospeck2\jlp_raptor\epix_inc\epix_cext_hps.h
 	"epix_cext.h"
@@ -3542,6 +3920,8 @@
 	"jlp_fitscube_cam1.h"
 	"jlp_fitscube_utils.h"
 
+1513010153 ube_utils.h"
+
 1518622347 c:\jlp_src\piscospeck2\jlp_fitscube\jlp_fitscube_cam1.h
 	"jlp_camera1.h"
 	"asp2_3D_infits.h"
@@ -3575,6 +3955,8 @@
 	"jlp_camera_thread.h"
 	"asp2_frame_id.h"
 
+1511701414 e_id.h"
+
 1516011564 source:c:\jlp_src\piscospeck2\asp2_camera\jlp_camera_utils.cpp
 	<stdio.h>
 	<string.h>
@@ -3589,6 +3971,8 @@
 	"asp2_2dfits_utils.h"
 	"asp2_rw_config_files.h"
 	"jlp_rw_fits0.h"
+
+1504604934 ts0.h"
 
 1513092849 source:c:\jlp_src\piscospeck2\asp2_fits\asp2_3d_infits.cpp
 	"asp2_3D_infits.h"
@@ -3623,10 +4007,14 @@
 	"jlp_rw_fits0.h"
 	"asp2_3D_outfits.h"
 
+1509977973 utfits.h"
+
 1504604934 source:c:\jlp_src\piscospeck2\asp2_fits\jlp_fits0_cvb.cpp
 	<math.h>
 	"jlp_fits0_fmt.h"
 	"jlp_fits0_computer.h"
+
+1504604934 _computer.h"
 
 1504604935 c:\jlp_src\piscospeck2\asp2_fits\jlp_fits0_fmt.h
 	"asp2_typedef.h"
@@ -3668,6 +4056,8 @@
 	"asp2_frame_id.h"
 	"asp2_frame_language.h"
 
+1511705013 e_language.h"
+
 1504604935 c:\jlp_src\piscospeck2\asp2_frame\asp2_frame_language.h
 
 1504604934 source:c:\jlp_src\piscospeck2\asp2_frame\asp2_frame_logbook.cpp
@@ -3678,6 +4068,8 @@
 	"asp2_frame.h"
 	"asp2_frame_id.h"
 	"asp_display_panel.h"
+
+1512561317 ay_panel.h"
 
 1510140464 source:c:\jlp_src\piscospeck2\asp2_frame\asp2_frame_menu_onclick.cpp
 	"asp2_frame.h"
@@ -3691,6 +4083,8 @@
 	"jlp_display2_mutex.h"
 	"jlp_andor_cam1.h"
 
+1518618762 _cam1.h"
+
 1504604934 c:\jlp_src\piscospeck2\asp2_tools\jlp_display2_mutex.h
 	"asp2_defs.h"
 
@@ -3702,6 +4096,8 @@
 	"jlp_camera_display.h"
 	"jlp_camera_display_mutex.h"
 	"jlp_display2_mutex.h"
+
+1512387506 ay2_mutex.h"
 
 1511701414 source:c:\jlp_src\piscospeck2\asp2_frame\asp2_frame_video.cpp
 	"asp2_frame.h"
@@ -3721,6 +4117,8 @@
 	"jlp_numeric.h"
 	"asp2_photon_corr.h"
 
+1513092849 on_corr.h"
+
 1504604934 c:\jlp_src\piscospeck2\asp2_process\asp2_photon_corr.h
 
 1504604935 source:c:\jlp_src\piscospeck2\asp2_process\asp2_covermas.cpp
@@ -3729,8 +4127,12 @@
 	"jlp_numeric.h"
 	"asp2_covermas.h"
 
+1504604935 rmas.h"
+
 1504604934 c:\jlp_src\piscospeck2\asp2_process\asp2_covermas.h
 	"jlp_numeric.h"
+
+1504604934 ic.h"
 
 1512561317 source:c:\jlp_src\piscospeck2\asp2_process\asp2_decode_thread.cpp
 	"asp2_app.h"
@@ -3828,6 +4230,8 @@
 1506081510 source:c:\jlp_src\piscospeck2\asp2_process\jlp_speckprocess_panel.cpp
 	"jlp_speckprocess_panel.h"
 
+1508244352 process_panel.h"
+
 1504604934 source:c:\jlp_src\piscospeck2\asp2_process\jlp_speckprocess_panel_onclick.cpp
 	"jlp_speckprocess_panel.h"
 	"jlp_rw_fits0.h"
@@ -3847,6 +4251,8 @@
 1512402797 source:c:\jlp_src\piscospeck2\asp2_tools\asp_camera_dlg.cpp
 	"asp_camera_dlg.h"
 
+1512402797 a_dlg.h"
+
 1510415974 source:c:\jlp_src\piscospeck2\asp2_tools\asp_display_panel.cpp
 	"asp_display_panel.h"
 	"jlp_decode.h"
@@ -3865,6 +4271,8 @@
 
 1504604934 source:c:\jlp_src\piscospeck2\asp2_tools\jlp_language_dlg.cpp
 	"jlp_language_dlg.h"
+
+1504604934 age_dlg.h"
 
 1522069643 source:c:\jlp_src\piscospeck2\asp2_tools\jlp_time0.cpp
 	<stdio.h>
@@ -3904,6 +4312,8 @@
 
 1511624986 source:c:\jlp_src\piscospeck2\jlp_andor\jlp_andor_panel.cpp
 	"jlp_andor_panel.h"
+
+1511526419 _panel.h"
 
 1516011564 source:c:\jlp_src\piscospeck2\jlp_andor\jlp_andor_panel_onclick1.cpp
 	"jlp_andor_panel.h"
@@ -3963,6 +4373,8 @@
 	"jlp_raptor_cam1.h"
 	"jlp_raptor_utils.h"
 
+1518623079 r_utils.h"
+
 1518619096 source:c:\jlp_src\piscospeck2\jlp_raptor\jlp_raptor_cam1_acqui.cpp
 	<stdio.h>
 	<string.h>
@@ -3991,6 +4403,8 @@
 	"jlp_raptor_cam1.h"
 	"jlp_raptor_serial.h"
 
+1515694300 r_serial.h"
+
 1508863071 c:\jlp_src\piscospeck2\jlp_raptor\jlp_raptor_serial.h
 	<cstdio>
 	<string>
@@ -4007,6 +4421,8 @@
 
 1518622347 source:c:\jlp_src\piscospeck2\jlp_raptor\jlp_raptor_panel.cpp
 	"jlp_raptor_panel.h"
+
+1518622347 r_panel.h"
 
 1518622347 source:c:\jlp_src\piscospeck2\jlp_raptor\jlp_raptor_panel_onclick1.cpp
 	"jlp_raptor_panel.h"
@@ -4028,9 +4444,13 @@
 1504604935 source:c:\jlp_src\piscospeck2\piscospeck2.rc
 	"wx/msw/wx.rc"
 
+1504604935 .rc"
+
 1506411428 c:\wxwidgets-3.1.0\include\wx\msw\wx.rc
 	<windows.h>
 	"wx/msw/rcdefs.h"
+
+1538054207 defs.h"
 
 1506411426 c:\wxwidgets-3.1.0\include\wx\msw\rcdefs.h
 
@@ -4046,6 +4466,8 @@
 	<string.h>
 	<time.h>
 	"jlp_raptor_cam1.h"
+
+1518622347 r_cam1.h"
 
 1538054196 c:\wxwidgets-3.1.1\include\wx\wx.h
 	"wx/defs.h"
@@ -5039,6 +5461,8 @@
 	"wx/msw/nonownedwnd.h"
 	"wx/qt/nonownedwnd.h"
 
+1538054195 ownedwnd.h"
+
 1538054195 c:\wxwidgets-3.1.1\include\wx\window.h
 	"wx/event.h"
 	"wx/list.h"
@@ -5481,6 +5905,8 @@
 1538054211 c:\wxwidgets-3.1.1\include\wx\qt\statusbar.h
 	"wx/statusbr.h"
 
+1538054211 br.h"
+
 1538054203 c:\wxwidgets-3.1.1\include\wx\univ\frame.h
 
 1538054207 c:\wxwidgets-3.1.1\include\wx\msw\frame.h
@@ -5716,6 +6142,8 @@
 
 1538054212 c:\wxwidgets-3.1.1\include\wx\qt\menuitem.h
 	"wx/menuitem.h"
+
+1538054212 em.h"
 
 1538054196 c:\wxwidgets-3.1.1\include\wx\menu.h
 	"wx/defs.h"
@@ -6242,6 +6670,8 @@
 1538054211 c:\wxwidgets-3.1.1\include\wx\qt\scrolbar.h
 	"wx/scrolbar.h"
 
+1538054211 ar.h"
+
 1538054197 c:\wxwidgets-3.1.1\include\wx\stattext.h
 	"wx/defs.h"
 	"wx/control.h"
@@ -6326,6 +6756,8 @@
 
 1538054207 c:\wxwidgets-3.1.1\include\wx\msw\statbox.h
 	"wx/compositewin.h"
+
+1538054207 itewin.h"
 
 1538054192 c:\wxwidgets-3.1.1\include\wx\compositewin.h
 	"wx/window.h"
@@ -7212,4 +7644,7 @@
 	"wx/msw/rcdefs.h"
 
 1538054207 c:\wxwidgets-3.1.1\include\wx\msw\rcdefs.h
+
+1567273995 source:/home/jprieur/jlp/src/pisco/PiscoSpeck2/PiscoSpeck2.rc
+	"wx/msw/wx.rc"
 

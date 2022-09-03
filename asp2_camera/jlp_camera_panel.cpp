@@ -10,8 +10,10 @@
 #include "jlp_camera1.h"
 #include "jlp_andor_cam1.h"
 #include "jlp_andor_panel.h"
+#ifdef USE_RAPTOR
 #include "jlp_raptor_cam1.h"
 #include "jlp_raptor_panel.h"
+#endif
 #include "jlp_fitscube_panel.h"
 // ============================================================================
 // implementation
@@ -37,7 +39,9 @@ char infits_fname[128];
 camera_type1 = *camera_type0;
 m_cam1 = NULL;
 m_andor_cam1 = NULL;
+#ifdef USE_RAPTOR
 m_raptor_cam1 = NULL;
+#endif
 m_fitscube_cam1 = NULL;
 *panel_wxID = 9802;
 *sub_panel_0 = NULL;
@@ -71,6 +75,7 @@ m_fitscube_cam1 = NULL;
        m_cam1 = (JLP_Camera1 *)m_andor_cam1;
       }
     break;
+#ifdef USE_RAPTOR
 // Raptor camera:
     case 2:
       m_raptor_cam1 = new JLP_RaptorCam1();
@@ -82,6 +87,7 @@ m_fitscube_cam1 = NULL;
        m_cam1 = (JLP_Camera1 *)m_raptor_cam1;
       }
     break;
+#endif
  }
 
 if((m_cam1 != NULL) && (camera_type1 >= 0))
@@ -94,7 +100,9 @@ if((m_cam1 != NULL) && (camera_type1 >= 0))
 *camera_type0 = camera_type1;
 
 m_andor_panel = NULL;
+#ifdef USE_RAPTOR
 m_raptor_panel = NULL;
+#endif
 m_fitscube_panel = NULL;
  switch(camera_type1) {
   default:
@@ -114,6 +122,7 @@ m_fitscube_panel = NULL;
                                        small_version);
     *sub_panel_0 = (wxFrame *)m_andor_panel;
     break;
+#ifdef USE_RAPTOR
 // Raptor camera:
   case 2:
     m_raptor_panel = new JLP_RaptorPanel(asp_frame, frame, *panel_wxID,
@@ -122,6 +131,7 @@ m_fitscube_panel = NULL;
                                          small_version);
     *sub_panel_0 = (wxFrame *)m_raptor_panel;
     break;
+#endif
  }
 
 return;
@@ -161,8 +171,10 @@ void JLP_CameraPanel::CamPanel_Get_CameraSettings(JLP_CAMERA_SETTINGS *CamSet0)
 {
   if(m_andor_cam1 != NULL)
     m_andor_cam1->Cam1_Get_CameraSettings(&CamSet1);
+#ifdef USE_RAPTOR
   else if(m_raptor_cam1 != NULL)
     m_raptor_cam1->Cam1_Get_CameraSettings(&CamSet1);
+#endif
   else if(m_fitscube_cam1 != NULL)
     m_fitscube_cam1->Cam1_Get_CameraSettings(&CamSet1);
 
@@ -177,8 +189,10 @@ void JLP_CameraPanel::CamPanel_Load_CameraSettings(JLP_CAMERA_SETTINGS CamSet0)
 {
   if(m_andor_cam1 != NULL)
     m_andor_cam1->Cam1_Load_CameraSettings(CamSet0);
+#ifdef USE_RAPTOR
   else if(m_raptor_cam1 != NULL)
     m_raptor_cam1->Cam1_Load_CameraSettings(CamSet0);
+#endif
   else if(m_fitscube_cam1 != NULL)
     m_fitscube_cam1->Cam1_Load_CameraSettings(CamSet0);
 
@@ -194,8 +208,10 @@ void JLP_CameraPanel::CamPanel_ValidateChanges()
 {
   if(m_andor_panel != NULL)
     m_andor_panel->CamPanel_ValidateNewSettings();
+#ifdef USE_RAPTOR
   else if(m_raptor_panel != NULL)
     m_raptor_panel->CamPanel_ValidateNewSettings();
+#endif
   else if(m_fitscube_panel != NULL)
     m_fitscube_panel->CamPanel_ValidateNewSettings();
 
@@ -208,8 +224,10 @@ void JLP_CameraPanel::CamPanel_CancelNonValidatedChanges()
 {
   if(m_andor_panel != NULL)
     m_andor_panel->CamPanel_CancelNonValidatedChanges();
+#ifdef USE_RAPTOR
   else if(m_raptor_panel != NULL)
     m_raptor_panel->CamPanel_CancelNonValidatedChanges();
+#endif
   else if(m_fitscube_panel != NULL)
     m_fitscube_panel->CamPanel_CancelNonValidatedChanges();
 }
@@ -220,8 +238,10 @@ void JLP_CameraPanel::CamPanel_ValidateNewSettings()
 {
   if(m_andor_panel != NULL)
     m_andor_panel->CamPanel_ValidateNewSettings();
+#ifdef USE_RAPTOR
   else if(m_raptor_panel != NULL)
     m_raptor_panel->CamPanel_ValidateNewSettings();
+#endif
   else if(m_fitscube_panel != NULL)
     m_fitscube_panel->CamPanel_ValidateNewSettings();
 }

@@ -14,7 +14,7 @@ enum
    ID_CAMERA_CANCEL,
    ID_CAMERA_FITS_CUBE,
    ID_CAMERA_ANDOR,
-   ID_CAMERA_RAPTOR,
+   ID_CAMERA_RAPTOR
 };
 
 BEGIN_EVENT_TABLE(AspCamera_Dlg, wxDialog)
@@ -22,7 +22,9 @@ EVT_BUTTON (ID_CAMERA_OK, AspCamera_Dlg::OnOKButton)
 EVT_BUTTON (ID_CAMERA_CANCEL, AspCamera_Dlg::OnCancelButton)
 EVT_RADIOBUTTON (ID_CAMERA_FITS_CUBE, AspCamera_Dlg::OnSelectCamera)
 EVT_RADIOBUTTON (ID_CAMERA_ANDOR, AspCamera_Dlg::OnSelectCamera)
+#ifdef USE_RAPTOR
 EVT_RADIOBUTTON (ID_CAMERA_RAPTOR, AspCamera_Dlg::OnSelectCamera)
+#endif
 END_EVENT_TABLE()
 
 
@@ -57,8 +59,10 @@ int i, nrows, ncols, vgap = 12, hgap = 12;
                                            wxPoint(-1,-1), wxSize(-1,-1),
                                            wxRB_GROUP);
   CameraRadioButton[1] = new wxRadioButton(this, ID_CAMERA_ANDOR, _T("Andor"));
+#ifdef RAPTOR
   CameraRadioButton[2] = new wxRadioButton(this, ID_CAMERA_RAPTOR,
                                            _T("Raptor"));
+#endif
   topsizer = new wxBoxSizer( wxVERTICAL );
 
 
@@ -132,11 +136,13 @@ void AspCamera_Dlg::OnSelectCamera( wxCommandEvent& event )
       iCamera_1 = 1;
       break;
     }
+#ifdef USE_RAPTOR
    case ID_CAMERA_RAPTOR:
     {
       iCamera_1 = 2;
       break;
     }
+#endif
   }  // EOF switch
 return;
 }

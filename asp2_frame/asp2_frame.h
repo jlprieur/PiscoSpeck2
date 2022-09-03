@@ -89,6 +89,7 @@ public:
     void CreateCameraThread();
     void SelectLanguageSetup();
     void SelectCameraSetup();
+    void SelectUTShiftSetup();
 //    void PromptForCameraType();
 
 #if wxUSE_TOOLTIPS
@@ -136,6 +137,7 @@ public:
     int PromptForComments(wxString &comments0);
 
 // In "asp2_frame_menu.cpp":
+    void CDisplayClockOnStatusBar();
     void CreateMyToolbar();
     void Gdp_SetupMenu();
     void Gdp_ResetAllOptionsOfImageMenu();
@@ -176,6 +178,19 @@ public:
 
 protected:
 
+// Clock on StatusBar:
+    void CDisplay_OnUpdateClock(wxTimerEvent&) {
+        CDisplay_UpdateClock();
+    }
+
+    void CDisplay_UpdateClock() {
+        wxDateTime wxdt;
+        wxString wxbuff;
+        wxdt = wxDateTime::Now().Subtract(wxTimeSpan(-UTShift));
+        wxbuff = wxT("UT ") + wxdt.FormatTime();
+        SetText_to_StatusBar(wxbuff, 2);
+    }
+
 private:
   wxStatusBar *m_StatusBar;
   int initialized, camera_type1;
@@ -199,6 +214,10 @@ private:
   wxBoxSizer  *m_topsizer;
   wxString m_filename1, m_full_filename1;
   int m_iframe, m_nframes;
+
+// Clock on Menubar:
+  int UTShift;
+  wxTimer m_clockTimer;
 
 // Messages in 5 languages:
   int iLang;

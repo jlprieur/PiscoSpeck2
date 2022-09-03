@@ -313,18 +313,8 @@ wxFlexGridSizer *fgs0, *fgs1, *fgs2, *fgs3, *fgs4;
 
  hsizer1 = new wxBoxSizer(wxHORIZONTAL);
 
-// i=328 "U.T./L.T. shift :"
- ProcCmb_UToffset.label = m_messg[328];
- ProcCmb_UToffset.nchoices = 3;
- ProcCmb_UToffset.choices[0] = "0";
- ProcCmb_UToffset.choices[1] = "-1";
- ProcCmb_UToffset.choices[2] = "-2";
- ProcCmb_UToffset.combo = new wxComboBox(this, ID_PROC_UT_OFFSET, wxT(""),
-                                         wxDefaultPosition, wxSize(80, 28),
-                                         ProcCmb_UToffset.nchoices,
-                                         ProcCmb_UToffset.choices);
- hsizer1->Add(new wxStaticText(this, -1, ProcCmb_UToffset.label));
- hsizer1->Add(ProcCmb_UToffset.combo, 0, wxLEFT, 5);
+// JLP2022: removed: // i=328 "U.T./L.T. shift :"
+
  save_sizer->Add(hsizer1, 0, wxALL, 10);
 
  hsizer2->Add(save_sizer, 0, wxEXPAND | wxLEFT, 10);

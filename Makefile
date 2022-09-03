@@ -20,17 +20,16 @@ ifeq ($(JLP_SYSTEM),Linux)
 CPP = c++
 
 JLPLIB_DIR = $(JLPSRC)/jlplib
-CFITSIO_INCL_DIR = $(JLPLIB_DIR)/cfitsio/incl
 
-CXFLAGS = -Wall `wx-config --cppflags` $(MY_INCL) -DLINUX
+CXFLAGS = -Wall `wx-config --cppflags` $(LOCAL_FLAGS) $(MY_INCL) -DLINUX
 
 mylib = $(JLPLIB)/jlp
 MATHLIB = $(JLPLIB)/jlp/jlp_numeric.a $(JLPLIB)/math/libfftw3.a
 
-PATHSEP1 = /
-
 #WX_LIB = -L/usr/local/lib -pthread   -lwx_baseu-2.9 -lwx_gtk2u_core-2.9
 WX_LIB := `wx-config --libs base,core`
+
+CFITSIO_INCL_DIR = $(JLPLIB_DIR)/jlp_cfitsio/incl
 
 else
 
@@ -41,186 +40,207 @@ else
 CPP = c++
 JLPSRC = c:/jlp_src
 JLPLIB_DIR = c:/jlp_src/jlplib
-CFITSIO_INCL_DIR = $(JLPLIB_DIR)/cfitsio/incl
 
 # C++ flags to use with wxWidgets code 
 WX_INCLUDE_DIR = c:/wxWidgets-3.0.2/include
 
 # Windows: I add USE_XPM (USE_XPM is needed to have the icon)
-CXFLAGS = -Wall -DUSE_XPM -I$(WX_INCLUDE_DIR) $(MY_INCL) -DWIN32
+CXFLAGS = -Wall -DUSE_XPM $(LOCAL_FLAGS) -I$(WX_INCLUDE_DIR) $(MY_INCL) -DWIN32
+
+CFITSIO_INCL_DIR = $(JLPLIB_DIR)/cfitsio/incl
 
 # To avoid console apparition:
 NO_CONSOLE = -mwindows 
 
-# Need two back slashes for Linux compatibility:
-PATHSEP1 = \\
-# Not true: hence:
-PATHSEP1 = /
-
 EXEC = c:/EXEC
 
 mylib = c:/EXEC/MyLib
-MATHLIB = $(mylib)$(PATHSEP)jlp_numeric.a $(mylib)$(PATHSEP)libfftw3.a
+MATHLIB = $(mylib)/jlp_numeric.a $(mylib)/libfftw3.a
 WX_LIB_DIR = c:/wxWidgets-3.0.2/lib/gcc_dll
 
 WX_LIB = -L$(WX_LIB_DIR) -lwxbase30u -lwxmsw30u_core
 
 endif
+###################################################
 
-#Remove extra blank before $(PATHSEP1):
-PATHSEP=$(strip $(PATHSEP1))
+LOCAL_FLAGS=$(MY_INCL) -I./asp2_camera -I./asp2_fits \
+	-I./asp2_frame -I./asp2_process -I./asp2_tools \
+	-I./bitmaps -I./jlp_andor -I./jlp_fitscube -I./jlp_raptor \
+	-I./jlp_raptor/epix_inc \
+	-I$(CFITSIO_INCL_DIR) \
+	-Dunix -DSYSTEM_FIVE -DJLP_USE_WXWID2
 
-EXEC_DIR = $(EXEC)$(PATHSEP)
+EXEC_DIR = $(EXEC)/
 
-MY_INCL=-I. -I$(JLPLIB_DIR)$(PATHSEP)jlp_splot  \
-	-I$(JLPLIB_DIR)$(PATHSEP)jlp_fits \
-	-I$(JLPLIB_DIR)$(PATHSEP)jlp_wxplot \
-	-I$(JLPLIB_DIR)$(PATHSEP)jlp_numeric \
+MY_INCL=-I. -I$(JLPLIB_DIR)/jlp_splot -I$(JLPLIB_DIR)/jlp_splot_idv \
+	-I$(JLPLIB_DIR)/jlp_gsegraf/jlp_gsegraf_include \
+	-I$(JLPLIB_DIR)/jlp_gseg_wxwid \
+	-I$(JLPLIB_DIR)/jlp_wxplot/jlp_wxplot_include/ \
+	-I$(JLPLIB_DIR)/jlp_fits -I$(JLPLIB_DIR)/jlp_numeric \
 	-I$(CFITSIO_INCL_DIR)
 
-FITSLIB=$(mylib)$(PATHSEP)jlp_fits.a $(mylib)$(PATHSEP)libcfitsio.a 
-MY_LIB= $(mylib)$(PATHSEP)jlp_wxplot.a $(mylib)$(PATHSEP)jlp_splot.a  \
-	$(MATHLIB) $(FITSLIB) -lm
+FITSLIB=$(mylib)/jlp_fits.a $(mylib)/libcfitsio.a 
+MY_LIB= $(mylib)/jlp_wxplot.a $(mylib)/jlp_splot.a \
+  $(mylib)/jlp_splot_idv.a $(mylib)/jlp_splot.a \
+  $(mylib)/jlp_gsegraf.a $(mylib)/jlp_gseg_wxwid.a \
+  $(mylib)/jlp_numeric.a $(MATHLIB) $(FITSLIB)
 
-FSP2_OBJ = asp2_main.o asp2_main_utils.o asp2_language.o \
-	jlp_language_dlg.o \
-	gdp_frame_video.o gdp_frame_logbook.o asp2_menu_rwfits.o \
-	asp2_3Dfits.o asp2_fits_utils.o \
-	jlp_rw_fits0.o jlp_fits0_cvb.o \
-	asp2_frame_menu.o jlp_decode.o jlp_decode_access.o \
-	jlp_decode_process_cube.o jlp_decode_process2.o \
-	jlp_decode_cube_save.o jlp_decode_process_cube_utils.o \
-	asp2_covermas.o asp2_photon_corr.o jlp_time0.o \
-	asp2_inv_bispec2.o asp2_clean_deconv.o \
-	jlp_andor_display_mutex.o jlp_display2_mutex.o \
-	asp2_rw_config_files.o asp2_display_panel.o asp2_process.o \
-	jlp_speckprocess_panel.o jlp_speckprocess_panel_onclick.o \
-	jlp_speckprocess_panel_update.o \
-	asp2_andor_thread.o asp2_andor_thread_display.o \
-	asp2_decode_thread.o asp2_3dfits_thread.o  
+##############################################################
 
-FSP2_SRC = $(FSP2_OBJ)(.o:.cpp)
+ASP2_CAM_DIR = asp2_camera
+ASP2_FITS_DIR = asp2_fits
+ASP2_FRAME_DIR = asp2_frame
+ASP2_PROCESS_DIR = asp2_process
+ASP2_TOOLS_DIR = asp2_tools
+JLP_ANDOR_DIR =  jlp_andor
+JLP_FITSCUBE_DIR =  jlp_fitscube
+JLP_RAPTOR_DIR =  jlp_raptor
+
+##############################################################
+
+ASP2_CAM_H = jlp_camera1.h jlp_camera_panel1.h jlp_camera_utils.h \
+	jlp_camera_display.h jlp_camera_panel.h \
+	jlp_camera_display_mutex.h  jlp_camera_thread.h
+
+ASP2_FITS_H = asp2_2dfits_utils.h asp2_3D_outfits.h \
+	asp2_3dfits_rd_utils.h jlp_fits0_computer.h reserve_jlp_fits1.h \
+	asp2_3dfits_wr_utils.h jlp_fits0_fmt.h asp2_3D_infits.h \
+	jlp_rw_fits0.h
+
+ASP2_FRAME_H = asp2_defs.h asp2_frame_id.h asp2_typedef.h asp2_frame.h \
+	asp2_frame_language.h
+
+ASP2_PROCESS_H = asp2_covermas.h asp2_photon_corr.h jlp_speckprocess_panel.h \
+	asp2_decode_thread.h jlp_decode.h
  
-FSP2_DEP = AndorSpeck2.h asp2_frame.h asp2_frame_id.h  \
-	jlp_fits0_computer.h jlp_fits0_fmt.h \
-	asp2_3Dfits.h asp2_fits_utils.h \
-	asp2_covermas.h jlp_decode.h asp2_defs.h \
-	asp2_photon_corr.h jlp_time0.h \
-	asp2_typedef.h jlp_andor_display_mutex.h jlp_display2_mutex.h \
-	asp2_rw_config_files.h jlp_speckprocess_panel.h \
-	asp2_andor_thread.h asp2_decode_thread.h asp2_3dfits_thread.h \
-	asp2_display_panel.h
+#jlp_wxthread : autonomous application !
+#ASP2_TOOLS_H = asp2_rw_config_files.h jlp_display2_mutex.h jlp_wxthread.h 
 
-ANDOR_OBJ = jlp_andor_cam1.o jlp_andor_cam1_set.o \
-	jlp_andor_cam1_acqui.o jlp_andor_cam1_acqui_conti.o jlp_andor_utils.o \
-	jlp_andor_panel.o jlp_andor_panel_update.o \
-	jlp_andor_panel_onclick1.o jlp_andor_panel_onclick2.o \
-	jlp_andor_display.o jlp_Atmcd32d_linux.o
+ASP2_TOOLS_H = asp2_rw_config_files.h jlp_display2_mutex.h \
+	asp_camera_dlg.h jlp_language_dlg.h jlp_utshift_dlg.h \
+	asp_display_panel.h jlp_time0.h
 
-ANDOR_SRC = $(ANDOR_OBJ)(.o:.cpp)
+JLP_ANDOR_H = Atmcd32d.h jlp_andor_panel.h jlp_Atmcd32d_linux.h \
+	jlp_andor_cam1.h jlp_andor_utils.h
 
-ANDOR_DEP = jlp_andor_cam1.h jlp_andor_panel.h jlp_Atmcd32d_linux.h
+JLP_FITSCUBE_H = jlp_fitscube_cam1.h jlp_fitscube_panel.h \
+	jlp_fitscube_utils.h
+
+JLP_RAPTOR_H = jlp_raptor_cam1.h jlp_raptor_serial.h RaptorEPIX0.h \
+	jlp_raptor_panel.h jlp_raptor_utils.h
+
+##############################################################
+
+ASP2_CAM_DEP = $(addprefix $(ASP2_CAM_DIR)/, $(ASP2_CAM_H))
+ASP2_FITS_DEP = $(addprefix $(ASP2_FITS_DIR)/, $(ASP2_FITS_H))
+ASP2_FRAME_DEP = $(addprefix $(ASP2_FRAME_DIR)/, $(ASP2_FRAME_H))
+ASP2_PROCESS_DEP = $(addprefix $(ASP2_PROCESS_DIR)/, $(ASP2_PROCESS_H))
+ASP2_TOOLS_DEP = $(addprefix $(ASP2_TOOLS_DIR)/, $(ASP2_TOOLS_H))
+JLP_ANDOR_DEP = $(addprefix $(JLP_ANDOR_DIR)/, $(JLP_ANDOR_H))
+JLP_FITSCUBE_DEP = $(addprefix $(JLP_FITSCUBE_DIR)/, $(JLP_FITSCUBE_H))
+JLP_RAPTOR_DEP = $(addprefix $(JLP_RAPTOR_DIR)/, $(JLP_RAPTOR_H))
+
+ASP2_DEP = $(ASP2_CAM_DEP) $(ASP2_FITS_DEP) $(ASP2_FRAME_DEP) \
+	$(ASP2_PROCESS_DEP) $(ASP2_TOOLS_DEP) $(JLP_ANDOR_DEP) \
+	$(JLP_FITSCUBE_DEP) $(JLP_RAPTOR_DEP) 
+
+##############################################################
+
+ASP2_CAM_SRC = jlp_camera1.cpp jlp_camera_panel.cpp \
+	jlp_camera_display.cpp jlp_camera_thread.cpp \
+	jlp_camera_display_mutex.cpp jlp_camera_thread_display.cpp \
+	jlp_camera_panel1.cpp jlp_camera_utils.cpp
+
+ASP2_FITS_SRC = asp2_2dfits_utils.cpp asp2_3D_infits.cpp \
+	jlp_rw_fits0.cpp asp2_3dfits_rd_utils.cpp asp2_3D_outfits.cpp \
+	asp2_3dfits_wr_utils.cpp jlp_fits0_cvb.cpp
+
+ASP2_FRAME_SRC = asp2_frame.cpp asp2_frame_menu.cpp asp2_frame_utils.cpp \
+	asp2_frame_language.cpp asp2_frame_menu_onclick.cpp \
+	asp2_menu_rwfits.cpp asp2_frame_logbook.cpp asp2_frame_process.cpp
+
+ASP2_PROCESS_SRC = asp2_clean_deconv.cpp jlp_decode_process2.cpp \
+	asp2_covermas.cpp jlp_decode_process_cube.cpp \
+	asp2_decode_thread.cpp jlp_decode_process_cube_utils.cpp \
+	asp2_inv_bispec2.cpp jlp_decode_process_scidar.cpp \
+	asp2_photon_corr.cpp jlp_speckprocess_panel.cpp \
+	jlp_decode_access.cpp jlp_speckprocess_panel_onclick.cpp \
+	jlp_decode.cpp jlp_speckprocess_panel_update.cpp \
+	jlp_decode_cube_save.cpp
+
+ASP2_TOOLS_SRC = asp2_rw_config_files.cpp asp_display_panel_onclick.cpp \
+	jlp_time0.cpp asp_camera_dlg.cpp jlp_display2_mutex.cpp \
+	asp_display_panel.cpp jlp_language_dlg.cpp jlp_utshift_dlg.cpp
+#	jlp_wxthread.cpp asp_display_panel.cpp jlp_language_dlg.cpp
+
+JLP_ANDOR_SRC = jlp_andor_cam1_acqui_conti.cpp jlp_andor_panel_onclick1.cpp \
+	jlp_andor_cam1_acqui.cpp jlp_andor_panel_onclick2.cpp \
+	jlp_andor_cam1.cpp jlp_andor_panel_update.cpp \
+	jlp_andor_cam1_set.cpp jlp_andor_utils.cpp \
+	jlp_andor_panel.cpp jlp_Atmcd32d_linux.cpp
+
+JLP_FITSCUBE_SRC = jlp_fitscube_cam1_acqui_conti.cpp  jlp_fitscube_panel.cpp \
+	jlp_fitscube_cam1_acqui.cpp jlp_fitscube_panel_onclick1.cpp \
+	jlp_fitscube_cam1.cpp jlp_fitscube_panel_update.cpp \
+	jlp_fitscube_cam1_set.cpp jlp_fitscube_utils.cpp
+
+
+ifeq ($(JLP_SYSTEM),Linux)
+JLP_RAPTOR_SRC = 
+else
+JLP_RAPTOR_SRC = jlp_raptor_cam1_acqui.cpp jlp_raptor_cam1_tools.cpp \
+	jlp_raptor_serial.cpp jlp_raptor_cam1.cpp jlp_raptor_panel.cpp \
+	jlp_raptor_utils.cpp jlp_raptor_cam1_get.cpp \
+	jlp_raptor_panel_onclick1.cpp RaptorEPIX0.cpp \
+	jlp_raptor_cam1_set.cpp jlp_raptor_panel_update.cpp
+endif
+
+##############################################################
+
+ASP2_CAM_OBJ = $(addprefix $(ASP2_CAM_DIR)/, $(ASP2_CAM_SRC:.cpp=.o))
+ASP2_FITS_OBJ = $(addprefix $(ASP2_FITS_DIR)/, $(ASP2_FITS_SRC:.cpp=.o))
+ASP2_FRAME_OBJ = $(addprefix $(ASP2_FRAME_DIR)/, $(ASP2_FRAME_SRC:.cpp=.o))
+ASP2_PROCESS_OBJ = $(addprefix $(ASP2_PROCESS_DIR)/, $(ASP2_PROCESS_SRC:.cpp=.o))
+ASP2_TOOLS_OBJ = $(addprefix $(ASP2_TOOLS_DIR)/, $(ASP2_TOOLS_SRC:.cpp=.o))
+JLP_ANDOR_OBJ = $(addprefix $(JLP_ANDOR_DIR)/, $(JLP_ANDOR_SRC:.cpp=.o))
+JLP_FITSCUBE_OBJ = $(addprefix $(JLP_FITSCUBE_DIR)/, $(JLP_FITSCUBE_SRC:.cpp=.o))
+JLP_RAPTOR_OBJ = $(addprefix $(JLP_RAPTOR_DIR)/, $(JLP_RAPTOR_SRC:.cpp=.o))
+
+ASP2_OBJ = $(ASP2_CAM_OBJ) $(ASP2_FITS_OBJ) $(ASP2_FRAME_OBJ) \
+	$(ASP2_PROCESS_OBJ) $(ASP2_TOOLS_OBJ) $(JLP_ANDOR_OBJ) \
+	$(JLP_FITSCUBE_OBJ) $(JLP_RAPTOR_OBJ) 
+ASP2_LIB = asp2_lib.a 
+
+##############################################################
 
 .SUFFIXES:
 .SUFFIXES: .o .cpp .exe $(SUFFIXES) 
 
 .cpp.o:
-	$(CPP) -c -g $(CXFLAGS) $*.cpp
+	$(CPP) -c -g $(CXFLAGS) -o $*.o $*.cpp
 
 .o.exe:
-	$(CPP) -o $(EXEC_DIR)$*.exe $*.o $(FSP2_OBJ) $(ANDOR_OBJ) \
-	$(MY_LIB) $(WX_LIB)
+	$(CPP) -o $(EXEC_DIR)$*.exe $*.o $(ASP2_OBJ) \
+	$(MY_LIB) $(WX_LIB) -lm -lz
 
 .cpp.exe:
-	$(CPP) -c -g $(CXFLAGS) $*.cpp
-	$(CPP) -o $(EXEC_DIR)$*.exe $*.o $(FSP2_OBJ) $(ANDOR_OBJ) \
-	$(MY_LIB) $(WX_LIB)
+	$(CPP) -c -g $(CXFLAGS) -o $*.o $*.cpp
+	$(CPP) -o $(EXEC_DIR)$*.exe $*.o $(ASP2_OBJ) \
+	$(MY_LIB) $(WX_LIB) -lm -lz
 
 ### Targets: ###
 
-all: $(FSP2_OBJ) $(ANDOR_OBJ) AndorSpeck2.exe
-
-Debug: $(FSP2_OBJ) $(ANDOR_OBJ) AndorSpeck2.exe
-
-AndorSpeck2.o: AndorSpeck2.cpp $(FSP2_DEP)
-
-asp2_main.o: asp2_main.cpp $(FSP2_DEP)
-
-asp2_main_utils.o: asp2_main_utils.cpp $(FSP2_DEP)
-
-gdp_frame_logbook.o: gdp_frame_logbook.cpp  $(FSP2_DEP)
-
-gdp_frame_video.o: gdp_frame_video.cpp  $(FSP2_DEP)
-
-asp2_frame_menu.o: asp2_frame_menu.cpp  $(FSP2_DEP)
-
-asp2_display_panel.o: asp2_display_panel.cpp  $(FSP2_DEP)
-
-asp2_process.o: asp2_process.cpp  $(FSP2_DEP)
-
-asp2_menu_rwfits.o: asp2_menu_rwfits.cpp  $(FSP2_DEP)
-
-asp2_3Dfits.o: asp2_3Dfits.cpp  $(FSP2_DEP)
-
-jlp_fits0_cvb.o: jlp_fits0_cvb.cpp  $(FSP2_DEP)
-
-jlp_rw_fits0.o: jlp_rw_fits0.cpp  $(FSP2_DEP)
-
-asp2_fits_utils.o: asp2_fits_utils.cpp  $(FSP2_DEP)
-
-jlp_decode.o: jlp_decode.cpp  $(FSP2_DEP)
-
-jlp_decode_process_cube.o: jlp_decode_process_cube.cpp  $(FSP2_DEP)
-
-jlp_decode_process_cube_utils.o: jlp_decode_process_cube_utils.cpp  $(FSP2_DEP)
-
-jlp_decode_process2.o: jlp_decode_process2.cpp  $(FSP2_DEP)
-
-jlp_decode_access.o: jlp_decode_access.cpp  $(FSP2_DEP)
-
-asp2_covermas.o: asp2_covermas.cpp  $(FSP2_DEP)
-
-asp2_photon_corr.o: asp2_photon_corr.cpp  $(FSP2_DEP)
-
-asp2_inv_bispec2.o : asp2_inv_bispec2.cpp $(FSP2_DEP)
-
-asp2_clean_deconv.o : asp2_clean_deconv.cpp $(FSP2_DEP)
-
-jlp_display1_mutex.o : jlp_display1_mutex.cpp $(FSP2_DEP)
-
-jlp_display2_mutex.o : jlp_display2_mutex.cpp $(FSP2_DEP)
-
-asp2_rw_config_files.o : asp2_rw_config_files.cpp $(FSP2_DEP)
-
-jlp_speckprocess_panel.o : jlp_speckprocess_panel.cpp $(FSP2_DEP)
-
-jlp_speckprocess_panel_onclick.o : jlp_speckprocess_panel_onclick.cpp $(FSP2_DEP)
-
-jlp_speckprocess_panel_update.o : jlp_speckprocess_panel_update.cpp $(FSP2_DEP)
-
-jlp_andor_panel.o : jlp_andor_panel.cpp $(ANDOR_DEP)
-
-jlp_andor_panel_update.o : jlp_andor_panel_update.cpp $(ANDOR_DEP)
-
-jlp_andor_panel_onclick1.o : jlp_andor_panel_onclick1.cpp $(ANDOR_DEP)
-
-jlp_andor_panel_onclick2.o : jlp_andor_panel_onclick2.cpp $(ANDOR_DEP)
-
-jlp_andor_cam1.o : jlp_andor_cam1.cpp $(ANDOR_DEP)
-
-jlp_andor_cam2.o : jlp_andor_cam2.cpp $(ANDOR_DEP)
-
-jlp_andor_utils.o : jlp_andor_utils.cpp $(ANDOR_DEP)
-
-jlp_Atmcd32d_linux.o : jlp_Atmcd32d_linux.cpp 
-
-jlp_time0.o: jlp_time0.cpp 
+all: $(ASP2_OBJ) AndorSpeck2.exe
+#all: $(ASP2_OBJ)
 
 ########################################################
 # Linux: 
 ifeq ($(JLP_SYSTEM),Linux)
 
-AndorSpeck2.exe: AndorSpeck2.cpp  $(FSP2_DEP)
+AndorSpeck2.exe: asp2_app_main.cpp  $(ASP2_DEP)
+	$(CPP) -c -g $(CXFLAGS) -o asp2_app_main.o asp2_app_main.cpp
+	$(CPP) -o $(EXEC_DIR)/AndorSpeck2.exe asp2_app_main.o $(ASP2_OBJ) \
+	$(MY_LIB) $(WX_LIB) -lm -lz
 
 else
 ########################################################
@@ -231,7 +251,7 @@ AndorSpeck2_rc.o: AndorSpeck2.rc
 
 AndorSpeck2.exe: $(FSP2_OBJ) AndorSpeck2.cpp AndorSpeck2_rc.o
 	$(CPP) $(CXFLAGS) $(NO_CONSOLE) -o $(EXEC_DIR)AndorSpeck2.exe \
-	AndorSpeck2.cpp AndorSpeck2_rc.o $(FSP2_OBJ) $(ANDOR_OBJ) $(MY_LIB) \
+	AndorSpeck2.cpp AndorSpeck2_rc.o $(ASP2_OBJ) $(MY_LIB) \
 	$(WX_LIB) atmcd32m.lib -lm 
 # Missing DLL's:
 # libgcc_s_dw2-1.dll, libstdc++-6.dll 
@@ -243,4 +263,4 @@ endif
 clear: clean
 
 clean: 
-	rm -f AndorSpeck2_rc.o AndorSpeck2.o $(FSP2_OBJ) $(ANDOR_OBJ) 
+	rm -f AndorSpeck2_rc.o AndorSpeck2.o $(ASP2_OBJ)

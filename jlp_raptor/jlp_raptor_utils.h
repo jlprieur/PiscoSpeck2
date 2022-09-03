@@ -23,6 +23,11 @@
     #include "wx/tooltip.h"
 #endif
 
+// JLP2022:
+#ifndef WIN32
+#define WORD AWORD
+#endif
+
 #include "asp2_typedef.h" // DESCRIPTORS, EXPOSURE_PARAM, BYTE, etc
 
 //***************************************************************************

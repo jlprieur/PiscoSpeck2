@@ -14,6 +14,9 @@
 #include "Atmcd32d.h"      // Andor functions
 #else
 
+// Attempt for Linux: JLP2022
+#define WORD AWORD
+
 #ifdef __cplusplus
 extern "C" {
 #endif

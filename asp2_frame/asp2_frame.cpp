@@ -25,6 +25,7 @@
 #include "asp2_frame.h"
 #include "asp2_frame_id.h"      // Definition of identifiers
 #include "jlp_language_dlg.h"   // JLP_Language_Dlg class
+#include "jlp_utshift_dlg.h"    // JLP_UTShift_Dlg class
 #include "asp_camera_dlg.h"     // AspCamera_Dlg class
 #include "jlp_camera_panel.h"   // JLP_CameraPanel class
 
@@ -67,6 +68,9 @@ int status;
 // Prompt the user for a new value of iLang:
   SelectLanguageSetup();
 
+// Prompt the UTshift value:
+  SelectUTShiftSetup();
+
 // Load menu messages to Str0:
   status = LoadMenuMessages();
   if(status) Close();
@@ -85,12 +89,13 @@ if(small_version1) SetWindowVariant(wxWINDOW_VARIANT_SMALL);
 
 // Status bar:
 // Create a status bar with two fields at the bottom:
-  m_StatusBar = CreateStatusBar(2);
-// First field has a variable length, second has a fixed length:
-  int widths[2];
+  m_StatusBar = CreateStatusBar(3);
+// First field has a variable length, second and third have a fixed length:
+  int widths[3];
   widths[0] = -1;
   widths[1] = 200;
-  SetStatusWidths( 2, widths );
+  widths[2] = 200;
+  SetStatusWidths( 3, widths );
 
 // Create notebook and its pages (opening camera connection and settings camera_type1)
   NotebookSetup(GdpWidth, GdpHeight);
@@ -106,6 +111,7 @@ if(small_version1) SetWindowVariant(wxWINDOW_VARIANT_SMALL);
 // Update display panel setup (and get nx1, ny1, Aset1, Pset1, Pset1.nz_cube):
   nx1 = 1; ny1 = 1;
   Init_PSET(Pset1);   // To force camera display setup updating
+  Pset1.utime_offset = UTShift;  // Load the value that was entered by the user
   UpdateDisplaySetup();
 
 // DEBUG: xMessageBox(_T("DEBUG:"), _T("Main"), wxOK);
@@ -133,6 +139,9 @@ if(small_version1) SetWindowVariant(wxWINDOW_VARIANT_SMALL);
 // Disable Display menu and update DisplayPanel labels:
   menuProcessing->Enable(ID_PROCMENU_BISP_RESTORE, false);
   menu_bar->EnableTop( menu_bar->FindMenu(_T("Display")), false);
+
+// Clock display on the left side:
+  CDisplayClockOnStatusBar();
 
 return;
 }
@@ -214,6 +223,7 @@ processing_mode_old = Pset1.ProcessingMode;
 
 // Retrieve processing settings from ProcessingPanel:
   jlp_speckprocess_panel->Get_PSET(Pset1);
+  Pset1.utime_offset = UTShift;  // Load the value that was entered by the user
 
 // Compute nx1, ny1:
   nx1 = CamSet0.nx1;
@@ -245,6 +255,7 @@ int k;
 
   new_data_is_needed = false;
   Init_PSET(Pset1);
+  Pset1.utime_offset = UTShift;  // Load the value that was entered by the user
   jlp_decode1 = NULL;
   input_processed_data1 = false;
 
@@ -527,6 +538,25 @@ delete LanguageDlg;
 if(status) {
  exit(-1);
 }
+
+return;
+}
+/**************************************************************************
+*
+***************************************************************************/
+void AspFrame::SelectUTShiftSetup()
+{
+JLP_UTShift_Dlg *UTShift_Dlg;
+int status;
+
+  UTShift_Dlg = new JLP_UTShift_Dlg(this, wxT("UTShift Selection"));
+
+  status = UTShift_Dlg->ShowModal();
+
+// Retrieve the UTShift value:
+  UTShift_Dlg->RetrieveData(&UTShift);
+
+delete UTShift_Dlg;
 
 return;
 }

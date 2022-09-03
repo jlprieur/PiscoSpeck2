@@ -10,7 +10,9 @@
 
 #include "jlp_camera1.h"     // JLP_Camera1 virtual class
 #include "jlp_raptor_utils.h" // RAPTOR_SETTINGS, ...
-#include "epix_xcliball.h"
+#ifdef WIN32
+#include "epix_xcliball.h" // in ./jlp_raptor/epix_inc
+#endif
 
 #define UNITS 1
 #define UNITMASK 1

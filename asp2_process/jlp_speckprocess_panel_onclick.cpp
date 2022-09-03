@@ -49,26 +49,11 @@ EVT_RADIOBUTTON (ID_PROC_NO_FFCORR, JLP_SpeckProcessPanel::OnSelectFFieldCorr)
 
 // Combo boxes:
 EVT_COMBOBOX(ID_PROC_MODES, JLP_SpeckProcessPanel::OnSelectProcMode)
-EVT_COMBOBOX(ID_PROC_UT_OFFSET, JLP_SpeckProcessPanel::OnSelectUToffset)
 EVT_COMBOBOX(ID_PROC_SAVE_3DFITS, JLP_SpeckProcessPanel::OnSelectSave3DFits)
 EVT_COMBOBOX(ID_PROC_KK_CROSSCOR, JLP_SpeckProcessPanel::OnSelect_KK_CrossCorr)
 
 END_EVENT_TABLE()
 
-/*************************************************************************
-* Selection of UToffset
-* "0", "-1", "-2"
-*****************************************************************************/
-void JLP_SpeckProcessPanel::OnSelectUToffset(wxCommandEvent& event)
-{
-
- if(initialized != 1234) return;
-
-// Get selection from combobox:
-  Pset1.utime_offset = -1 * ProcCmb_UToffset.combo->GetSelection();
-
-return;
-}
 /*************************************************************************
 * Selection of new processing mode
  ProcRad_Mode_str[0] = _T("Aucun (visualisation seulement)");
@@ -922,7 +907,6 @@ strcpy(Pset1.PhotModsqFileName, "");
 
 return(0);
 }
-
 /****************************************************************************
 * Select FFTW directory  (for FFTW Fourier Transform, or other temporary files)
 *****************************************************************************/

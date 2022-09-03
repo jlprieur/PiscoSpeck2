@@ -14,10 +14,6 @@ int JLP_SpeckProcessPanel::DisplayNewValues()
 wxString buffer;
 wxFont font1;
 
-  if((Pset1.utime_offset >= -2) &&
-     (Pset1.utime_offset <= 0))
-  ProcCmb_UToffset.combo->SetSelection(-Pset1.utime_offset);
-
 /*---------------------------------------------------------------------------
 * ProcessingMode = 0 : no processing (only numerisation)
 * ProcessingMode = 1 : Only integration
@@ -253,7 +249,6 @@ fprintf(fp_out, "MaxValSelect.LowCut = %.3f\n", Pset1.MaxValSelect.LowCut);
 fprintf(fp_out, "MaxValSelect.HighCut = %.3f\n", Pset1.MaxValSelect.HighCut);
 fprintf(fp_out, "slangle = %.3f\n", Pset1.slangle);
 fprintf(fp_out, "spangle = %.3f\n", Pset1.spangle);
-fprintf(fp_out, "utime_offset = %d\n", Pset1.utime_offset);
 fprintf(fp_out, "ProcessingMode = %d\n", Pset1.ProcessingMode);
 fprintf(fp_out, "Selection_fwhm = %d\n", Pset1.Selection_fwhm);
 fprintf(fp_out, "Selection_maxval = %d\n", Pset1.Selection_maxval);
@@ -322,7 +317,6 @@ ReadDoubleFromConfigFile(filename, "MaxValSelect.LowCut", &Pset1->MaxValSelect.L
 ReadDoubleFromConfigFile(filename, "MaxValSelect.HighCut", &Pset1->MaxValSelect.HighCut);
 ReadDoubleFromConfigFile(filename, "slangle", &Pset1->slangle);
 ReadDoubleFromConfigFile(filename, "spangle", &Pset1->spangle);
-ReadIntFromConfigFile(filename, "utime_offset", &Pset1->utime_offset);
 ReadIntFromConfigFile(filename, "ProcessingMode", &Pset1->ProcessingMode);
 ReadBoolFromConfigFile(filename, "Selection_fwhm", &Pset1->Selection_fwhm);
 ReadBoolFromConfigFile(filename, "Selection_maxval", &Pset1->Selection_maxval);

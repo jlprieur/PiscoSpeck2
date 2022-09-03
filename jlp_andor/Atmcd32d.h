@@ -1,6 +1,12 @@
 #if !defined(__atmcd32d_h)
 #define __atmcd32d_h
 
+// JLP2017:
+// Case: WIN32 API
+#ifndef WIN32
+#include "jlp_Atmcd32d_linux.h"      // Andor functions
+#else
+
 #include "windows.h"
 
 #ifdef __cplusplus
@@ -558,4 +564,5 @@ EXPNETTYPE unsigned int WINAPI WhiteBalance(WORD* _wRed, WORD* _wGreen, WORD* _w
 }
 #endif
 
+#endif
 #endif

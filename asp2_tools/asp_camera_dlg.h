@@ -20,7 +20,11 @@
 // icamera = 0 : FitsCube
 // icamera = 1 : Andor
 // icamera = 2 : Raptor
+#ifdef USE_RAPTOR
 #define NCAMERA 3
+#else
+#define NCAMERA 2
+#endif
 
 /********************************************************************
 * Class AspCamera_Dlg

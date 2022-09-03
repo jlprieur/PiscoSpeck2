@@ -38,7 +38,6 @@ enum {
   ID_PROC_SLIT_ANGLE,
   ID_PROC_SPECT_ANGLE,
   ID_PROC_NZ_CUBE,
-  ID_PROC_UT_OFFSET,
   ID_PROC_FFTW_DIR,
   ID_PROC_3DFITS_DIR,
   ID_PROC_RESULTS_DIR,
@@ -113,7 +112,6 @@ protected:
    void UpdatefftwDirFromScreen();
 
    void OnConfig(wxCommandEvent& event);
-   void OnSelectUToffset(wxCommandEvent& event);
    void OnSelectProcMode(wxCommandEvent& event);
    void OnBisp_nclosEditExit(wxCommandEvent& event);
    void OnSlitAngle(wxCommandEvent& event);
@@ -173,7 +171,6 @@ private:
   wxStaticText *ProcStatic_UnresAutocFile, *ProcStatic_UnresModsqFile;
   wxStaticText *ProcStatic_PhotModsqFile;
   JLP_ComboBox ProcCmb_Mode, ProcCmb_Save_3DFits, ProcCmb_KK_CrossCorr;
-  JLP_ComboBox ProcCmb_UToffset;
 
   DECLARE_EVENT_TABLE()
 };
