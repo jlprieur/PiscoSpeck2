@@ -140,9 +140,12 @@ if(simulation1 == false) {
 
 // Set system for continuous acquisition:
  status = m_cam1->Cam1_SetSystemForContinuousAcquisition(nx1, ny1, xc0, yc0, xbin0, ybin0);
- if(status) wxMessageBox(wxT("Error setting the system for  continuous acquisition"),
-   wxT("JLP_CameraThread::JLP_Camera_SetSystemForContinuousAcquisition"),
-   wxOK | wxICON_ERROR);
+ if(status) {
+   buffer.Printf(wxT("Error setting the system for continuous acquisition: status=%d \n"), status);
+   wxMessageBox(buffer,
+          wxT("JLP_CameraThread::JLP_Camera_SetSystemForContinuousAcquisition"),
+          wxOK | wxICON_ERROR);
+   }
 }
 
  cube_to_be_loaded = false;

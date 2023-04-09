@@ -23,11 +23,12 @@
 *  DESCRIPTION:  This function sets up the acquisition settings exposure time
 *		  shutter, trigger for a new acquisition.
 *********************************************************************************/
-int JLP_AndorCam1::Cam1_SetSystemForContinuousAcquisition(int nx0, int ny0, int xc0,
-                                                          int yc0, int xbin0, int ybin0)
+int JLP_AndorCam1::Cam1_SetSystemForContinuousAcquisition(int nx0, int ny0, 
+                                                          int xc0, int yc0, 
+                                                          int xbin0, int ybin0)
 {
-wxString aBuffer2, buff0;
-int errorValue, xstart, xend, ystart, yend, status;
+wxString aBuffer2, buff0, error_msg;
+int errorValue, xstart, xend, ystart, yend, status = 0;
 
 // Allocate memory for image data.
 // Size is returned for GetAcquiredData which needs the buffer size
@@ -38,6 +39,18 @@ int errorValue, xstart, xend, ystart, yend, status;
   AndorSet1.ybin = ybin0;
   buff0.Printf(wxT("nx0=%d ny0=%d xc0=%d yc0=%d xbin0=%d ybin0=%d \n"),
                nx0, ny0, xc0, yc0, xbin0, ybin0);
+
+// JLP2023: inquire status of camera (ANDOR routine) and AbortAcquisition if  needed
+  GetStatus(&status);
+    if(status == DRV_ACQUIRING){
+      errorValue = AbortAcquisition();
+      if(errorValue != DRV_SUCCESS){
+        error_msg = wxT("Error aborting acquisition");
+        wxMessageBox(error_msg, wxT("Cam1_SetSystemForContinuousAcquisition"),
+                     wxOK | wxICON_ERROR);
+        return(-1);
+      }
+    }
 
 // Prepare Acquisition:
   errorValue = PrepareAcquisition();
@@ -74,9 +87,10 @@ int errorValue, xstart, xend, ystart, yend, status;
       }
     buff0.Append(aBuffer2);
     wxMessageBox(buff0, wxT("Cam1_SetSystemForContinuousAcquisition"),
-                 wxICON_ERROR);
-    return(-1);
+                 wxOK | wxICON_ERROR);
+    return(-2);
     }
+
 
 // This function only needs to be called when acquiring an image. It sets
 // the horizontal and vertical binning and the area of the image to be
@@ -95,15 +109,15 @@ int errorValue, xstart, xend, ystart, yend, status;
   yend = ystart + ny0 -1;
   errorValue = SetImage(AndorSet1.xbin, AndorSet1.ybin, xstart,
                         xend, ystart, yend);
-  if(errorValue!=DRV_SUCCESS) {
+  if(errorValue != DRV_SUCCESS) {
     aBuffer2.Printf(wxT("Set Image Error: xbin=%d ybin=%d, nx0=%d ny0=%d xc0=%d yc0=%d xstart=%d xend=%d ystart=%d yend=%d\r\n"),
             AndorSet1.xbin, AndorSet1.ybin, nx0, ny0, AndorSet1.xc0, AndorSet1.yc0, xstart, xend, ystart, yend);
     wxMessageBox(aBuffer2, wxT("JLP_Andor_SetSystemForContinuousAcquisition"),
-                     wxICON_ERROR);
-    return(-1);
-  }
+                     wxOK | wxICON_ERROR);
+    return(-3);
+    }
 
-return(status);
+return(0);
 }
 /*******************************************************************************
 *  FUNCTION NAME:  Cam1_StartContinuousAcquisition()
@@ -118,15 +132,38 @@ wxString error_msg;
 int errorValue;
 int status = 0;
 
-// Starting the acquisition now
+// JLP2023: exit from here if already in continuous acquisition 
+// Inquire status of camera (ANDOR routine):
+  GetStatus(&status);
+  if(status == DRV_ACQUIRING) {
+     return(0);
+  }
+
+// If not, start the acquisition now
   errorValue = StartAcquisition();
   if(errorValue != DRV_SUCCESS){
     error_msg.Append(wxT("Error returned from \"StartAcquisition\" \r\n"));
+    if(errorValue == DRV_NOT_INITIALIZED) {
+        error_msg.Append(wxT("System not initialized \n\r"));
+    } else if(errorValue == DRV_ACQUIRING) {
+        error_msg.Append(wxT("Acquisition in progress \n\r"));
+    } else if(errorValue == DRV_VXDNOTINSTALLED) {
+        error_msg.Append(wxT("VxD not loaded \n\r"));
+    } else if(errorValue == DRV_ERROR_ACK) {
+        error_msg.Append(wxT("Unable to communicate with card \n\r"));
+    } else if(errorValue == DRV_ACQUISITION_ERRORS) {
+        error_msg.Append(wxT("Acquisition settings invalid \n\r"));
+    } else if(errorValue == DRV_ERROR_PAGELOCK) {
+        error_msg.Append(wxT("Unable to allocate memory \n\r"));
+    } else if(errorValue == DRV_INVALID_FILTER) {
+        error_msg.Append(wxT("Filter not available for current acquisition \n\r"));
+        }
     AbortAcquisition();
     gblData_is_ready = false;
     status = -1;
   } else {
     error_msg.Append(wxT("Start acquisition was successful\r\n"));
+    status = 0;
 //      JLP_Andor_Continuous_GetTheImages();
 // Start processing by sending an event to the AndorThread
 //     SetEvent(StartProcessingEvent);
