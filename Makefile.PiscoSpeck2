@@ -31,6 +31,9 @@ WX_LIB := `wx-config --libs base,core`
 
 CFITSIO_INCL_DIR = $(JLPLIB_DIR)/jlp_cfitsio/incl
 
+EXEC_DIR = /home/build/execlnx
+#echo "$EXEC_DIR"
+
 else
 
 ##############################################################
@@ -61,6 +64,8 @@ WX_LIB_DIR = c:/wxWidgets-3.2.1/lib/
 WX_LIB = -L$(WX_LIB_DIR) -lwxbase30u -lwxmsw30u_core
 WX_LIB = -L$(WX_LIB_DIR) `c:/wxWidgets-3.2.1/build-jlp/wx-config --libs `
 
+EXEC_DIR = c:/EXEC/PiscoSpeck2_2023/
+
 endif
 ###################################################
 
@@ -71,7 +76,6 @@ LOCAL_FLAGS=$(MY_INCL) -I./asp2_camera -I./asp2_fits \
 	-I$(CFITSIO_INCL_DIR) \
 	-Dunix -DSYSTEM_FIVE -DJLP_USE_WXWID2 -D_WXMSW_ -D_WINSOCK2API_
 
-EXEC_DIR = c:/EXEC/PiscoSpeck2_2023/
 
 MY_INCL=-I. -I$(JLPLIB_DIR)/jlp_splot -I$(JLPLIB_DIR)/jlp_splot_idv \
 	-I$(JLPLIB_DIR)/jlp_gsegraf/jlp_gsegraf_include \
@@ -240,11 +244,13 @@ all: $(ASP2_OBJ) PiscoSpeck2.exe
 ########################################################
 # Linux: 
 ifeq ($(JLP_SYSTEM),Linux)
+jlp_Atmcd32d_linux.o : $(JLP_ANDOR_DIR)/jlp_Atmcd32d_linux.cpp
 
 PiscoSpeck2.exe: asp2_app_main.cpp  $(ASP2_DEP)
+	$(CPP) -c -g $(CXFLAGS) -o jlp_Atmcd32d_linux.o $(JLP_ANDOR_DIR)/jlp_Atmcd32d_linux.cpp
 	$(CPP) -c -g $(CXFLAGS) -o asp2_app_main.o asp2_app_main.cpp
 	$(CPP) -o $(EXEC_DIR)/PiscoSpeck2.exe asp2_app_main.o $(ASP2_OBJ) \
-	$(MY_LIB) $(WX_LIB) -lm -lz
+	jlp_Atmcd32d_linux.o $(MY_LIB) $(WX_LIB) -lm -lz
 
 else
 ########################################################

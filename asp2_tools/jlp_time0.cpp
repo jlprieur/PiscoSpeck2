@@ -115,14 +115,14 @@ int jlp_time_microsec(char *full_date, int *istat)
   struct timeval tt;
   gettimeofday(&tt, NULL);
   JLP_CTIME(str, istat);
-  jlp_string_compact(str, 80);
+  jlp_compact_string(str, 80);
   sprintf(full_date, "%s [%ld:%06ld]", str, tt.tv_sec, tt.tv_usec);
 // WIN32 API
 #else
   SYSTEMTIME st;
   GetSystemTime(&st);
   jlp_local_time(str);
-  jlp_string_compact(str, 80);
+  jlp_compact_string(str, 80);
   sprintf(full_date, "%s [%02d.%03d sec]", str, st.wSecond, st.wMilliseconds);
 #endif
 

@@ -198,7 +198,8 @@ cube_to_be_processed = false;
   k_decode_index = ipanel_decode_index[k];
   status = jlp_decode1->ReadDbleImage(child_image1[k], nx1, ny1, k_decode_index);
   if(status) {
-     fprintf(stderr, "JLP_DecodeThread/Error retrieving data ReadDbleImage\n");
+     fprintf(stderr, "JLP_DecodeThread/Error retrieving data ReadDbleImage (k=%d k_decode_index=%d\n",
+             k, k_decode_index);
      return;
     }
  }

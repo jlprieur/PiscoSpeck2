@@ -40,6 +40,11 @@ static int Scidar_CreatePupilMask(double **pupil_mask0, int nx0, int ny0);
 * Process CubeImage twice:
 *  - First step: compute a mean image
 *  - Second step: compute the auto-correlation of the fluctuations
+*
+* This routine updates the arrays:
+*  long_int[], autocc[], modsq[], ShortExp_v[]
+* Long integration of the fluctuations: (Scidar Log mode only)
+*  scidar_lf[]
 ****************************************************************************/
 int JLP_Decode::ProcessCubeScidarLog(AWORD* CubeImage, int nx, int ny,
                                      int nz_cube)
@@ -277,6 +282,9 @@ if(ngood_frames > 0)
 * ProcessingMode = 8 : SCIDAR Lin
 * Compute autocorrelation and crosscorrelation
 * Use "normal" auto-correlation
+* 
+* This routine updates the arrays:
+*  long_int[], autocc[], modsq[], ShortExp_v[]
 *****************************************************************************/
 int JLP_Decode::ProcessCubeScidarLin(AWORD* CubeImage, int nx, int ny, int nz_cube)
 {
@@ -431,9 +439,9 @@ delete[] tmp;
 
 return(0);
 }
-/************************************************************************************
+/*******************************************************************************
 * Pupil mask
-*************************************************************************************/
+*******************************************************************************/
 static int Scidar_CreatePupilMask(double **pupil_mask0, int nx0, int ny0)
 {
 int i, j, ic, jc;

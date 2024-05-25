@@ -356,6 +356,33 @@ int i;
 // Add direct vector instead of flattened autoc:
      if(Pset0.DirectVector) ipanel_decode_index[5] = 7;
      break;
+/* 
+* ProcessingMode = 7 : SCIDAR Log
+* Processcube routine updates the arrays:
+*  long_int[], autocc[], modsq[], ShortExp_v[]
+* Long integration of the fluctuations: (Scidar Log mode only)
+*  scidar_lf[]
+*
+* ProcessingMode = 8 : SCIDAR Lin
+* Processcube routine updates the arrays:
+*  long_int[], autocc[], modsq[], ShortExp_v[]
+*/
+   case 7:
+   case 8:
+    nChild0 = 4;
+// Short exp
+     i = 0;
+     ipanel_decode_index[i] = 0;
+// LongInt
+     i++;
+     ipanel_decode_index[i] = 3;
+// Modsq
+     i++;
+     ipanel_decode_index[i] = 1;
+// Autocc
+     i++;
+     ipanel_decode_index[i] = 2;
+     break;
    }
 
 
